@@ -1,0 +1,15 @@
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\bin\Debug\net6.0\Parnas.Domain.deps.json
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\bin\Debug\net6.0\Parnas.Domain.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\bin\Debug\net6.0\ref\Parnas.Domain.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\bin\Debug\net6.0\Parnas.Domain.pdb
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\bin\Debug\net6.0\Parnas.Base.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\bin\Debug\net6.0\Parnas.Base.pdb
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\Parnas.Domain.csproj.AssemblyReference.cache
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\Parnas.Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\Parnas.Domain.AssemblyInfoInputs.cache
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\Parnas.Domain.AssemblyInfo.cs
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\Parnas.Domain.csproj.CoreCompileInputs.cache
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\Parnas.Domain.csproj.CopyComplete
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\Parnas.Domain.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\ref\Parnas.Domain.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Domain\obj\Debug\net6.0\Parnas.Domain.pdb

@@ -1,0 +1,11 @@
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\bin\Debug\net6.0\Parnas.Base.deps.json
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\bin\Debug\net6.0\Parnas.Base.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\bin\Debug\net6.0\ref\Parnas.Base.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\bin\Debug\net6.0\Parnas.Base.pdb
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.GeneratedMSBuildEditorConfig.editorconfig
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.AssemblyInfoInputs.cache
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.AssemblyInfo.cs
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.csproj.CoreCompileInputs.cache
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\ref\Parnas.Base.dll
+E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.pdb
