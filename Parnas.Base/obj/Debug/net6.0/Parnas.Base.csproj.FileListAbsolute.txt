@@ -9,3 +9,15 @@ E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.c
 E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.dll
 E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\ref\Parnas.Base.dll
 E:\AzarBinaPardazesh\ParnasApp\Parnas\Parnas.Base\obj\Debug\net6.0\Parnas.Base.pdb
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.deps.json
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.dll
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.pdb
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.GeneratedMSBuildEditorConfig.editorconfig
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.AssemblyInfoInputs.cache
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.AssemblyInfo.cs
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.csproj.CoreCompileInputs.cache
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.sourcelink.json
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.dll
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\refint\Parnas.Base.dll
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.pdb
+F:\Programing\AzarBinaPardazesh\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\ref\Parnas.Base.dll

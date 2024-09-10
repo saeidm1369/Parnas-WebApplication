@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Parnas.DomainService")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d403b444b110126b76f896db506b67f3a72ab0f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Parnas.DomainService")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Parnas.DomainService")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,19 +8,24 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
+    "C:\\Users\\saeid\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\AzarBinaPardazesh\\ParnasApp\\Parnas\\Parnas.Base\\Parnas.Base.csproj",
+      "projectUniqueName": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
       "projectName": "Parnas.Base",
-      "projectPath": "E:\\AzarBinaPardazesh\\ParnasApp\\Parnas\\Parnas.Base\\Parnas.Base.csproj",
-      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-      "outputPath": "E:\\AzarBinaPardazesh\\ParnasApp\\Parnas\\Parnas.Base\\obj\\",
+      "projectPath": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
+      "packagesPath": "C:\\Users\\saeid\\.nuget\\packages\\",
+      "outputPath": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Base\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\saeid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -40,6 +45,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -51,7 +61,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -60,7 +71,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
