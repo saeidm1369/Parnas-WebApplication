@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Parnas.Base")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d403b444b110126b76f896db506b67f3a72ab0f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9492b597e2d36f26d97680c3eda8576e78dc48b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Parnas.Base")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Parnas.Base")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

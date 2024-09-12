@@ -1,36 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{8280C980-150A-49F3-8C72-81961288526D}|Parnas.Infrastructure\\Parnas.Infrastructure.csproj|f:\\programing\\azarbinapardazesh\\parnasapp\\parnasapp\\parnas.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8280C980-150A-49F3-8C72-81961288526D}|Parnas.Infrastructure\\Parnas.Infrastructure.csproj|solutionrelative:parnas.infrastructure\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8280C980-150A-49F3-8C72-81961288526D}|Parnas.Infrastructure\\Parnas.Infrastructure.csproj|F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\parnas.infrastructure\\applicationdbcontext\\parnasdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8280C980-150A-49F3-8C72-81961288526D}|Parnas.Infrastructure\\Parnas.Infrastructure.csproj|solutionrelative:parnas.infrastructure\\applicationdbcontext\\parnasdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED61184C-D35C-469E-B01E-3F1E4378E61B}|Parnas.Domain\\Parnas.Domain.csproj|F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\parnas.domain\\maininterface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED61184C-D35C-469E-B01E-3F1E4378E61B}|Parnas.Domain\\Parnas.Domain.csproj|solutionrelative:parnas.domain\\maininterface\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81729F69-E502-427B-A4D5-D94FFABF3470}|Parnas\\Parnas.csproj|F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\parnas\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{81729F69-E502-427B-A4D5-D94FFABF3470}|Parnas\\Parnas.csproj|solutionrelative:parnas\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8280C980-150A-49F3-8C72-81961288526D}|Parnas.Infrastructure\\Parnas.Infrastructure.csproj|F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\parnas.infrastructure\\migrations\\20240910123603_mig_init_database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8280C980-150A-49F3-8C72-81961288526D}|Parnas.Infrastructure\\Parnas.Infrastructure.csproj|solutionrelative:parnas.infrastructure\\migrations\\20240910123603_mig_init_database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED61184C-D35C-469E-B01E-3F1E4378E61B}|Parnas.Domain\\Parnas.Domain.csproj|F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\parnas.domain\\entities\\computermonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{ED61184C-D35C-469E-B01E-3F1E4378E61B}|Parnas.Domain\\Parnas.Domain.csproj|solutionrelative:parnas.domain\\entities\\computermonitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81729F69-E502-427B-A4D5-D94FFABF3470}|Parnas\\Parnas.csproj|F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\parnas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81729F69-E502-427B-A4D5-D94FFABF3470}|Parnas\\Parnas.csproj|solutionrelative:parnas\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -38,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,91 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Infrastructure\\Repositories\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Parnas.Infrastructure\\Repositories\\GenericRepository.cs",
-              "ToolTip": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Infrastructure\\Repositories\\GenericRepository.cs",
-              "RelativeToolTip": "Parnas.Infrastructure\\Repositories\\GenericRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:09:10.29Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IGenericRepository.cs",
-              "DocumentMoniker": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Domain\\MainInterface\\IGenericRepository.cs",
-              "RelativeDocumentMoniker": "Parnas.Domain\\MainInterface\\IGenericRepository.cs",
-              "ToolTip": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Domain\\MainInterface\\IGenericRepository.cs",
-              "RelativeToolTip": "Parnas.Domain\\MainInterface\\IGenericRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:06:06.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas\\appsettings.json",
-              "RelativeDocumentMoniker": "Parnas\\appsettings.json",
-              "ToolTip": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas\\appsettings.json",
-              "RelativeToolTip": "Parnas\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-10T15:03:53.898Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "20240910123603_Mig_Init_Database.cs",
-              "DocumentMoniker": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Infrastructure\\Migrations\\20240910123603_Mig_Init_Database.cs",
-              "RelativeDocumentMoniker": "Parnas.Infrastructure\\Migrations\\20240910123603_Mig_Init_Database.cs",
-              "ToolTip": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Infrastructure\\Migrations\\20240910123603_Mig_Init_Database.cs",
-              "RelativeToolTip": "Parnas.Infrastructure\\Migrations\\20240910123603_Mig_Init_Database.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:03:53.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas\\Program.cs",
-              "RelativeDocumentMoniker": "Parnas\\Program.cs",
-              "ToolTip": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas\\Program.cs",
-              "RelativeToolTip": "Parnas\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:03:53.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ComputerMonitor.cs",
-              "DocumentMoniker": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Domain\\Entities\\ComputerMonitor.cs",
-              "RelativeDocumentMoniker": "Parnas.Domain\\Entities\\ComputerMonitor.cs",
-              "ToolTip": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Domain\\Entities\\ComputerMonitor.cs",
-              "RelativeToolTip": "Parnas.Domain\\Entities\\ComputerMonitor.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAowA8AAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:03:53.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ParnasDbContext.cs",
-              "DocumentMoniker": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Infrastructure\\ApplicationDbContext\\ParnasDbContext.cs",
-              "RelativeDocumentMoniker": "Parnas.Infrastructure\\ApplicationDbContext\\ParnasDbContext.cs",
-              "ToolTip": "F:\\Programing\\AzarBinaPardazesh\\ParnasApp\\ParnasApp\\Parnas.Infrastructure\\ApplicationDbContext\\ParnasDbContext.cs",
-              "RelativeToolTip": "Parnas.Infrastructure\\ApplicationDbContext\\ParnasDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:03:53.946Z"
             }
           ]
         }
