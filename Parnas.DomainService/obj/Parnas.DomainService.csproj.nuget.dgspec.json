@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {}
+    "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {}
   },
   "projects": {
-    "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj": {
+    "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
+        "projectUniqueName": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
         "projectName": "Parnas.Base",
-        "projectPath": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
-        "packagesPath": "C:\\Users\\saeid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Base\\obj\\",
+        "projectPath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Base\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\saeid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -38,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -54,8 +45,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -64,25 +54,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {
+    "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
+        "projectUniqueName": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
         "projectName": "Parnas.DomainService",
-        "projectPath": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
-        "packagesPath": "C:\\Users\\saeid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.DomainService\\obj\\",
+        "projectPath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.DomainService\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\saeid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,8 +82,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
-                "projectPath": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
+              "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
+                "projectPath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
               }
             }
           }
@@ -106,11 +92,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -128,8 +109,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -138,25 +118,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
+    "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
+        "projectUniqueName": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
         "projectName": "Parnas.Domain",
-        "projectPath": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
-        "packagesPath": "C:\\Users\\saeid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Domain\\obj\\",
+        "projectPath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\saeid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -170,8 +146,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj": {
-                "projectPath": "C:\\Users\\saeid\\Downloads\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj"
+              "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj": {
+                "projectPath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj"
               }
             }
           }
@@ -180,11 +156,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -196,8 +167,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -206,7 +176,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

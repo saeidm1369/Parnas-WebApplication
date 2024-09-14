@@ -32,3 +32,14 @@ E:\ThourismWebsite\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.csproj.Cor
 E:\ThourismWebsite\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.dll
 E:\ThourismWebsite\ParnasApp\Parnas.Base\obj\Debug\net6.0\ref\Parnas.Base.dll
 E:\ThourismWebsite\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.pdb
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.deps.json
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.dll
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\bin\Debug\net6.0\ref\Parnas.Base.dll
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.pdb
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.GeneratedMSBuildEditorConfig.editorconfig
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.AssemblyInfoInputs.cache
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.AssemblyInfo.cs
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.csproj.CoreCompileInputs.cache
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.dll
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\ref\Parnas.Base.dll
+E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.pdb
