@@ -1,22 +1,22 @@
 ﻿using DomainServices.Exception;
 using Microsoft.AspNetCore.Mvc;
 using Parnas.Domain.DTOs.Accessories;
-using Parnas.Domain.DTOs.Gaming;
+using Parnas.Domain.DTOs.FanCase;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
 
-namespace Parnas.Areas.Admin
+namespace Parnas.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class GamingController : Controller
+    public class FanCaseController : Controller
     {
         #region Field
-        private readonly IGenericService<Gaming> _genericService;
+        private readonly IGenericService<FanCase> _genericService;
         #endregion
 
         #region Constructor
 
-        public GamingController(IGenericService<Gaming> genericService)
+        public FanCaseController(IGenericService<FanCase> genericService)
         {
             _genericService = genericService;
         }
@@ -29,8 +29,8 @@ namespace Parnas.Areas.Admin
         {
             try
             {
-                var gamings = _genericService.GetAll<GamingListDto>().ToList();
-                return View(gamings);
+                var FanCases = _genericService.GetAll<FanCaseListDto>().ToList();
+                return View(FanCases);
             }
             catch (ServiceException exception)
             {
@@ -55,7 +55,7 @@ namespace Parnas.Areas.Admin
         {
             try
             {
-                var result = _genericService.GetById<GamingDetailDto>(id);
+                var result = _genericService.GetById<FanCaseDetailDto>(id);
                 return View(result);
             }
             catch (ServiceException exception)
@@ -80,42 +80,42 @@ namespace Parnas.Areas.Admin
         #region CUD
 
         [HttpGet]
-        public IActionResult AddGaming()
+        public IActionResult AddFanCase()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddGaming(GamingAddDto gamingAddDto)
+        public IActionResult AddFanCase(FaneCaseAddDto faneCaseAddDto)
         {
             if (!ModelState.IsValid)
-                return View(gamingAddDto);
+                return View(faneCaseAddDto);
 
-            var result = _genericService.Add<GamingAddDto>(gamingAddDto);
+            var result = _genericService.Add(faneCaseAddDto);
             ViewData["Message"] = result.Title;
             return View();
         }
 
         [HttpGet]
-        public IActionResult UpdateGaming(string id)
+        public IActionResult UpdateFanCase(string id)
         {
             if (id == null)
                 ViewData["Message"] = "Null";
-            var gaming = _genericService.GetById<GamingDetailDto>(id);
-            return View(gaming);
+            var fancase = _genericService.GetById<FanCaseDetailDto>(id);
+            return View(fancase);
         }
 
         [HttpPost]
-        public IActionResult UpdateGaming(GamingDetailDto gamingDetailDto)
+        public IActionResult UpdateFanCase(FanCaseDetailDto fanCaseDetailDto)
         {
             if (!ModelState.IsValid)
-                return View(gamingDetailDto);
-            var result = _genericService.Update<GamingDetailDto>(gamingDetailDto.Id, gamingDetailDto);
+                return View(fanCaseDetailDto);
+            var result = _genericService.Update(fanCaseDetailDto.Id, fanCaseDetailDto);
             ViewData["Message"] = result.Title;
             return View();
         }
 
-        public IActionResult DeleteGaming(string id)
+        public IActionResult DeleteFanCase(string id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Title;
