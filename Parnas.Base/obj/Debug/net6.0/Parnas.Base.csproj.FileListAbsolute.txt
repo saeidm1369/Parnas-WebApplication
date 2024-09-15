@@ -43,3 +43,14 @@ E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.
 E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.dll
 E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\ref\Parnas.Base.dll
 E:\ThourismWebsite\ParnasApp\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.pdb
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.deps.json
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.dll
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\bin\Debug\net6.0\Parnas.Base.pdb
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.GeneratedMSBuildEditorConfig.editorconfig
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.AssemblyInfoInputs.cache
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.AssemblyInfo.cs
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.csproj.CoreCompileInputs.cache
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.dll
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\obj\Debug\net6.0\refint\Parnas.Base.dll
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\obj\Debug\net6.0\Parnas.Base.pdb
+E:\PCMod\Parnas\ParnasApp\Parnas.Base\obj\Debug\net6.0\ref\Parnas.Base.dll
