@@ -102,7 +102,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (id == null)
                 ViewData["Message"] = "Null";
             var graphicCard = _genericService.GetById<AccessoryDetailsDto>(id);
-            return View(accessory);
+            return View(graphicCard);
         }
 
         [HttpPost]
