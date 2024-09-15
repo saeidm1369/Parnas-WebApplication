@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "yZOfqd1M1BeBCFu5FWyHr+f+AS/ZsRQEezKK/RLi2fc4jHzbyx/ZBNZgY1CiEve7ndEkj4apyUBCeZNzsLBzsA==",
+  "dgSpecHash": "/7CgtcAUt28AJ9QL7BXRH1pSnjR5RH6Bljel16Cn1xa5UV19FfP/tvdPaJ45DrzkflGqgwftMuh1+zjFi3sHRw==",
   "success": true,
-  "projectFilePath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
+  "projectFilePath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Lenovo\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
-    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
-    "C:\\Users\\Lenovo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    "C:\\Users\\Parnas\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\Parnas\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\Parnas\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\Parnas\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\Parnas\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }

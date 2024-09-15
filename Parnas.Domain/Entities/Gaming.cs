@@ -11,7 +11,6 @@ namespace Parnas.Domain.Entities
         {
 
         }
-        public string Type { get; set; }
         public string CPU { get; set; }
         public string MotherBoard { get; set; }
         public string Graphic { get; set; }
