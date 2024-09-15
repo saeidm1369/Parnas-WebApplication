@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Parnas.Infrastructure.ApplicationDbContext;
 
@@ -10,9 +11,10 @@ using Parnas.Infrastructure.ApplicationDbContext;
 namespace Parnas.Infrastructure.Migrations
 {
     [DbContext(typeof(ParnasDbContext))]
-    partial class ParnasDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240915133125_Mig_Add_ProductImage_In_Product")]
+    partial class Mig_Add_ProductImage_In_Product
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -86,7 +88,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Accessories", (string)null);
+                    b.ToTable("Accessories");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Case", b =>
@@ -196,7 +198,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Cases", (string)null);
+                    b.ToTable("Cases");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Category", b =>
@@ -239,7 +241,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasIndex("ParentId");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.ComputerMonitor", b =>
@@ -334,7 +336,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Monitors", (string)null);
+                    b.ToTable("Monitors");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Cooling", b =>
@@ -414,7 +416,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Coolings", (string)null);
+                    b.ToTable("Coolings");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.CPU", b =>
@@ -518,7 +520,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CPUs", (string)null);
+                    b.ToTable("CPUs");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.FanCase", b =>
@@ -583,7 +585,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("FanCases", (string)null);
+                    b.ToTable("FanCases");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Gaming", b =>
@@ -645,7 +647,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Gamings", (string)null);
+                    b.ToTable("Gamings");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.GraphicCard", b =>
@@ -764,7 +766,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("GraphicCards", (string)null);
+                    b.ToTable("GraphicCards");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.HDD", b =>
@@ -817,7 +819,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("HDDs", (string)null);
+                    b.ToTable("HDDs");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.MotherBoard", b =>
@@ -921,7 +923,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("MotherBoards", (string)null);
+                    b.ToTable("MotherBoards");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Power", b =>
@@ -1010,7 +1012,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Powers", (string)null);
+                    b.ToTable("Powers");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.ProductImage", b =>
@@ -1109,7 +1111,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasIndex("SsdId");
 
-                    b.ToTable("ProductImages", (string)null);
+                    b.ToTable("ProductImages");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Ram", b =>
@@ -1171,7 +1173,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Rams", (string)null);
+                    b.ToTable("Rams");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.SSD", b =>
@@ -1233,7 +1235,7 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SSDs", (string)null);
+                    b.ToTable("SSDs");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Category", b =>

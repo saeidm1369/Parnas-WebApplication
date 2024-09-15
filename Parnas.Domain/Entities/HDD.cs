@@ -11,10 +11,15 @@ namespace Parnas.Domain.Entities
         {
 
         }
-        public string Capacity { get; set; }
-        public string TheAppearanceOfTheHardDrive { get; set; }
-        public string HardDrivePort { get; set; }
-        public string RotationSpeed { get; set; }
-        public string HardDiskCachMemory { get; set; }
+        public string? Capacity { get; set; }
+        public string? TheAppearanceOfTheHardDrive { get; set; }
+        public string? HardDrivePort { get; set; }
+        public string? RotationSpeed { get; set; }
+        public string? HardDiskCachMemory { get; set; }
+
+        #region Relations
+        public ICollection<ProductImage> ProductImages { get; set; }
+        public Category Category { get; set; }
+        #endregion
     }
 }

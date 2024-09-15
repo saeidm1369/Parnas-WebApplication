@@ -11,14 +11,19 @@ namespace Parnas.Domain.Entities
         {
             
         }
-        public string FanCaseType { get; set; }
-        public string FanCaseUsageType { get; set; }
+        public string? FanCaseType { get; set; }
+        public string? FanCaseUsageType { get; set; }
         public bool FanCaseController { get; set; }
         public bool CaseFanSpeedController { get; set; }
-        public string CaseFanNoiseLevel { get; set; }
-        public string RatiotionSpeedOfTheCaseFan { get; set; }
-        public string FanCaseLighting { get; set; }
-        public string MaximumCaseAirFlow { get; set; }
-        public bool FanCaseLightingController { get; set; }
+        public string? CaseFanNoiseLevel { get; set; }
+        public string? RatiotionSpeedOfTheCaseFan { get; set; }
+        public string? FanCaseLighting { get; set; }
+        public string? MaximumCaseAirFlow { get; set; }
+        public bool LightingControllerFanCase { get; set; }
+
+        #region Relations
+        public ICollection<ProductImage> ProductImages { get; set; }
+        public Category Category { get; set; }
+        #endregion
     }
 }

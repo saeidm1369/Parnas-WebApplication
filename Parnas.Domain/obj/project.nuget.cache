@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Y1pW+WSolT17Rh3zB7LmmTBz9FewJfRUGukTo/+1XGc/AD/ntV25cjd1/jrv8DoVtYOgOiwF11Pt/1CjacZeRg==",
+  "dgSpecHash": "khCKYToW5bRYUeyn41E+ILMha8P2qmLb8lKe688zDpPIdw1k7jsAb5HLBAIlVSPf/ffJibc90Er8SOEeU8iPiw==",
   "success": true,
   "projectFilePath": "E:\\ThourismWebsite\\ParnasApp\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.17\\microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

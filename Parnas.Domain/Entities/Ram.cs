@@ -11,13 +11,18 @@ namespace Parnas.Domain.Entities
         {
 
         }
-        public string NumberOfPin { get; set; }
-        public string RamCooler { get; set; }
-        public string RomeLighting { get; set; }
-        public string TypeOfRamMemory { get; set; }
-        public string NumberOfModel { get; set; }
-        public string VolumeOfEachModules { get; set; }
-        public string TotalMemorySize { get; set; }
-        public string Ferequency { get; set; }
+        public string? NumberOfPin { get; set; }
+        public string? RamCooler { get; set; }
+        public string? RomeLighting { get; set; }
+        public string? TypeOfRamMemory { get; set; }
+        public string? NumberOfModel { get; set; }
+        public string? VolumeOfEachModules { get; set; }
+        public string? TotalMemorySize { get; set; }
+        public string? Ferequency { get; set; }
+
+        #region Relations
+        public ICollection<ProductImage> ProductImages { get; set; }
+        public Category Category { get; set; }
+        #endregion
     }
 }
