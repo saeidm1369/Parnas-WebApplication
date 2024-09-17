@@ -657,10 +657,14 @@
           "System.IO.Pipelines": "5.0.2"
         },
         "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {}
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {}
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.AspNetCore.Razor.Language/6.0.0": {
@@ -10846,6 +10850,7 @@
     "net6.0": [
       "Microsoft.EntityFrameworkCore.Design >= 6.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.17",
+      "Parnas.Domain >= 1.0.0",
       "Parnas.DomainService >= 1.0.0",
       "Parnas.Infrastructure >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.6.2"
@@ -10859,11 +10864,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas\\Parnas.csproj",
+      "projectUniqueName": "E:\\PCMod\\ParnasApp\\Parnas\\Parnas.csproj",
       "projectName": "Parnas",
-      "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas\\Parnas.csproj",
+      "projectPath": "E:\\PCMod\\ParnasApp\\Parnas\\Parnas.csproj",
       "packagesPath": "C:\\Users\\Parnas\\.nuget\\packages\\",
-      "outputPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas\\obj\\",
+      "outputPath": "E:\\PCMod\\ParnasApp\\Parnas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -10886,11 +10891,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {
-              "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj"
+            "E:\\PCMod\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {
+              "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj"
             },
-            "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj": {
-              "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj"
+            "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
+              "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
+            },
+            "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj": {
+              "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj"
             }
           }
         }

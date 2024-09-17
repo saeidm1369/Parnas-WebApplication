@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(faneCaseAddDto);
 
-            var result = _genericService.Add(faneCaseAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add(faneCaseAddDto, faneCaseAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(fanCaseDetailDto);
-            var result = _genericService.Update(fanCaseDetailDto.Id, fanCaseDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update(fanCaseDetailDto.Id, fanCaseDetailDto, fanCaseDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteFanCase(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

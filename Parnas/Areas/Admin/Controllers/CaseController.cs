@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(caseAddDto);
 
-            var result = _genericService.Add<CaseAddDto>(caseAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<CaseAddDto>(caseAddDto, caseAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(caseDetail);
-            var result = _genericService.Update<CaseDetailDto>(caseDetail.Id, caseDetail);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<CaseDetailDto>(caseDetail.Id, caseDetail, caseDetail.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteCase(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

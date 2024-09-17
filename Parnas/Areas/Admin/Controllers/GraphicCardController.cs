@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(graphicCardAddDto);
 
-            var result = _genericService.Add<GraphicCardAddDto>(graphicCardAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<GraphicCardAddDto>(graphicCardAddDto, graphicCardAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(graphicCardDetailDto);
-            var result = _genericService.Update<GraphicCardDetailDto>(graphicCardDetailDto.Id, graphicCardDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<GraphicCardDetailDto>(graphicCardDetailDto.Id, graphicCardDetailDto, graphicCardDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteGraphicCard(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

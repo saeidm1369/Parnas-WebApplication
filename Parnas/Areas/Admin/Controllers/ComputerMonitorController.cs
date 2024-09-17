@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(monitorAddDto);
 
-            var result = _genericService.Add<ComputerMonitorAddDto>(monitorAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<ComputerMonitorAddDto>(monitorAddDto, monitorAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(monitorDetailDto);
-            var result = _genericService.Update<ComputerMonitorDetailDto>(monitorDetailDto.Id, monitorDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<ComputerMonitorDetailDto>(monitorDetailDto.Id, monitorDetailDto, monitorDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteMonitor(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

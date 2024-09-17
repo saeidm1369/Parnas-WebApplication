@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -10,7 +11,6 @@ namespace Parnas.Domain.DTOs.Accessories
     public class AccessoryDetailsDto
     {
         // Base Entity
-
         public string Id { get; set; }
 
         [Display(Name = "عنوان")]
@@ -40,6 +40,7 @@ namespace Parnas.Domain.DTOs.Accessories
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        public List<IFormFile> Images { get; set; }
 
         // Accessories Entity
         public string? Lighting { get; set; }

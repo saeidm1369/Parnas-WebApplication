@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -39,6 +40,8 @@ namespace Parnas.Domain.DTOs.Ram
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+
+        public List<IFormFile> Images { get; set; }
 
         // Ram Entity
         public string NumberOfPin { get; set; }

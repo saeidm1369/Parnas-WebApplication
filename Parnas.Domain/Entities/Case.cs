@@ -1,11 +1,12 @@
 ﻿using Parnas.Base;
+using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Case : BaseEntity<string>
+    public class Case : BaseEntity<string> , IHasImage
     {
         public Case()
         {
@@ -36,8 +37,12 @@ namespace Parnas.Domain.Entities
         public bool MicrophoneInput { get; set;}
         public bool HeadPhoneOutPut { get; set;}
 
+        // IHasImage Properties
+        public string ImageName { get; set; }
+        public string ImagePath { get; set; }
+
         #region Relations
-        public ICollection<ProductImage> ProductImages { get; set; }
+        public string CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     };

@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(hddAddDto);
 
-            var result = _genericService.Add<HDDAddDto>(hddAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<HDDAddDto>(hddAddDto, hddAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(hddDetailDto);
-            var result = _genericService.Update<HDDDetailDto>(hddDetailDto.Id, hddDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<HDDDetailDto>(hddDetailDto.Id, hddDetailDto, hddDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteHDD(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

@@ -90,8 +90,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(ssdAddDto);
 
-            var result = _genericService.Add<SSDAddDto>(ssdAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<SSDAddDto>(ssdAddDto, ssdAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -109,15 +109,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(ssdDetailDto);
-            var result = _genericService.Update<SSDDetailDto>(ssdDetailDto.Id, ssdDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<SSDDetailDto>(ssdDetailDto.Id, ssdDetailDto, ssdDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteSSD(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

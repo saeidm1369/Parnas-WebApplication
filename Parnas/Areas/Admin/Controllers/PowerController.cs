@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(poweAddDto);
 
-            var result = _genericService.Add<PoweAddDto>(poweAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<PoweAddDto>(poweAddDto, poweAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(powerDetailDto);
-            var result = _genericService.Update<PowerDetailDto>(powerDetailDto.Id, powerDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<PowerDetailDto>(powerDetailDto.Id, powerDetailDto, powerDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeletePower(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

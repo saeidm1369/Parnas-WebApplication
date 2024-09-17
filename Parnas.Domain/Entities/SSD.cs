@@ -1,11 +1,12 @@
 ﻿using Parnas.Base;
+using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class SSD : BaseEntity<string>
+    public class SSD : BaseEntity<string> , IHasImage
     {
         public SSD()
         {
@@ -20,8 +21,12 @@ namespace Parnas.Domain.Entities
         public string? WritingSpeed { get; set; }
         public string? Longevity { get; set; }
 
+        // IHasImage Properties
+        public string ImageName { get; set; }
+        public string ImagePath { get; set; }
+
         #region Relations
-        public ICollection<ProductImage> ProductImages { get; set; }
+        public string CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     }

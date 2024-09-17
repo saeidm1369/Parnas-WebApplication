@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(ramAddDto);
 
-            var result = _genericService.Add<RamAddDto>(ramAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<RamAddDto>(ramAddDto, ramAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(ramDetailDto);
-            var result = _genericService.Update<RamDetailDto>(ramDetailDto.Id, ramDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<RamDetailDto>(ramDetailDto.Id, ramDetailDto, ramDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteRam(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

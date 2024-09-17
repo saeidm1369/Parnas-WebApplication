@@ -1,11 +1,12 @@
 ﻿using Parnas.Base;
+using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class MotherBoard : BaseEntity<string>
+    public class MotherBoard : BaseEntity<string> , IHasImage
     {
         public MotherBoard()
         {
@@ -34,8 +35,12 @@ namespace Parnas.Domain.Entities
         public bool Bluetooth { get; set; }
         public string? BluetoothVersion { get; set; }
 
+        // IHasImage Properties
+        public string ImageName { get; set; }
+        public string ImagePath { get; set; }
+
         #region Relations
-        public ICollection<ProductImage> ProductImages { get; set; }
+        public string CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     }

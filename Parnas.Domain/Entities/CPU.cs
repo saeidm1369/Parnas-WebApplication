@@ -1,11 +1,12 @@
 ﻿using Parnas.Base;
+using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-     public class CPU : BaseEntity<string>
+     public class CPU : BaseEntity<string> , IHasImage
     {
         public CPU()
         {
@@ -34,8 +35,12 @@ namespace Parnas.Domain.Entities
         public string? PowerCounsumption { get; set; }
         public string? Packaging { get; set; }
 
+        // IHasImage Properties
+        public string ImageName { get; set; }
+        public string ImagePath { get; set; }
+
         #region Relations
-        public ICollection<ProductImage> ProductImages { get; set; }
+        public string CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     }

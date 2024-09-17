@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(gamingAddDto);
 
-            var result = _genericService.Add(gamingAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add(gamingAddDto, gamingAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(gamingDetailDto);
-            var result = _genericService.Update(gamingDetailDto.Id, gamingDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update(gamingDetailDto.Id, gamingDetailDto, gamingDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteGaming(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

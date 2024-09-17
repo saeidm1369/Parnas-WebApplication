@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PCMod\\Parnas\\ParnasApp\\Parnas\\Parnas.csproj": {}
+    "E:\\PCMod\\ParnasApp\\Parnas\\Parnas.csproj": {}
   },
   "projects": {
-    "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj": {
+    "E:\\PCMod\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
+        "projectUniqueName": "E:\\PCMod\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
         "projectName": "Parnas.Base",
-        "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
+        "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
         "packagesPath": "C:\\Users\\Parnas\\.nuget\\packages\\",
-        "outputPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\obj\\",
+        "outputPath": "E:\\PCMod\\ParnasApp\\Parnas.Base\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -65,14 +65,14 @@
         }
       }
     },
-    "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {
+    "E:\\PCMod\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
+        "projectUniqueName": "E:\\PCMod\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
         "projectName": "Parnas.DomainService",
-        "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
+        "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj",
         "packagesPath": "C:\\Users\\Parnas\\.nuget\\packages\\",
-        "outputPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\obj\\",
+        "outputPath": "E:\\PCMod\\ParnasApp\\Parnas.DomainService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -95,8 +95,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
-                "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
+              "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
+                "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
               }
             }
           }
@@ -136,14 +136,14 @@
         }
       }
     },
-    "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
+    "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
+        "projectUniqueName": "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
         "projectName": "Parnas.Domain",
-        "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
+        "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj",
         "packagesPath": "C:\\Users\\Parnas\\.nuget\\packages\\",
-        "outputPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\obj\\",
+        "outputPath": "E:\\PCMod\\ParnasApp\\Parnas.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -166,8 +166,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj": {
-                "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj"
+              "E:\\PCMod\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj": {
+                "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj"
               }
             }
           }
@@ -207,14 +207,14 @@
         }
       }
     },
-    "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj": {
+    "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj",
+        "projectUniqueName": "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj",
         "projectName": "Parnas.Infrastructure",
-        "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj",
+        "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Parnas\\.nuget\\packages\\",
-        "outputPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\obj\\",
+        "outputPath": "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -237,8 +237,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
-                "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
+              "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
+                "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
               }
             }
           }
@@ -298,14 +298,14 @@
         }
       }
     },
-    "E:\\PCMod\\Parnas\\ParnasApp\\Parnas\\Parnas.csproj": {
+    "E:\\PCMod\\ParnasApp\\Parnas\\Parnas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas\\Parnas.csproj",
+        "projectUniqueName": "E:\\PCMod\\ParnasApp\\Parnas\\Parnas.csproj",
         "projectName": "Parnas",
-        "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas\\Parnas.csproj",
+        "projectPath": "E:\\PCMod\\ParnasApp\\Parnas\\Parnas.csproj",
         "packagesPath": "C:\\Users\\Parnas\\.nuget\\packages\\",
-        "outputPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas\\obj\\",
+        "outputPath": "E:\\PCMod\\ParnasApp\\Parnas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -328,11 +328,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {
-                "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj"
+              "E:\\PCMod\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj": {
+                "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.DomainService\\Parnas.DomainService.csproj"
               },
-              "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj": {
-                "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj"
+              "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
+                "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
+              },
+              "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj": {
+                "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj"
               }
             }
           }

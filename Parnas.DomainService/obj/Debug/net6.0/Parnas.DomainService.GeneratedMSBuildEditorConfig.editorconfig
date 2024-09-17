@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Parnas.DomainService
-build_property.ProjectDir = E:\PCMod\Parnas\ParnasApp\Parnas.DomainService\
+build_property.ProjectDir = E:\PCMod\ParnasApp\Parnas.DomainService\

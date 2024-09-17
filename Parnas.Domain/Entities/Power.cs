@@ -1,11 +1,12 @@
 ﻿using Parnas.Base;
+using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Power : BaseEntity<string>
+    public class Power : BaseEntity<string> , IHasImage
     {
         public Power()
         {
@@ -29,8 +30,12 @@ namespace Parnas.Domain.Entities
         public string? EighteenPlusCertificate { get; set; }
         public string? ProtectionStandards { get; set; }
 
+        // IHasImage Properties
+        public string ImageName { get; set; }
+        public string ImagePath { get; set; }
+
         #region Relations
-        public ICollection<ProductImage> ProductImages { get; set; }
+        public string CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -39,6 +40,7 @@ namespace Parnas.Domain.DTOs.Cooling
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        public List<IFormFile> Images { get; set; }
 
         // Cooling Entity
         public string IntelSocketSupport { get; set; }

@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
+      "projectUniqueName": "E:\\PCMod\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
       "projectName": "Parnas.Base",
-      "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
+      "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Base\\Parnas.Base.csproj",
       "packagesPath": "C:\\Users\\Parnas\\.nuget\\packages\\",
-      "outputPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Base\\obj\\",
+      "outputPath": "E:\\PCMod\\ParnasApp\\Parnas.Base\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

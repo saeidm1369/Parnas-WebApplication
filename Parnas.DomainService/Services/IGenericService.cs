@@ -1,4 +1,5 @@
 ﻿using DomainServices.Exception;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +12,8 @@ namespace Parnas.DomainService.Services
     {
         TDto GetById<TDto>(string id) where TDto : class;
         IEnumerable<TDto> GetAll<TDto>() where TDto : class;
-        ServiceException Add<TDto>(TDto dto) where TDto : class;
-        ServiceException Update<TDto>(string id, TDto dto) where TDto : class;
+        ServiceException Add<TDto>(TDto dto, List<IFormFile> files) where TDto : class;
+        ServiceException Update<TDto>(string id, TDto dto, List<IFormFile> files) where TDto : class;
         ServiceException Delete(string id);
     }
 }

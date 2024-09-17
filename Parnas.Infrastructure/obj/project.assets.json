@@ -22,10 +22,14 @@
           "System.IO.Pipelines": "5.0.2"
         },
         "compile": {
-          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {}
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {}
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.CSharp/4.5.0": {
@@ -615,10 +619,14 @@
       "System.IO.Pipelines/5.0.2": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {}
+          "ref/netcoreapp2.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {}
+          "lib/netcoreapp3.0/System.IO.Pipelines.dll": {
+            "related": ".xml"
+          }
         }
       },
       "System.Runtime.Caching/4.7.0": {
@@ -2119,11 +2127,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj",
+      "projectUniqueName": "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj",
       "projectName": "Parnas.Infrastructure",
-      "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj",
+      "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\Parnas.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Parnas\\.nuget\\packages\\",
-      "outputPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Infrastructure\\obj\\",
+      "outputPath": "E:\\PCMod\\ParnasApp\\Parnas.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -2146,8 +2154,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
-              "projectPath": "E:\\PCMod\\Parnas\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
+            "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj": {
+              "projectPath": "E:\\PCMod\\ParnasApp\\Parnas.Domain\\Parnas.Domain.csproj"
             }
           }
         }

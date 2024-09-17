@@ -17,13 +17,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Parnas.DomainService\Parnas.DomainService.csproj" />
+    <ProjectReference Include="..\Parnas.Domain\Parnas.Domain.csproj" />
     <ProjectReference Include="..\Parnas.Infrastructure\Parnas.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\" />
   </ItemGroup>
 
 </Project>

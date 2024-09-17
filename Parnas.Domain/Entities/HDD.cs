@@ -1,11 +1,12 @@
 ﻿using Parnas.Base;
+using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class HDD : BaseEntity<string>
+    public class HDD : BaseEntity<string> , IHasImage
     {
         public HDD()
         {
@@ -17,8 +18,12 @@ namespace Parnas.Domain.Entities
         public string? RotationSpeed { get; set; }
         public string? HardDiskCachMemory { get; set; }
 
+        // IHasImage Properties
+        public string ImageName { get; set; }
+        public string ImagePath { get; set; }
+
         #region Relations
-        public ICollection<ProductImage> ProductImages { get; set; }
+        public string CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     }

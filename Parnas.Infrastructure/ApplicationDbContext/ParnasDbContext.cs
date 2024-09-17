@@ -34,6 +34,5 @@ namespace Parnas.Infrastructure.ApplicationDbContext
         public DbSet<Power> Powers { get; set; }
         public DbSet<Ram> Rams { get; set; }
         public DbSet<SSD> SSDs { get; set; }
-        public DbSet<ProductImage> ProductImages { get; set; }
     }
 }

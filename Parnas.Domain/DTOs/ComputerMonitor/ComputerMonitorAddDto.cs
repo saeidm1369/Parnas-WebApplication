@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -38,6 +39,7 @@ namespace Parnas.Domain.DTOs.ComputerMonitor
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        public List<IFormFile> Images { get; set; }
 
         // ComputerMonitor Entity
         public string MonitorUserClass { get; set; }

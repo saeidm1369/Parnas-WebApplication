@@ -13,9 +13,6 @@ namespace Parnas.Infrastructure.Config
     {
         public void Configure(EntityTypeBuilder<Accessories> builder)
         {
-            builder.HasMany(x => x.ProductImages).WithOne(x => x.Accessories)
-                .HasForeignKey(x => x.AccessoryId).OnDelete(DeleteBehavior.Cascade);
-
             builder.HasOne(x => x.Category).WithMany(x => x.Accessories)
                 .HasForeignKey(x => x.CategoryId).OnDelete(DeleteBehavior.Restrict);
         }

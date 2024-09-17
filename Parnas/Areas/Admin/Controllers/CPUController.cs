@@ -91,8 +91,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(cpuAddDto);
 
-            var result = _genericService.Add<CPUAddDto>(cpuAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<CPUAddDto>(cpuAddDto, cpuAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -110,15 +110,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(cpuDetailDto);
-            var result = _genericService.Update<CPUDetailDto>(cpuDetailDto.Id, cpuDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<CPUDetailDto>(cpuDetailDto.Id, cpuDetailDto, cpuDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteCPU(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

@@ -90,8 +90,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(motherBoardAddDto);
 
-            var result = _genericService.Add<MotherBoardAddDto>(motherBoardAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<MotherBoardAddDto>(motherBoardAddDto, motherBoardAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -109,15 +109,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(motherBoardDetailDto);
-            var result = _genericService.Update<MotherBoardDetailDto>(motherBoardDetailDto.Id, motherBoardDetailDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<MotherBoardDetailDto>(motherBoardDetailDto.Id, motherBoardDetailDto, motherBoardDetailDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteMotherBoard(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion

@@ -90,8 +90,8 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(accessoryAddDto);
 
-            var result = _genericService.Add<AccessoryAddDto>(accessoryAddDto);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Add<AccessoryAddDto>(accessoryAddDto, accessoryAddDto.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
@@ -109,15 +109,15 @@ namespace Parnas.Areas.Admin.Controllers
         {
             if (!ModelState.IsValid)
                 return View(accessory);
-            var result = _genericService.Update<AccessoryDetailsDto>(accessory.Id, accessory);
-            ViewData["Message"] = result.Title;
+            var result = _genericService.Update<AccessoryDetailsDto>(accessory.Id, accessory, accessory.Images);
+            ViewData["Message"] = result.Type;
             return View();
         }
 
         public IActionResult DeleteAccessory(string id)
         {
             var result = _genericService.Delete(id);
-            ViewData["Message"] = result.Title;
+            ViewData["Message"] = result.Type;
             return View();
         }
         #endregion
