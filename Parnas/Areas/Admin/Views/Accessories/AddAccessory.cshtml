@@ -1,211 +1,305 @@
-﻿@model Parnas.Domain.DTOs.Accessories.AccessoryAddDto
-
-@{
+﻿@{
     ViewData["Title"] = "افزودن لوازم جانبی";
 }
+<h2 style="margin:10px 40px 15px 0">افزودن لوازم جانبی</h2>
 
-<h2>افزودن لوازم جانبی</h2>
-<hr />
-
-<div class="row">
-    <form asp-action="AddAccessory">
-        <div class="col-md-8" style="margin-right:15px">
+<div class="box box-warning container">
+    <div class="row">
+        <div class="col-md-7">
             <div class="row">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Title" class="control-label"></label>
-                            <input asp-for="Title" class="form-control" />
-                            <span asp-validation-for="Title" class="text-danger"></span>
-                        </div>
+                <div class="col-md-6">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">اجزای کلی</h3>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Brand" class="control-label"></label>
-                            <input asp-for="Brand" class="form-control" />
-                            <span asp-validation-for="Brand" class="text-danger"></span>
-                        </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <form role="form">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label>نوشته</label>
+                                <input type="text" class="form-control" placeholder="متن">
+                            </div>
+                            <div class="form-group">
+                                <label>غیر فعال</label>
+                                <input type="text" class="form-control" placeholder="متن" disabled="">
+                            </div>
+
+                            <!-- textarea -->
+                            <div class="form-group">
+                                <label>متن</label>
+                                <textarea class="form-control" rows="3" placeholder="متن"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>متنی غیرفعال</label>
+                                <textarea class="form-control" rows="3" placeholder="متن" disabled=""></textarea>
+                            </div>
+
+                            <!-- input states -->
+                            <div class="form-group has-success">
+                                <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> مقدار درست</label>
+                                <input type="text" class="form-control" id="inputSuccess" placeholder="متن">
+                                <span class="help-block">راهنمای ورودی</span>
+                            </div>
+                            <div class="form-group has-warning">
+                                <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> مقدار اشتباه</label>
+                                <input type="text" class="form-control" id="inputWarning" placeholder="متن">
+                                <span class="help-block">راهنمای ورودی</span>
+                            </div>
+                            <div class="form-group has-error">
+                                <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> مقدار درست نیست</label>
+                                <input type="text" class="form-control" id="inputError" placeholder="متن">
+                                <span class="help-block">راهنمای ورودی</span>
+                            </div>
+
+                            <!-- checkbox -->
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        چک باکس 1
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        چک باکس 2
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" disabled="">
+                                        چک باکس غیرفعال
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- radio -->
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                        رادیو گزینه ۱
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        رادیو گزینه ۲
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+                                        رادیو گزینه غیرفعال
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- select -->
+                            <div class="form-group">
+                                <label>انتخاب کنید</label>
+                                <select class="form-control">
+                                    <option>گزینه 1</option>
+                                    <option>گزینه 2</option>
+                                    <option>گزینه 3</option>
+                                    <option>گزینه 4</option>
+                                    <option>گزینه 5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>غیرفعال</label>
+                                <select class="form-control" disabled="">
+                                    <option>گزینه 1</option>
+                                    <option>گزینه 2</option>
+                                    <option>گزینه 3</option>
+                                    <option>گزینه 4</option>
+                                    <option>گزینه 5</option>
+                                </select>
+                            </div>
+
+                            <!-- Select multiple-->
+                            <div class="form-group">
+                                <label>چند انتخابی</label>
+                                <select multiple="" class="form-control">
+                                    <option>گزینه 1</option>
+                                    <option>گزینه 2</option>
+                                    <option>گزینه 3</option>
+                                    <option>گزینه 4</option>
+                                    <option>گزینه 5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>غیرفعال</label>
+                                <select multiple="" class="form-control" disabled="">
+                                    <option>گزینه 1</option>
+                                    <option>گزینه 2</option>
+                                    <option>گزینه 3</option>
+                                    <option>گزینه 4</option>
+                                    <option>گزینه 5</option>
+                                </select>
+                            </div>
+
+                        </form>
                     </div>
+                    <!-- /.box-body -->
                 </div>
+                <div class="col-md-6">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">اجزای کلی</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <form role="form">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label>نوشته</label>
+                                <input type="text" class="form-control" placeholder="متن">
+                            </div>
+                            <div class="form-group">
+                                <label>غیر فعال</label>
+                                <input type="text" class="form-control" placeholder="متن" disabled="">
+                            </div>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Price" class="control-label"></label>
-                            <input asp-for="Price" class="form-control" />
-                            <span asp-validation-for="Price" class="text-danger"></span>
-                        </div>
+                            <!-- textarea -->
+                            <div class="form-group">
+                                <label>متن</label>
+                                <textarea class="form-control" rows="3" placeholder="متن"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>متنی غیرفعال</label>
+                                <textarea class="form-control" rows="3" placeholder="متن" disabled=""></textarea>
+                            </div>
+
+                            <!-- input states -->
+                            <div class="form-group has-success">
+                                <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> مقدار درست</label>
+                                <input type="text" class="form-control" id="inputSuccess" placeholder="متن">
+                                <span class="help-block">راهنمای ورودی</span>
+                            </div>
+                            <div class="form-group has-warning">
+                                <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> مقدار اشتباه</label>
+                                <input type="text" class="form-control" id="inputWarning" placeholder="متن">
+                                <span class="help-block">راهنمای ورودی</span>
+                            </div>
+                            <div class="form-group has-error">
+                                <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> مقدار درست نیست</label>
+                                <input type="text" class="form-control" id="inputError" placeholder="متن">
+                                <span class="help-block">راهنمای ورودی</span>
+                            </div>
+
+                            <!-- checkbox -->
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        چک باکس 1
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox">
+                                        چک باکس 2
+                                    </label>
+                                </div>
+
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" disabled="">
+                                        چک باکس غیرفعال
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- radio -->
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+                                        رادیو گزینه ۱
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        رادیو گزینه ۲
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
+                                        رادیو گزینه غیرفعال
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- select -->
+                            <div class="form-group">
+                                <label>انتخاب کنید</label>
+                                <select class="form-control">
+                                    <option>گزینه 1</option>
+                                    <option>گزینه 2</option>
+                                    <option>گزینه 3</option>
+                                    <option>گزینه 4</option>
+                                    <option>گزینه 5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>غیرفعال</label>
+                                <select class="form-control" disabled="">
+                                    <option>گزینه 1</option>
+                                    <option>گزینه 2</option>
+                                    <option>گزینه 3</option>
+                                    <option>گزینه 4</option>
+                                    <option>گزینه 5</option>
+                                </select>
+                            </div>
+
+                            <!-- Select multiple-->
+                            <div class="form-group">
+                                <label>چند انتخابی</label>
+                                <select multiple="" class="form-control">
+                                    <option>گزینه 1</option>
+                                    <option>گزینه 2</option>
+                                    <option>گزینه 3</option>
+                                    <option>گزینه 4</option>
+                                    <option>گزینه 5</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>غیرفعال</label>
+                                <select multiple="" class="form-control" disabled="">
+                                    <option>گزینه 1</option>
+                                    <option>گزینه 2</option>
+                                    <option>گزینه 3</option>
+                                    <option>گزینه 4</option>
+                                    <option>گزینه 5</option>
+                                </select>
+                            </div>
+
+                        </form>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Description" class="control-label"></label>
-                            <input asp-for="Description" class="form-control" />
-                            <span asp-validation-for="Description" class="text-danger"></span>
-                        </div>
-                    </div>
+                    <!-- /.box-body -->
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Color" class="control-label"></label>
-                            <input asp-for="Color" class="form-control" />
-                            <span asp-validation-for="Color" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Dimensions" class="control-label"></label>
-                            <input asp-for="Dimensions" class="form-control" />
-                            <span asp-validation-for="Dimensions" class="text-danger"></span>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="container">
+                <div style="margin-top: 15px">
+                    <img src="~/assets/img/products/p16.jpg" style="width:350px;height:350px; border-radius:10px" />
                 </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Weight" class="control-label"></label>
-                            <input asp-for="Weight" class="form-control" />
-                            <span asp-validation-for="Weight" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Type" class="control-label"></label>
-                            <input asp-for="Type" class="form-control" />
-                            <span asp-validation-for="Type" class="text-danger"></span>
-                        </div>
-                    </div>
-
+                <div class="container-fluid" style="margin-top: 15px">
+                    <img src="~/assets/img/products/p20.jpg" style="width:70px;height:70px; border-radius:10px" />
+                    <img src="~/assets/img/products/p16.jpg" style="width:70px;height:70px; border-radius:10px" />
+                    <img src="~/assets/img/products/p26.jpg" style="width:70px;height:70px; border-radius:10px" />
+                    <img src="~/assets/img/products/p16.jpg" style="width:70px;height:70px; border-radius:10px" />
                 </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Lighting" class="control-label"></label>
-                            <input asp-for="Lighting" class="form-control" />
-                            <span asp-validation-for="Lighting" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="ConnectionPort" class="control-label"></label>
-                            <input asp-for="ConnectionPort" class="form-control" />
-                            <span asp-validation-for="ConnectionPort" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="InterfaceType" class="control-label"></label>
-                            <input asp-for="InterfaceType" class="form-control" />
-                            <span asp-validation-for="InterfaceType" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Microphone" class="control-label"></label>
-                            <input asp-for="Microphone" class="form-control" />
-                            <span asp-validation-for="Microphone" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Input" class="control-label"></label>
-                            <input asp-for="Input" class="form-control" />
-                            <span asp-validation-for="Input" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="OutPut" class="control-label"></label>
-                            <input asp-for="OutPut" class="form-control" />
-                            <span asp-validation-for="OutPut" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="UserType" class="control-label"></label>
-                            <input asp-for="UserType" class="form-control" />
-                            <span asp-validation-for="UserType" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Quality" class="control-label"></label>
-                            <input asp-for="Quality" class="form-control" />
-                            <span asp-validation-for="Quality" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="AntiGhosting" class="control-label"></label>
-                            <input asp-for="AntiGhosting" class="form-control" />
-                            <span asp-validation-for="AntiGhosting" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Sensor" class="control-label"></label>
-                            <input asp-for="Sensor" class="form-control" />
-                            <span asp-validation-for="Sensor" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        
-                    <label asp-for="CategoryId" for="CategoryId">نوع دوره</label>
-                        <select asp-for="CategoryId" class="form-control" id="CategoryId" name="CategoryId" required="">
-                            <option value="1">لوازم</option>
-
-                        </select>
-                        <span asp-validation-for="CategoryId" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <input type="submit" value="افزودن" class="btn btn-info" />
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <a asp-action="Index">بازگشت به پنل مدیریت</a>
-                    </div>
-                </div>
-                </div>
-                </div>
-                <div class="col-md-4" style="width:350px;height:350px">
-                    <img src="~/assets/img/single-product/p23.jpg" style="width:300px;height:300px" />
-                    <br/>
-                    <div class="row">
-                        <div class="col-md-2"></div>
-                    <img src="~/assets/img/single-product/p23.jpg" style="width:50px;height:50px"/>
-                    <img src="~/assets/img/single-product/p23.jpg" style="width:50px;height:50px"/>
-                    <img src="~/assets/img/single-product/p23.jpg" style="width:50px;height:50px"/>
-                    <img src="~/assets/img/single-product/p23.jpg" style="width:50px;height:50px"/>
-                    </div>
-                    <br/>
-                    <div class="row">
-                        <div class="col-md-4"></div>
-                        <button class="btn btn-info">افزودن تصویر</button>
-                    </div>
-                </div>
-    </form>
-
-
+            </div>
+            <div class="text-center" style="margin-top:15px">
+                <button type="button" class="btn btn-success" >افزودن تصاویر</button>
+            </div>
+        </div>
+    </div>
 </div>

@@ -43,6 +43,7 @@ namespace Parnas.Domain.DTOs.Case
 
         [Display(Name = "دسته بندی")]
         public int? CategoryId { get; set; }
+
         [Display(Name = "تصاویر")]
         public List<IFormFile> Images { get; set; }
 
