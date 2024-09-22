@@ -51,7 +51,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -97,9 +97,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateGraphicCard(string id)
+        public IActionResult UpdateGraphicCard(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var graphicCard = _genericService.GetById<AccessoryDetailsDto>(id);
             return View(graphicCard);
@@ -115,11 +115,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteGraphicCard(string id)
+        [HttpGet]
+        public IActionResult DeleteGraphicCard(GraphicCardListDto graphicCardDto)
+        {
+            if (graphicCardDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<GraphicCardListDto>(graphicCardDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteGraphicCard(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "GraphicCard", new { area = "Admin" });
         }
         #endregion
     }

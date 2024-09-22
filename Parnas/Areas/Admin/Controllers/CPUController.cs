@@ -51,7 +51,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -97,9 +97,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateCPU(string id)
+        public IActionResult UpdateCPU(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var cpu = _genericService.GetById<CPUDetailDto>(id);
             return View(cpu);
@@ -115,11 +115,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteCPU(string id)
+        [HttpGet]
+        public IActionResult DeleteCPU(CPUListDto cpuDto)
+        {
+            if (cpuDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<CPUListDto>(cpuDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteCPU(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "CPU", new { area = "Admin" });
         }
         #endregion
     }

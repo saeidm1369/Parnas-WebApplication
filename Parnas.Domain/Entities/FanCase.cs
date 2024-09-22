@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class FanCase : BaseEntity<string> , IHasImage
+    public class FanCase : BaseEntity<int> , IHasImage
     {
         public FanCase()
         {
@@ -23,11 +23,11 @@ namespace Parnas.Domain.Entities
         public bool LightingControllerFanCase { get; set; }
 
         // IHasImage Properties
-        public string ImageName { get; set; }
-        public string ImagePath { get; set; }
+        public string? ImageName { get; set; }
+        public string? ImagePath { get; set; }
 
         #region Relations
-        public string CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     }

@@ -18,19 +18,19 @@ namespace Parnas.DomainService.Services
         public GenericService(IGenericRepository<TEntity> repository, IMapper mapper)
         {
             _repository = repository;
-            _mapper = mapper;
+            _mapper = mapper; 
         }
 
-        public TDto GetById<TDto>(string id) where TDto : class
+        public TDto GetById<TDto>(int id) where TDto : class
         {
             var entity = _repository.GetById(id);
             return _mapper.Map<TDto>(entity);
         }
 
-        public IEnumerable<TDto> GetAll<TDto>() where TDto : class
+        public List<TDto> GetAll<TDto>() where TDto : class
         {
             var entities = _repository.GetAll();
-            return _mapper.Map<IEnumerable<TDto>>(entities);
+            return _mapper.Map<List<TDto>>(entities);
         }
 
         public ServiceException Add<TDto>(TDto dto, List<IFormFile> files) where TDto : class
@@ -69,9 +69,9 @@ namespace Parnas.DomainService.Services
                 type: "Success");
         }
 
-        public ServiceException Update<TDto>(string id, TDto dto, List<IFormFile> files) where TDto : class
+        public ServiceException Update<TDto>(int id, TDto dto, List<IFormFile> files) where TDto : class
         {
-            if (id == null)
+            if (id == 0)
                 return ServiceException.Create(
                 type: "NotFound");
 
@@ -109,9 +109,9 @@ namespace Parnas.DomainService.Services
                 type: "Success");
         }
 
-        public ServiceException Delete(string id)
+        public ServiceException Delete(int id)
         {
-            if (id == null)
+            if (id == 0)
                 return ServiceException.Create(
                 type: "NotFound");
 

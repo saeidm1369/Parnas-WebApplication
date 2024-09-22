@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class MotherBoard : BaseEntity<string> , IHasImage
+    public class MotherBoard : BaseEntity<int> , IHasImage
     {
         public MotherBoard()
         {
@@ -36,11 +36,11 @@ namespace Parnas.Domain.Entities
         public string? BluetoothVersion { get; set; }
 
         // IHasImage Properties
-        public string ImageName { get; set; }
-        public string ImagePath { get; set; }
+        public string? ImageName { get; set; }
+        public string? ImagePath { get; set; }
 
         #region Relations
-        public string CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     }

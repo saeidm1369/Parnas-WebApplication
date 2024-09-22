@@ -23,7 +23,7 @@ namespace Parnas.Infrastructure.Repositories
 
         public GenericRepository(ParnasDbContext dbContext)
         {
-            this._dbContext = dbContext;            
+            this._dbContext = dbContext;
         }
 
         public List<TEntity> GetAll()
@@ -36,7 +36,7 @@ namespace Parnas.Infrastructure.Repositories
             return dbSet.Where(where).FirstOrDefault();
         }
 
-        public TEntity GetById(string id)
+        public TEntity GetById(int id)
         {
             return dbSet.Find(id);
         }
@@ -48,18 +48,18 @@ namespace Parnas.Infrastructure.Repositories
             _dbContext.SaveChanges();
         }
 
-        public void Update(string id, TEntity entity)
+        public void Update(int id, TEntity entity)
         {           
             dbSet.Update(entity);
             _dbContext.SaveChanges();
         }
 
-        public void DeleteById(string id)
+        public void DeleteById(int id)
         {
             var entity = dbSet.Find(id);
             if (entity != null)
             {
-                var prop = typeof(TEntity).GetProperty("IsDeleted");
+                var prop = typeof(TEntity).GetProperty("IsDelete");
                 if (prop != null)
                 {
                     prop.SetValue(entity, true);
@@ -100,7 +100,7 @@ namespace Parnas.Infrastructure.Repositories
             return await dbSet.Where(where).ToListAsync();
         }
 
-        public async Task<TEntity> GetByIdAsync(string id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
             return await dbSet.FindAsync(id);
         }

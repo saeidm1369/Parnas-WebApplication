@@ -39,17 +39,35 @@ namespace Parnas.Domain.DTOs.Ram
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        [Display(Name = "دسته بندی")]
+        public int? CategoryId { get; set; }
+        [Display(Name = "تصاویر ")]
 
         public List<IFormFile> Images { get; set; }
 
         // Ram Entity
+        [Display(Name = "تعداد پین")]
         public string NumberOfPin { get; set; }
+
+        [Display(Name = "خنک‌کننده رم")]
         public string RamCooler { get; set; }
+
+        [Display(Name = "نورپردازی RGB (در رم‌ها)")]
         public string RomeLighting { get; set; }
+
+        [Display(Name = "نوع حافظه رم")]
         public string TypeOfRamMemory { get; set; }
+
+        [Display(Name = "تعداد ماژول‌ها")]
         public string NumberOfModel { get; set; }
+
+        [Display(Name = "حجم هر ماژول")]
         public string VolumeOfEachModules { get; set; }
+
+        [Display(Name = "حجم کل حافظه")]
         public string TotalMemorySize { get; set; }
+
+        [Display(Name = "فرکانس")]
         public string Ferequency { get; set; }
     }
 }

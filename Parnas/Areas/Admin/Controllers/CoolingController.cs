@@ -51,7 +51,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -97,9 +97,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateMonitor(string id)
+        public IActionResult UpdateMonitor(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var monitor = _genericService.GetById<CoolingDetailDto>(id);
             return View(monitor);
@@ -115,11 +115,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteMonitor(string id)
+        [HttpGet]
+        public IActionResult DeleteCooling(CoolingListDto coolingDto)
+        {
+            if (coolingDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<CoolingListDto>(coolingDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteCooling(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Cooling", new { area = "Admin" });
         }
         #endregion
     }

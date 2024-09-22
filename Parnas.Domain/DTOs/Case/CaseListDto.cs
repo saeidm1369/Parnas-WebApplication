@@ -9,6 +9,7 @@ namespace Parnas.Domain.DTOs.Case
 {
     public class CaseListDto
     {
+        public int Id { get; set; }
         // Base Entity
         [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]

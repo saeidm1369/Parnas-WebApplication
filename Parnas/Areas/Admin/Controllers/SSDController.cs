@@ -50,7 +50,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -96,9 +96,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateSSD(string id)
+        public IActionResult UpdateSSD(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var ssd = _genericService.GetById<SSDDetailDto>(id);
             return View(ssd);
@@ -114,11 +114,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteSSD(string id)
+        [HttpGet]
+        public IActionResult DeleteSSD(SSDListDto ssdDto)
+        {
+            if (ssdDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<SSDListDto>(ssdDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteSSD(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "SSD", new { area = "Admin" });
         }
         #endregion
     }

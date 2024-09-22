@@ -11,7 +11,7 @@ namespace Parnas.Domain.DTOs.Accessories
     public class AccessoryDetailsDto
     {
         // Base Entity
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
@@ -37,21 +37,47 @@ namespace Parnas.Domain.DTOs.Accessories
 
         [Display(Name = "وزن")]
         public string? Weight { get; set; }
+        
+        [Display(Name = "تعداد")]
+        public int Count { get; set; }
+        
+        [Display(Name = "تاریخ افزودن محصول")]
+        public DateTime CreateDate { get; set; }
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
-        public List<IFormFile> Images { get; set; }
+        [Display(Name = "تصاویر")]
+        public List<string> Images { get; set; }
 
         // Accessories Entity
+        [Display(Name = "روشنایی")]
         public string? Lighting { get; set; }
+
+        [Display(Name = "پورت اتصال")]
         public string? ConnectionPort { get; set; }
+
+        [Display(Name = "نوع واسط")]
         public string? InterfaceType { get; set; }
+
+        [Display(Name = "میکروفن")]
         public string? Microphone { get; set; }
+
+        [Display(Name = "ورودی")]
         public string? Input { get; set; }
+
+        [Display(Name = "خزوجی")]
         public string? OutPut { get; set; }
+
+        [Display(Name = "نوع کاربری")]
         public string? UserType { get; set; }
+
+        [Display(Name = "کیفیت")]
         public string? Quality { get; set; }
+
+        [Display(Name = "آنتی گوسینگ")]
         public bool? AntiGhosting { get; set; }
+
+        [Display(Name = "سنسور")]
         public string? Sensor { get; set; }
     }
 }

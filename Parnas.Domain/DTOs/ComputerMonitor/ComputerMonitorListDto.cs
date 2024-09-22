@@ -9,6 +9,7 @@ namespace Parnas.Domain.DTOs.ComputerMonitor
 {
     public class ComputerMonitorListDto
     {
+        public int Id { get; set; }
         // Base Entity
         [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]

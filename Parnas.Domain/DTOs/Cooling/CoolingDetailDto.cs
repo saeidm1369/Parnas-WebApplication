@@ -11,7 +11,7 @@ namespace Parnas.Domain.DTOs.Cooling
     public class CoolingDetailDto
     {
         // Base Entity
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
@@ -40,22 +40,37 @@ namespace Parnas.Domain.DTOs.Cooling
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
-        public List<IFormFile> Images { get; set; }
+        [Display(Name = "تصاویر")]
+        public List<string> Images { get; set; }
 
         // Cooling Entity
+        [Display(Name = "پشتیبانی از سوکت اینتل")]
         public string IntelSocketSupport { get; set; }
+        [Display(Name = "پشتیبانی از سوکت AMD")]
         public string AMDSocketSupport { get; set; }
+        [Display(Name = "نوع بلوک پردازنده")]
         public string TypeOfProccesorBlock { get; set; }
+        [Display(Name = "نورپردازی بلوک")]
         public string BlockLighting { get; set; }
+        [Display(Name = "اتصال فن")]
         public string FanConnection { get; set; }
+        [Display(Name = "تعداد فن‌های خنک ‌کننده")]
         public string NumberOfCoolingFans { get; set; }
+        [Display(Name = " نوع فن خنک ‌کننده")]
         public string TypeOfCoolingFan { get; set; }
+        [Display(Name = "سرعت چرخش فن خنک‌ کننده")]
         public string CoolingFanRotationSpeed { get; set; }
+        [Display(Name = " نورپردازی فن")]
         public string FanLighting { get; set; }
+        [Display(Name = "سرعت چرخش پمپ")]
         public string PumpRotationSpeed { get; set; }
+        [Display(Name = " حداکثر جریان هوا")]
         public string MaximumAirFlow { get; set; }
+        [Display(Name = "جنس رادیاتور")]
         public string RadiatorMaterial { get; set; }
+        [Display(Name = "ابعاد رادیاتور")]
         public string RadiatorDimensions { get; set; }
+        [Display(Name = "طول لوله خنک ‌کننده")]
         public string CoolingPipeLenght { get; set; }
     }
 }

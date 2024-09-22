@@ -9,6 +9,7 @@ namespace Parnas.Domain.DTOs.Accessories
 {
     public class AccessoryListDto
     {
+        public int Id { get; set; }
         // Base Entity
         [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]

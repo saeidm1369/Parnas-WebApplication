@@ -11,11 +11,11 @@ namespace Parnas.Domain.MainInterface
     {
         List<TEntity> GetAll();
         TEntity Get(Expression<Func<TEntity, bool>> where);
-        TEntity GetById(string id);
+        TEntity GetById(int id);
 
         void Create(TEntity entity);
-        void Update(string id, TEntity entity);
-        void DeleteById(string id);
+        void Update(int id, TEntity entity);
+        void DeleteById(int id);
         void Delete(TEntity entity);
         void RemoveRange(List<TEntity> entities);
 
@@ -23,7 +23,7 @@ namespace Parnas.Domain.MainInterface
         Task<IQueryable<TEntity>> GetAllAsyncQuery();
         Task<List<TEntity>> GetListAsync(Expression<Func<TEntity, bool>> where);
         Task<TEntity> GetAsync(Expression<Func<TEntity, bool>> where);
-        Task<TEntity> GetByIdAsync(string id);
+        Task<TEntity> GetByIdAsync(int id);
         Task CreateAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
     }

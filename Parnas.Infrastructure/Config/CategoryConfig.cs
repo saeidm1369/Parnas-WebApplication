@@ -11,8 +11,11 @@ namespace Parnas.Infrastructure.Config
     {
         public void Configure(EntityTypeBuilder<Category> builder)
         {
+            builder.HasKey(x => x.Id);
             builder.Property(c => c.ParentId).IsRequired(false);
-            builder.HasMany(c => c.SubCategories).WithOne(c => c.ParentCategory).HasForeignKey(c => c.ParentId);
+
+            builder.HasMany(c => c.SubCategories).WithOne(c => c.ParentCategory)
+                .HasForeignKey(c => c.ParentId);
         }
     }
 }

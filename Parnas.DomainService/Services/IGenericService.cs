@@ -10,10 +10,11 @@ namespace Parnas.DomainService.Services
 {
     public interface IGenericService<TEntity> where TEntity : class
     {
-        TDto GetById<TDto>(string id) where TDto : class;
-        IEnumerable<TDto> GetAll<TDto>() where TDto : class;
+        TDto GetById<TDto>(int id) where TDto : class;
+        List<TDto> GetAll<TDto>() where TDto : class;
         ServiceException Add<TDto>(TDto dto, List<IFormFile> files) where TDto : class;
-        ServiceException Update<TDto>(string id, TDto dto, List<IFormFile> files) where TDto : class;
-        ServiceException Delete(string id);
+        ServiceException Update<TDto>(int id, TDto dto, List<IFormFile> files) where TDto : class;
+        ServiceException Delete(int id);
+
     }
 }

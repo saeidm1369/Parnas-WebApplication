@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class SSD : BaseEntity<string> , IHasImage
+    public class SSD : BaseEntity<int> , IHasImage
     {
         public SSD()
         {
@@ -22,11 +22,11 @@ namespace Parnas.Domain.Entities
         public string? Longevity { get; set; }
 
         // IHasImage Properties
-        public string ImageName { get; set; }
-        public string ImagePath { get; set; }
+        public string? ImageName { get; set; }
+        public string? ImagePath { get; set; }
 
         #region Relations
-        public string CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public Category Category { get; set; }
         #endregion
     }

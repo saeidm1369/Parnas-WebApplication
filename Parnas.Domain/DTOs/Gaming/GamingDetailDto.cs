@@ -11,7 +11,7 @@ namespace Parnas.Domain.DTOs.Gaming
     public class GamingDetailDto
     {
         // Base Entity
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
@@ -40,16 +40,25 @@ namespace Parnas.Domain.DTOs.Gaming
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
-        public List<IFormFile> Images { get; set; }
+        [Display(Name = "تصاویر")]
+        public List<string> Images { get; set; }
 
         // Gaming Entity
+        [Display(Name = "پردازنده ")]
         public string CPU { get; set; }
+        [Display(Name = "مادربرد")]
         public string MotherBoard { get; set; }
+        [Display(Name = "کارت گرافیک")]
         public string Graphic { get; set; }
+        [Display(Name = " حافظه رم")]
         public string Ram { get; set; }
+        [Display(Name = "هارد دیسک")]
         public string Hdd { get; set; }
+        [Display(Name = "خنک‌ کننده ")]
         public string DeepCool { get; set; }
+        [Display(Name = "منبع تغذیه")]
         public string Power { get; set; }
+        [Display(Name = "کیس")]
         public string Case { get; set; }
     }
 }

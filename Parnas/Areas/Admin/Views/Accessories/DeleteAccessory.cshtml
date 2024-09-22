@@ -1,0 +1,48 @@
+﻿@model Parnas.Domain.DTOs.Accessories.AccessoryListDto
+
+@{
+    ViewData["Title"] = "حذف لوازم جانبی";
+}
+
+<h2>حذف لوازم جانبی</h2>
+
+<h3>آیا از حذف این محصول مطمئن هستید؟</h3>
+
+
+
+
+
+        <input asp-for="@Model.Id" type="hidden"/>
+        <div class="row">
+            <div class="col-md-4">
+     
+            @Html.DisplayNameFor(model => model.Title)
+       
+            @Html.DisplayFor(model => model.Title)
+        
+            </div>
+
+            <div class="col-md-4">
+        
+            @Html.DisplayNameFor(model => model.Brand)
+        
+            @Html.DisplayFor(model => model.Brand)
+       
+        </div>
+            <div class="col-md-4">
+       
+            @Html.DisplayNameFor(model => model.Price)
+       
+            @Html.DisplayFor(model => model.Price)
+        
+            </div>
+       </div>
+       <div class="row">
+
+    <form asp-action="DeleteAccessory">
+        <input type="submit" value="حذف" class="btn btn-default" /> |
+        <a asp-action="Index">بازگشت به  لیست محصولات</a>
+    </form>
+
+
+</div>

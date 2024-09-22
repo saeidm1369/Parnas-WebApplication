@@ -5,13 +5,14 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Category : BaseEntity<string>
+    public class Category
     {
         public Category()
         {
-
         }
-        public string? ParentId { get; set; }
+        public int Id { get; set; }
+        public int? ParentId { get; set; }
+        public string Title { get; set; }
         public Category ParentCategory { get; set; }
 
         public ICollection<Category>? SubCategories { get; set; }

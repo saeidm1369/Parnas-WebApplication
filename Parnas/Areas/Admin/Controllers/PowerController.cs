@@ -51,7 +51,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -97,9 +97,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdatePower(string id)
+        public IActionResult UpdatePower(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var power = _genericService.GetById<PowerDetailDto>(id);
             return View(power);
@@ -115,11 +115,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeletePower(string id)
+        [HttpGet]
+        public IActionResult DeletePower(PowerListDto powerDto)
+        {
+            if (powerDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<PowerListDto>(powerDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeletePower(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Power", new { area = "Admin" });
         }
         #endregion
     }

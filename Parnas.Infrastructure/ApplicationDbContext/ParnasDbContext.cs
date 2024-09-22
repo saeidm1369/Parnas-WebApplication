@@ -18,6 +18,7 @@ namespace Parnas.Infrastructure.ApplicationDbContext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new CategoryConfig());
+            modelBuilder.ApplyConfiguration(new AccessoryConfig());
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Category> Categories { get; set; }

@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace Parnas.Base
 {
     public class BaseEntity<TKey>
     {
+        public BaseEntity()
+        {
+            
+        }
+        [Key]
         public TKey Id { get; set; }
         public string Title { get; set; }
         public string? Description { get; set; }
@@ -16,5 +22,7 @@ namespace Parnas.Base
         public string? Weight { get; set; }
         public string? Type { get; set; }
         public bool IsDelete { get; set; } = false;
+        public int Count { get; set; }
+        public DateTime CreateDate { get; set; } = DateTime.Now; 
     }
 }

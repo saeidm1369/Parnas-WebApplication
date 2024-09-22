@@ -50,7 +50,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -92,13 +92,13 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<AccessoryAddDto>(accessoryAddDto, accessoryAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Accessories", new { area = "Admin" });
         }
 
         [HttpGet]
-        public IActionResult UpdateAccessory(string id)
+        public IActionResult UpdateAccessory(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var accessory = _genericService.GetById<AccessoryDetailsDto>(id);
             return View(accessory);
@@ -114,11 +114,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteAccessory(string id)
+        [HttpGet]
+        public IActionResult DeleteAccessory(AccessoryListDto accessory)
+        {
+            if (accessory.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<AccessoryListDto>(accessory.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteAccessory(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Accessories", new {area="Admin"});
         }
         #endregion
     }

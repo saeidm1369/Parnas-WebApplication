@@ -10,6 +10,8 @@ namespace Parnas.Domain.DTOs.FanCase
     public class FanCaseListDto
     {
         // Base Entity
+        public int Id { get; set; }
+
         [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
         public string Title { get; set; }

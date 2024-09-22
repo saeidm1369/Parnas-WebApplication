@@ -50,7 +50,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -96,9 +96,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateMotherBoard(string id)
+        public IActionResult UpdateMotherBoard(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var motherBoard = _genericService.GetById<MotherBoardDetailDto>(id);
             return View(motherBoard);
@@ -114,11 +114,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteMotherBoard(string id)
+        [HttpGet]
+        public IActionResult DeleteMotherBoard(MotherBoardListDto motherBoardDto)
+        {
+            if (motherBoardDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<MotherBoardListDto>(motherBoardDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteMotherBoard(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "MotherBoard", new { area = "Admin" });
         }
         #endregion
     }

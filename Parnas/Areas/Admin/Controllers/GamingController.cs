@@ -51,7 +51,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -97,9 +97,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateGaming(string id)
+        public IActionResult UpdateGaming(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var gaming = _genericService.GetById<GamingDetailDto>(id);
             return View(gaming);
@@ -115,11 +115,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteGaming(string id)
+        [HttpGet]
+        public IActionResult DeleteGaming(GamingListDto gamingDto)
+        {
+            if (gamingDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<GamingListDto>(gamingDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteGaming(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Gaming", new { area = "Admin" });
         }
         #endregion
     }

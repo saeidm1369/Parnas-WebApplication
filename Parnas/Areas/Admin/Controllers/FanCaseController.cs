@@ -51,7 +51,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -97,9 +97,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateFanCase(string id)
+        public IActionResult UpdateFanCase(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var fancase = _genericService.GetById<FanCaseDetailDto>(id);
             return View(fancase);
@@ -115,11 +115,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteFanCase(string id)
+        [HttpGet]
+        public IActionResult DeleteFanCase(FanCaseListDto fanCaseDto)
+        {
+            if (fanCaseDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<FanCaseListDto>(fanCaseDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteFanCase(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "FanCase", new { area = "Admin" });
         }
         #endregion
     }

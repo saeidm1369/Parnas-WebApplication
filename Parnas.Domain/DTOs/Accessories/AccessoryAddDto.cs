@@ -39,19 +39,41 @@ namespace Parnas.Domain.DTOs.Accessories
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        [Display(Name = "دسته بندی")]
+        public int? CategoryId { get; set; }
 
+        [Display(Name = "تصاویر")]
         public List<IFormFile> Images { get; set; }
 
         // Accessories Entity
+        [Display(Name = "روشنایی")]
         public string? Lighting { get; set; }
+
+        [Display(Name = "پورت اتصال")]
         public string? ConnectionPort { get; set; }
+
+        [Display(Name = "نوع واسط")]
         public string? InterfaceType { get; set; }
+        
+        [Display(Name = "میکروفن")]
         public string? Microphone { get; set; }
+
+        [Display(Name = "ورودی")]
         public string? Input { get; set; }
+        
+        [Display(Name = "خزوجی")]
         public string? OutPut { get; set; }
+
+        [Display(Name = "نوع کاربری")]
         public string? UserType { get; set; }
+
+        [Display(Name = "کیفیت")]
         public string? Quality { get; set; }
+
+        [Display(Name = "آنتی گوسینگ")]
         public bool? AntiGhosting { get; set; }
+
+        [Display(Name = "سنسور")]
         public string? Sensor { get; set; }
     }
 }

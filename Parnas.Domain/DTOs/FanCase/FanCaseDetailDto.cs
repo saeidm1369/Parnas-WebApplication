@@ -11,7 +11,7 @@ namespace Parnas.Domain.DTOs.FanCase
     public class FanCaseDetailDto
     {
         // Base Entity
-        public string Id { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "عنوان")]
         [Required(ErrorMessage = "لطفا {0} را وارد کنید")]
@@ -40,17 +40,27 @@ namespace Parnas.Domain.DTOs.FanCase
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
-        public List<IFormFile> Images { get; set; }
+        [Display(Name = "تصاویر")]
+        public List<string> Images { get; set; }
 
         // FanCase Entity
+        [Display(Name = "نوع فن کیس")]
         public string FanCaseType { get; set; }
+        [Display(Name = "نوع کاربرد فن کیس")]
         public string FanCaseUsageType { get; set; }
+        [Display(Name = "کنترل‌کننده فن کیس")]
         public bool FanCaseController { get; set; }
+        [Display(Name = " کنترل‌کننده سرعت فن کیس")]
         public bool CaseFanSpeedController { get; set; }
+        [Display(Name = " سطح صدای فن کیس")]
         public string CaseFanNoiseLevel { get; set; }
+        [Display(Name = "سرعت چرخش فن کیس")]
         public string RatiotionSpeedOfTheCaseFan { get; set; }
+        [Display(Name = "نورپردازی فن کیس")]
         public string FanCaseLighting { get; set; }
+        [Display(Name = "حداکثر جریان هوا در کیس")]
         public string MaximumCaseAirFlow { get; set; }
+        [Display(Name = " کنترل‌کننده نورپردازی فن کیس")]
         public bool FanCaseLightingController { get; set; }
     }
 }

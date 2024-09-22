@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Parnas.Domain.MainInterface;
+using Parnas.DomainService.MapSetting;
 using Parnas.DomainService.Services;
 using Parnas.Infrastructure.ApplicationDbContext;
 using Parnas.Infrastructure.Repositories;
@@ -11,6 +12,10 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 builder.Services.AddScoped(typeof(IGenericService<>), typeof(GenericService<>));
+
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 builder.Services.AddDbContext<ParnasDbContext>(option =>
     option.UseSqlServer("name=ConnectionStrings:DefaultConnection"));

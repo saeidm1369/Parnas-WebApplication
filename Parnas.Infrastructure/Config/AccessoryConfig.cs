@@ -15,6 +15,11 @@ namespace Parnas.Infrastructure.Config
         {
             builder.HasOne(x => x.Category).WithMany(x => x.Accessories)
                 .HasForeignKey(x => x.CategoryId).OnDelete(DeleteBehavior.Restrict);
+
+            builder.HasKey(x => x.Id);
+
+            builder.HasQueryFilter(x => !x.IsDelete);
+            builder.Property(x => x.IsDelete).HasDefaultValue(false);
         }
     }
 }

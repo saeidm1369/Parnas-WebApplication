@@ -51,7 +51,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Detail(string id)
+        public IActionResult Detail(int id)
         {
             try
             {
@@ -97,9 +97,9 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateRam(string id)
+        public IActionResult UpdateRam(int id)
         {
-            if (id == null)
+            if (id == 0)
                 ViewData["Message"] = "Null";
             var ram = _genericService.GetById<RamDetailDto>(id);
             return View(ram);
@@ -115,11 +115,21 @@ namespace Parnas.Areas.Admin.Controllers
             return View();
         }
 
-        public IActionResult DeleteRam(string id)
+        [HttpGet]
+        public IActionResult DeleteRam(RamListDto ramDto)
+        {
+            if (ramDto.Id == 0)
+                ViewData["Message"] = "Null";
+            var result = _genericService.GetById<RamListDto>(ramDto.Id);
+            return View(result);
+        }
+
+        [HttpPost]
+        public IActionResult DeleteRam(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Ram", new { area = "Admin" });
         }
         #endregion
     }

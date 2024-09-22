@@ -39,13 +39,25 @@ namespace Parnas.Domain.DTOs.HDD
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        [Display(Name = "دسته بندی")]
+        public int? CategoryId { get; set; }
+        [Display(Name = "تصاویر")]
         public List<IFormFile> Images { get; set; }
 
         // HDD Entity
+        [Display(Name = "ظرفیت")]
         public string Capacity { get; set; }
+
+        [Display(Name = "ظاهر هارد دیسک")]
         public string TheAppearanceOfTheHardDrive { get; set; }
+
+        [Display(Name = "پورت هارد دیسک")]
         public string HardDrivePort { get; set; }
+
+        [Display(Name = "سرعت چرخش")]
         public string RotationSpeed { get; set; }
+
+        [Display(Name = "حافظه کش هارد دیسک")]
         public string HardDiskCachMemory { get; set; }
     }
 }

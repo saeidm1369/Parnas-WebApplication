@@ -39,17 +39,35 @@ namespace Parnas.Domain.DTOs.SSD
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        [Display(Name = "دسته بندی")]
+        public int? CategoryId { get; set; }
+        [Display(Name = "تصاویر ")]
 
         public List<IFormFile> Images { get; set; }
 
         // SSD Entity
-        public string SSDAppearance { get; set; }
-        public string Capacity { get; set; }
-        public string SSDInterface { get; set; }
-        public string SSDMemoryTechnology { get; set; }
-        public string SSDPort { get; set; }
-        public string ReadingSpeed { get; set; }
-        public string WritingSpeed { get; set; }
-        public string Longevity { get; set; }
+        [Display(Name = "ظاهر SSD")]
+        public string? SSDAppearance { get; set; }
+
+        [Display(Name = "ظرفیت")]
+        public string? Capacity { get; set; }
+
+        [Display(Name = "رابط SSD")]
+        public string? SSDInterface { get; set; }
+
+        [Display(Name = "فناوری حافظه SSD")]
+        public string? SSDMemoryTechnology { get; set; }
+
+        [Display(Name = "پورت SSD")]
+        public string? SSDPort { get; set; }
+
+        [Display(Name = "سرعت خواندن")]
+        public string? ReadingSpeed { get; set; }
+
+        [Display(Name = "سرعت نوشتن")]
+        public string? WritingSpeed { get; set; }
+
+        [Display(Name = "طول عمر")]
+        public string? Longevity { get; set; }
     }
 }
