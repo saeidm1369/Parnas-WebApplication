@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Parnas.Domain.DTOs.Accessories.AccessoryAddDto
+@{
     ViewData["Title"] = "افزودن لوازم جانبی";
 }
 <h2 style="margin:10px 40px 15px 0">افزودن لوازم جانبی</h2>
@@ -10,98 +11,49 @@
                 <div class="col-md-6">
                     <div class="box-header with-border">
                         <h3 class="box-title">اجزای کلی</h3>
-                    </div>
+                    </div>                    
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form role="form">
+                        <form asp-action="AddAccessory">
                             <!-- text input -->
                             <div class="form-group">
-                                <label>نوشته</label>
-                                <input type="text" class="form-control" placeholder="متن">
+                                <label>Title</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
                             <div class="form-group">
-                                <label>غیر فعال</label>
-                                <input type="text" class="form-control" placeholder="متن" disabled="">
-                            </div>
-
-                            <!-- textarea -->
+                                <label>Brand</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>                           
                             <div class="form-group">
-                                <label>متن</label>
-                                <textarea class="form-control" rows="3" placeholder="متن"></textarea>
+                                <label>Price</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
                             <div class="form-group">
-                                <label>متنی غیرفعال</label>
-                                <textarea class="form-control" rows="3" placeholder="متن" disabled=""></textarea>
+                                <label>Color</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
-
-                            <!-- input states -->
-                            <div class="form-group has-success">
-                                <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> مقدار درست</label>
-                                <input type="text" class="form-control" id="inputSuccess" placeholder="متن">
-                                <span class="help-block">راهنمای ورودی</span>
-                            </div>
-                            <div class="form-group has-warning">
-                                <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> مقدار اشتباه</label>
-                                <input type="text" class="form-control" id="inputWarning" placeholder="متن">
-                                <span class="help-block">راهنمای ورودی</span>
-                            </div>
-                            <div class="form-group has-error">
-                                <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> مقدار درست نیست</label>
-                                <input type="text" class="form-control" id="inputError" placeholder="متن">
-                                <span class="help-block">راهنمای ورودی</span>
-                            </div>
-
-                            <!-- checkbox -->
                             <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">
-                                        چک باکس 1
-                                    </label>
-                                </div>
-
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">
-                                        چک باکس 2
-                                    </label>
-                                </div>
-
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" disabled="">
-                                        چک باکس غیرفعال
-                                    </label>
-                                </div>
+                                <label>Dimensions</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
-
-                            <!-- radio -->
                             <div class="form-group">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                                        رادیو گزینه ۱
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                        رادیو گزینه ۲
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
-                                        رادیو گزینه غیرفعال
-                                    </label>
-                                </div>
+                                <label>Weight</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
-
+                            <div class="form-group">
+                                <label>Count</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label>CreateDate</label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>                                                     
+                            
                             <!-- select -->
                             <div class="form-group">
-                                <label>انتخاب کنید</label>
+                                <label>انتخاب دسته بندی</label>
                                 <select class="form-control">
-                                    <option>گزینه 1</option>
+                                    <option> لوازم جانبی</option>
                                     <option>گزینه 2</option>
                                     <option>گزینه 3</option>
                                     <option>گزینه 4</option>
@@ -109,37 +61,14 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label>غیرفعال</label>
-                                <select class="form-control" disabled="">
-                                    <option>گزینه 1</option>
-                                    <option>گزینه 2</option>
-                                    <option>گزینه 3</option>
-                                    <option>گزینه 4</option>
-                                    <option>گزینه 5</option>
+                                <label> AntiGhosting </label>
+                                <select class="form-control">
+                                    <option> دارد</option>
+                                    <option>ندارد </option>                                    
                                 </select>
                             </div>
 
-                            <!-- Select multiple-->
-                            <div class="form-group">
-                                <label>چند انتخابی</label>
-                                <select multiple="" class="form-control">
-                                    <option>گزینه 1</option>
-                                    <option>گزینه 2</option>
-                                    <option>گزینه 3</option>
-                                    <option>گزینه 4</option>
-                                    <option>گزینه 5</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>غیرفعال</label>
-                                <select multiple="" class="form-control" disabled="">
-                                    <option>گزینه 1</option>
-                                    <option>گزینه 2</option>
-                                    <option>گزینه 3</option>
-                                    <option>گزینه 4</option>
-                                    <option>گزینه 5</option>
-                                </select>
-                            </div>
+
 
                         </form>
                     </div>
@@ -147,97 +76,51 @@
                 </div>
                 <div class="col-md-6">
                     <div class="box-header with-border">
-                        <h3 class="box-title">اجزای کلی</h3>
+                        <h3 class="box-title"> </h3>
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
                         <form role="form">
                             <!-- text input -->
                             <div class="form-group">
-                                <label>نوشته</label>
-                                <input type="text" class="form-control" placeholder="متن">
+                                <label>Lighting</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
                             <div class="form-group">
-                                <label>غیر فعال</label>
-                                <input type="text" class="form-control" placeholder="متن" disabled="">
-                            </div>
-
-                            <!-- textarea -->
-                            <div class="form-group">
-                                <label>متن</label>
-                                <textarea class="form-control" rows="3" placeholder="متن"></textarea>
+                                <label>ConnectionPort</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
                             <div class="form-group">
-                                <label>متنی غیرفعال</label>
-                                <textarea class="form-control" rows="3" placeholder="متن" disabled=""></textarea>
+                                <label>InterfaceType </label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
-
-                            <!-- input states -->
-                            <div class="form-group has-success">
-                                <label class="control-label" for="inputSuccess"><i class="fa fa-check"></i> مقدار درست</label>
-                                <input type="text" class="form-control" id="inputSuccess" placeholder="متن">
-                                <span class="help-block">راهنمای ورودی</span>
-                            </div>
-                            <div class="form-group has-warning">
-                                <label class="control-label" for="inputWarning"><i class="fa fa-bell-o"></i> مقدار اشتباه</label>
-                                <input type="text" class="form-control" id="inputWarning" placeholder="متن">
-                                <span class="help-block">راهنمای ورودی</span>
-                            </div>
-                            <div class="form-group has-error">
-                                <label class="control-label" for="inputError"><i class="fa fa-times-circle-o"></i> مقدار درست نیست</label>
-                                <input type="text" class="form-control" id="inputError" placeholder="متن">
-                                <span class="help-block">راهنمای ورودی</span>
-                            </div>
-
-                            <!-- checkbox -->
                             <div class="form-group">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">
-                                        چک باکس 1
-                                    </label>
-                                </div>
-
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox">
-                                        چک باکس 2
-                                    </label>
-                                </div>
-
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" disabled="">
-                                        چک باکس غیرفعال
-                                    </label>
-                                </div>
+                                <label>Microphone</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
-
-                            <!-- radio -->
                             <div class="form-group">
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
-                                        رادیو گزینه ۱
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                                        رادیو گزینه ۲
-                                    </label>
-                                </div>
-                                <div class="radio">
-                                    <label>
-                                        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled="">
-                                        رادیو گزینه غیرفعال
-                                    </label>
-                                </div>
+                                <label>Input </label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div><div class="form-group">
+                                <label>OutPut</label>
+                                <input type="text" class="form-control" placeholder="">
                             </div>
-
+                            <div class="form-group">
+                                <label>UserType </label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>                          
+                            <div class="form-group">
+                                <label>Quality </label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>
+                            <div class="form-group">
+                                <label>Sensor </label>
+                                <input type="text" class="form-control" placeholder="">
+                            </div>                           
+                            
                             <!-- select -->
                             <div class="form-group">
-                                <label>انتخاب کنید</label>
+                                <label> نوع</label>
                                 <select class="form-control">
                                     <option>گزینه 1</option>
                                     <option>گزینه 2</option>
@@ -246,39 +129,7 @@
                                     <option>گزینه 5</option>
                                 </select>
                             </div>
-                            <div class="form-group">
-                                <label>غیرفعال</label>
-                                <select class="form-control" disabled="">
-                                    <option>گزینه 1</option>
-                                    <option>گزینه 2</option>
-                                    <option>گزینه 3</option>
-                                    <option>گزینه 4</option>
-                                    <option>گزینه 5</option>
-                                </select>
-                            </div>
-
-                            <!-- Select multiple-->
-                            <div class="form-group">
-                                <label>چند انتخابی</label>
-                                <select multiple="" class="form-control">
-                                    <option>گزینه 1</option>
-                                    <option>گزینه 2</option>
-                                    <option>گزینه 3</option>
-                                    <option>گزینه 4</option>
-                                    <option>گزینه 5</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label>غیرفعال</label>
-                                <select multiple="" class="form-control" disabled="">
-                                    <option>گزینه 1</option>
-                                    <option>گزینه 2</option>
-                                    <option>گزینه 3</option>
-                                    <option>گزینه 4</option>
-                                    <option>گزینه 5</option>
-                                </select>
-                            </div>
-
+                            
                         </form>
                     </div>
                     <!-- /.box-body -->
