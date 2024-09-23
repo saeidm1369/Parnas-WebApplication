@@ -6,6 +6,7 @@
 
 <div class="box box-warning container">
     <div class="row">
+            <form asp-area="Admin" asp-controller="Accessories" asp-action="AddAccessory" method="post" enctype="multipart/form-data">
         <div class="col-md-7">
             <div class="row">
                 <div class="col-md-6">
@@ -14,63 +15,58 @@
                     </div>                    
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form asp-action="AddAccessory">
                             <!-- text input -->
                             <div class="form-group">
-                                <label>Title</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Title">عنوان</label>
+                                <input asp-for="Title" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Title" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Brand</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Brand">برند</label>
+                                <input asp-for="Brand" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Brand" class="text-danger"></span>
                             </div>                           
                             <div class="form-group">
-                                <label>Price</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Price">قیمت</label>
+                                <input asp-for="Price" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Price" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Color</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Color">رنگ</label>
+                                <input asp-for="Color" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Color" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Dimensions</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Dimensions">ابعاد</label>
+                                <input asp-for="Dimensions" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Dimensions" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Weight</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Weight">وزن</label>
+                                <input asp-for="Weight" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Weight" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Count</label>
-                                <input type="text" class="form-control" placeholder="">
-                            </div>
-                            <div class="form-group">
-                                <label>CreateDate</label>
-                                <input type="text" class="form-control" placeholder="">
-                            </div>                                                     
-                            
+                                <label asp-for="Count">تعداد</label>
+                                <input asp-for="Count" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Count" class="text-danger"></span>
+                            </div>                           
                             <!-- select -->
                             <div class="form-group">
-                                <label>انتخاب دسته بندی</label>
-                                <select class="form-control">
-                                    <option> لوازم جانبی</option>
-                                    <option>گزینه 2</option>
-                                    <option>گزینه 3</option>
-                                    <option>گزینه 4</option>
-                                    <option>گزینه 5</option>
+                                <label asp-for="CategoryId" for="CategoryId">انتخاب دسته بندی</label>
+                                <select asp-for="CategoryId" name="CategoryId" class="form-control">
+                                    <option value="1"> لوازم جانبی</option>
+                                    <option value="2">سیستم های آماده</option>
+                                    <option value ="3">قطعات کامپیوتر</option>
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label> AntiGhosting </label>
-                                <select class="form-control">
-                                    <option> دارد</option>
-                                    <option>ندارد </option>                                    
+                                <label asp-for="AntiGhosting" for="AntiGhosting"> آنتی گوستینگ </label>
+                                <select asp-for="AntiGhosting" name="AntiGhosting" class="form-control">
+                                    <option value="True"> دارد</option>
+                                    <option value="False">ندارد </option>
                                 </select>
                             </div>
-
-
-
-                        </form>
                     </div>
                     <!-- /.box-body -->
                 </div>
@@ -80,77 +76,134 @@
                     </div>
                     <!-- /.box-header -->
                     <div class="box-body">
-                        <form role="form">
                             <!-- text input -->
                             <div class="form-group">
-                                <label>Lighting</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Lighting">روشنایی</label>
+                                <input asp-for="Lighting" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Lighting" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>ConnectionPort</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="ConnectionPort">پورت اتصال</label>
+                                <input asp-for="ConnectionPort" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="ConnectionPort" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>InterfaceType </label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="InterfaceType">نوع واسط </label>
+                                <input asp-for="InterfaceType" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="InterfaceType" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Microphone</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Microphone">میکروفن</label>
+                                <input asp-for="Microphone" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Microphone" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Input </label>
-                                <input type="text" class="form-control" placeholder="">
-                            </div><div class="form-group">
-                                <label>OutPut</label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Input">ورودی </label>
+                                <input asp-for="Input" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Input" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>UserType </label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="OutPut">خروجی</label>
+                                <input asp-for="OutPut" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="OutPut" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="UserType">نوع کاربری </label>
+                                <input asp-for="UserType" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="UserType" class="text-danger"></span>
                             </div>                          
                             <div class="form-group">
-                                <label>Quality </label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Quality">کیفیت </label>
+                                <input asp-for="Quality" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Quality" class="text-danger"></span>
                             </div>
                             <div class="form-group">
-                                <label>Sensor </label>
-                                <input type="text" class="form-control" placeholder="">
+                                <label asp-for="Sensor" for="Sensor">سنسور </label>
+                                <input asp-for="Sensor" type="text" id="Sensor" name="Sensor" class="form-control" placeholder="">
+                                <span asp-validation-for="Sensor" class="text-danger"></span>
                             </div>                           
                             
                             <!-- select -->
                             <div class="form-group">
-                                <label> نوع</label>
-                                <select class="form-control">
-                                    <option>گزینه 1</option>
-                                    <option>گزینه 2</option>
-                                    <option>گزینه 3</option>
-                                    <option>گزینه 4</option>
-                                    <option>گزینه 5</option>
-                                </select>
+                                <label asp-for="Type">نوع </label>
+                                <input asp-for="Type" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Type" class="text-danger"></span>
                             </div>
-                            
-                        </form>
                     </div>
                     <!-- /.box-body -->
                 </div>
             </div>
+           
+        
         </div>
-        <div class="col-md-5">
-            <div class="container">
-                <div style="margin-top: 15px">
-                    <img src="~/assets/img/products/p16.jpg" style="width:350px;height:350px; border-radius:10px" />
+            <div class="col-md-5">
+                <div class="container">
+                    <div class="form-group">
+                        <label asp-for="Description">توضیحات </label>
+                        <textarea asp-for="Description" class="form-control" placeholder=""></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div style="margin-top: 15px">
+                        <img id="main-image" src="" style="width:350px;height:350px; border-radius:10px; display: none;" />
+                    </div>
+                    <div class="container-fluid" style="margin-top: 15px" id="image-gallery"></div>
                 </div>
-                <div class="container-fluid" style="margin-top: 15px">
-                    <img src="~/assets/img/products/p20.jpg" style="width:70px;height:70px; border-radius:10px" />
-                    <img src="~/assets/img/products/p16.jpg" style="width:70px;height:70px; border-radius:10px" />
-                    <img src="~/assets/img/products/p26.jpg" style="width:70px;height:70px; border-radius:10px" />
-                    <img src="~/assets/img/products/p16.jpg" style="width:70px;height:70px; border-radius:10px" />
+                <div class="text-center" style="margin-top:15px">
+                    <button type="button" class="btn btn-success" id="add-images-btn">افزودن تصاویر</button>
+                    <input asp-for="Images" type="file" id="file-input" multiple accept="image/*" style="display: none;">
+                    <input type="submit" class="btn btn-primary" value="ارسال">
                 </div>
             </div>
-            <div class="text-center" style="margin-top:15px">
-                <button type="button" class="btn btn-success" >افزودن تصاویر</button>
-            </div>
-        </div>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#add-images-btn').on('click', function () {
+                    $('#file-input').click();
+                });
+
+                $('#file-input').on('change', function () {
+                    const files = this.files;
+                    const maxImages = 4;
+                    let currentImages = $('#image-gallery img').length;
+
+                    // بررسی تعداد تصاویر جدیدی که کاربر می‌تواند اضافه کند
+                    const newImagesCount = Math.min(files.length, maxImages - currentImages);
+
+                    if (newImagesCount === 0) {
+                        alert('تعداد عکس‌ها حداکثر باید ۴ تا باشد.');
+                        return;
+                    }
+
+                    // اضافه کردن تصاویر جدید به گالری
+                    for (let i = 0; i < newImagesCount; i++) {
+                        const file = files[i];
+                        const reader = new FileReader();
+                        reader.onload = (function (file) {
+                            return function (e) {
+                                // ایجاد عنصر جدید برای تصویر
+                                const newImage = $('<img>', {
+                                    class: 'gallery-image',
+                                    src: e.target.result,
+                                    style: 'width:70px;height:70px; border-radius:10px; margin: 5px;'
+                                });
+                                $('#image-gallery').append(newImage);
+
+                                // نمایش تصویر بزرگ
+                                $('#main-image').attr('src', e.target.result).show();
+                            };
+                        })(file);
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                // برای تغییر تصویر بزرگ هنگام کلیک بر روی تصاویر گالری
+                $(document).on('click', '.gallery-image', function () {
+                    const src = $(this).attr('src');
+                    $('#main-image').attr('src', src);
+                });
+            });
+        </script>
     </div>
 </div>

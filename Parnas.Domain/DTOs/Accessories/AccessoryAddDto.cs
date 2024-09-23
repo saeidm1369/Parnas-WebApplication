@@ -39,10 +39,10 @@ namespace Parnas.Domain.DTOs.Accessories
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+
         [Display(Name = "تعداد")]
         public int Count { get; set; }
-        [Display(Name = "نوع")]
-        public DateTime CreateDate { get; set; }
+
         [Display(Name = "دسته بندی")]
         public int? CategoryId { get; set; }
 
@@ -65,7 +65,7 @@ namespace Parnas.Domain.DTOs.Accessories
         [Display(Name = "ورودی")]
         public string? Input { get; set; }
         
-        [Display(Name = "خزوجی")]
+        [Display(Name = "خروجی")]
         public string? OutPut { get; set; }
 
         [Display(Name = "نوع کاربری")]
