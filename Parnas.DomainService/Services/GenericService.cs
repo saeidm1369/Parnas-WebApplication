@@ -46,7 +46,7 @@ namespace Parnas.DomainService.Services
                     var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                     var extension = Path.GetExtension(file.FileName);
                     var uniqueFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
-                    var filePath = Path.Combine("wwwroot/images/uploads", uniqueFileName);
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/uploads", uniqueFileName);
 
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
