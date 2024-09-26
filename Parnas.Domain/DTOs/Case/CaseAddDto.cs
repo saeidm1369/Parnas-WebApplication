@@ -41,6 +41,9 @@ namespace Parnas.Domain.DTOs.Case
         [Display(Name = "نوع")]
         public string? Type { get; set; }
 
+        [Display(Name = "تعداد")]
+        public int Count { get; set; }
+
         [Display(Name = "دسته بندی")]
         public int? CategoryId { get; set; }
 
@@ -72,10 +75,11 @@ namespace Parnas.Domain.DTOs.Case
         public string NumberOfFansThatCanBeInstalledInCase { get; set; }
         [Display(Name = "تعداد فن های نصب شده در کیس")]
         public string NumberOfFanInstalledInCase { get; set; }
-        [Display(Name = "تعداد فن های قابل نصب 120 میلی متر")]
+        [Display(Name = "تعداد فن های قابل نصب 120 میلی متری")]
         public string NumberOf120mmInstallableFans { get; set; }
-        public string NumberOfInstalledFansIs140mm { get; set; }
         [Display(Name = "تعداد فن های نصب شده 140 میلی متری")]
+        public string NumberOfInstalledFansIs140mm { get; set; }
+        [Display(Name = "تعداد فن هایی که در پشت نصب شده اند")]
         public string NumberOfFansThatCanBeInstalledonTheBack { get; set; }
         [Display(Name = "تعداد فن هایی که در جلو نصب شده اند")]
         public string NumberOfFansThatCanBeInstalledInTheFront { get; set; }

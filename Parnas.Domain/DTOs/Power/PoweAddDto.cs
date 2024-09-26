@@ -39,6 +39,8 @@ namespace Parnas.Domain.DTOs.Power
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        [Display(Name = "تعداد")]
+        public int Count { get; set; }
         [Display(Name = "دسته بندی")]
         public int? CategoryId { get; set; }
         [Display(Name = "تصاویر")]
@@ -91,7 +93,7 @@ namespace Parnas.Domain.DTOs.Power
         [Display(Name = "کانکتور 15 پین SATA")]
         public string PinSataConnector { get; set; }
 
-        [Display(Name = "گواهینامه 80Plus")]
+        [Display(Name = "گواهینامه 80 پلاس")]
         public string EighteenPlusCertificate { get; set; }
 
         [Display(Name = "استانداردهای حفاظت")]

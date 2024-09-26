@@ -1,319 +1,285 @@
 ﻿@model Parnas.Domain.DTOs.Case.CaseAddDto
-
 @{
-    ViewData["Title"] = "افزودن  کیس";
+    ViewData["Title"] = "افزودن کیس ";
 }
+<h2 style="margin:10px 40px 15px 0">افزودن کیس </h2>
 
-<h2>افزودن  کیس</h2>
-<hr />
-
-<div class="row">
-    <form asp-action="AddCase">
-        <div class="col-md-8" style="margin-right:15px">
-            <div class="row">
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="box box-warning container">
+    <div class="row">
+        <form asp-area="Admin" asp-controller="Case" asp-action="AddCase" method="post" enctype="multipart/form-data">
+            <div class="col-md-7">
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Title" class="control-label"></label>
-                            <input asp-for="Title" class="form-control" />
-                            <span asp-validation-for="Title" class="text-danger"></span>
+                        <div class="box-header with-border">
+                            <h3 class="box-title">اجزای کلی</h3>
                         </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label asp-for="Title">عنوان</label>
+                                <input asp-for="Title" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Brand">برند</label>
+                                <input asp-for="Brand" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Brand" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Price">قیمت</label>
+                                <input asp-for="Price" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Color">رنگ</label>
+                                <input asp-for="Color" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Color" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Dimensions">ابعاد</label>
+                                <input asp-for="Dimensions" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Dimensions" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Weight">وزن</label>
+                                <input asp-for="Weight" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Weight" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Count">تعداد</label>
+                                <input asp-for="Count" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Count" class="text-danger"></span>
+                                <div class="form-group">
+                                    <label asp-for="Type">نوع </label>
+                                    <input asp-for="Type" type="text" class="form-control" placeholder="">
+                                    <span asp-validation-for="Type" class="text-danger"></span>
+                                </div>
+                                <!-- select -->
+                                <div class="form-group">
+                                    <label asp-for="CategoryId" for="CategoryId">انتخاب دسته بندی</label>
+                                    <select asp-for="CategoryId" name="CategoryId" class="form-control">
+                                        <option value="1"> لوازم جانبی</option>
+                                        <option value="2">سیستم های آماده</option>
+                                        <option value="3">قطعات کامپیوتر</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="Lighting"> روشنایی </label>
+                                    <input asp-for="Lighting" type="text" class="form-control" placeholder="">
+                                    <span asp-validation-for="Lighting" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CaseLighting">روشنایی کیس </label>
+                                    <input asp-for="CaseLighting" type="text" class="form-control" placeholder="">
+                                    <span asp-validation-for="CaseLighting" class="text-danger"></span>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label asp-for="MaximumLengthOfGraphicCard">حداکثر طول کارت گرافیک </label>
+                                    <input asp-for="MaximumLengthOfGraphicCard" type="text" class="form-control" placeholder="">
+                                    <span asp-validation-for="MaximumLengthOfGraphicCard" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="NumberofUSBPortsIs3Cases"> تعداد پورت های USB کیس </label>
+                                    <input asp-for="NumberofUSBPortsIs3Cases" type="text" class="form-control" placeholder="">
+                                    <span asp-validation-for="NumberofUSBPortsIs3Cases" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="CaseUSBType_CPort"> تعداد پورت های تایپ c </label>
+                                    <input asp-for="CaseUSBType_CPort" type="text" class="form-control" placeholder="">
+                                    <span asp-validation-for="CaseUSBType_CPort" class="text-danger"></span>
+                                </div>
+
+                            </div>                            
+                            <div class="form-group">
+                                <label asp-for="CaseFanSpeedController" for="CaseFanSpeedController"> کنترل کننده سرعت فن کیس</label>
+                                <select asp-for="CaseFanSpeedController" name="CaseFanSpeedController" class="form-control">
+                                    <option value="True"> دارد</option>
+                                    <option value="False">ندارد </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="FancaseLightingController" for="FancaseLightingController"> کنترل کننده روشنایی فن کیس</label>
+                                <select asp-for="FancaseLightingController" name="FancaseLightingController" class="form-control">
+                                    <option value="True"> دارد</option>
+                                    <option value="False">ندارد </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MicrophoneInput" for="MicrophoneInput">ورودی میکروفن </label>
+                                <select asp-for="MicrophoneInput" name="MicrophoneInput" class="form-control">
+                                    <option value="True"> دارد</option>
+                                    <option value="False">ندارد </option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="HeadPhoneOutPut" for="HeadPhoneOutPut">خروجی هدفون</label>
+                                <select asp-for="HeadPhoneOutPut" name="HeadPhoneOutPut" class="form-control">
+                                    <option value="True"> دارد</option>
+                                    <option value="False">ندارد </option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Brand" class="control-label"></label>
-                            <input asp-for="Brand" class="form-control" />
-                            <span asp-validation-for="Brand" class="text-danger"></span>
+                        <div class="box-header with-border">
+                            <h3 class="box-title"> </h3>
                         </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <!-- text input -->
+                            <div class="form-group">
+                                <label asp-for="Inch3_5DriveBay">محفظه درایو 3.5 اینچی</label>
+                                <input asp-for="Inch3_5DriveBay" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Inch3_5DriveBay" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Inch2_5DriveBay"> محفظه درایو 2.5 اینچی</label>
+                                <input asp-for="Inch2_5DriveBay" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Inch2_5DriveBay" class="text-danger"></span>
+                            </div>                            
+                            <div class="form-group">
+                                <label asp-for="MaxSizeOfCoolerCeilingPanel">بیشترین اندازه پنل سقفی خنک کننده</label>
+                                <input asp-for="MaxSizeOfCoolerCeilingPanel" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MaxSizeOfCoolerCeilingPanel" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MaxSizeOfCoolerFrontPanel">بیشترین اندازه پنل جلویی خنک کننده </label>
+                                <input asp-for="MaxSizeOfCoolerFrontPanel" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MaxSizeOfCoolerFrontPanel" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MaxSizeOfCoolerBackPanel">بیشترین اندازه پنل پشتی خنک کننده</label>
+                                <input asp-for="MaxSizeOfCoolerBackPanel" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MaxSizeOfCoolerBackPanel" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MaximumCPUCoolerHeight"> حداکثر ارتفاع خنک کننده پردازنده </label>
+                                <input asp-for="MaximumCPUCoolerHeight" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MaximumCPUCoolerHeight" class="text-danger"></span>
+                            </div>                            
+                            <div class="form-group">
+                                <label asp-for="NumberofPowerSuppliesThatCanBeInstalled" for="Sensor">تعداد منابع تغذیه که می توان نصب کرد </label>
+                                <input asp-for="NumberofPowerSuppliesThatCanBeInstalled" type="text" id="Sensor" name="Sensor" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberofPowerSuppliesThatCanBeInstalled" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="PowerSupplyInstallationLocation"> محل نصب منبع تغذیه</label>
+                                <input asp-for="PowerSupplyInstallationLocation" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="PowerSupplyInstallationLocation" class="text-danger"></span>
+                            </div>
+                             <div class="form-group">
+                                <label asp-for="NumberOfFansThatCanBeInstalledInCase"> تعداد فن هایی که میتوانند در کیس نصب شوند </label>
+                                <input asp-for="NumberOfFansThatCanBeInstalledInCase" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberOfFansThatCanBeInstalledInCase" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NumberOfFanInstalledInCase"> تعداد فن های نصب شده در کیس </label>
+                                <input asp-for="NumberOfFanInstalledInCase" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberOfFanInstalledInCase" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NumberOf120mmInstallableFans"> تعداد فن های قابل نصب 120 میلی متری </label>
+                                <input asp-for="NumberOf120mmInstallableFans" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberOf120mmInstallableFans" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NumberOfInstalledFansIs140mm"> تعداد فن های نصب شده 140 میلی متری </label>
+                                <input asp-for="NumberOfInstalledFansIs140mm" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberOfInstalledFansIs140mm" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NumberOfFansThatCanBeInstalledonTheBack"> تعداد فن هایی که در پشت نصب شده اند </label>
+                                <input asp-for="NumberOfFansThatCanBeInstalledonTheBack" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberOfFansThatCanBeInstalledonTheBack" class="text-danger"></span>
+                            </div>
+                             <div class="form-group">
+                                <label asp-for="NumberOfFansThatCanBeInstalledInTheFront"> تعداد فن هایی که در جلو نصب شده اند </label>
+                                <input asp-for="NumberOfFansThatCanBeInstalledInTheFront" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberOfFansThatCanBeInstalledInTheFront" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="NumberOfFansThatCanBeInstalledinTheCeiling"> تعداد فن هایی که که در سقف نصب شده اند </label>
+                                <input asp-for="NumberOfFansThatCanBeInstalledinTheCeiling" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberOfFansThatCanBeInstalledinTheCeiling" class="text-danger"></span>
+                            </div>                                                  
+                                                       
+                        </div>
+                        <!-- /.box-body -->
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Price" class="control-label"></label>
-                            <input asp-for="Price" class="form-control" />
-                            <span asp-validation-for="Price" class="text-danger"></span>
-                        </div>
+
+            </div>
+            <div class="col-md-5">
+                <div class="container">
+                    <div class="form-group">
+                        <label asp-for="Description">توضیحات </label>
+                        <textarea asp-for="Description" class="form-control" placeholder=""></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Description" class="control-label"></label>
-                            <input asp-for="Description" class="form-control" />
-                            <span asp-validation-for="Description" class="text-danger"></span>
-                        </div>
+                    <div style="margin-top: 15px">
+                        <img id="main-image" src="" style="width:350px;height:350px; border-radius:10px; display: none;" />
                     </div>
+                    <div class="container-fluid" style="margin-top: 15px" id="image-gallery"></div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Color" class="control-label"></label>
-                            <input asp-for="Color" class="form-control" />
-                            <span asp-validation-for="Color" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Dimensions" class="control-label"></label>
-                            <input asp-for="Dimensions" class="form-control" />
-                            <span asp-validation-for="Dimensions" class="text-danger"></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Weight" class="control-label"></label>
-                            <input asp-for="Weight" class="form-control" />
-                            <span asp-validation-for="Weight" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Type" class="control-label"></label>
-                            <input asp-for="Type" class="form-control" />
-                            <span asp-validation-for="Type" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Inch3_5DriveBay" class="control-label"></label>
-                            <input asp-for="Inch3_5DriveBay" class="form-control" />
-                            <span asp-validation-for="Inch3_5DriveBay" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Inch2_5DriveBay" class="control-label"></label>
-                            <input asp-for="Inch2_5DriveBay" class="form-control" />
-                            <span asp-validation-for="Inch2_5DriveBay" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="CaseLighting" class="control-label"></label>
-                            <input asp-for="CaseLighting" class="form-control" />
-                            <span asp-validation-for="CaseLighting" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="MaxSizeOfCoolerCeilingPanel" class="control-label"></label>
-                            <input asp-for="MaxSizeOfCoolerCeilingPanel" class="form-control" />
-                            <span asp-validation-for="MaxSizeOfCoolerCeilingPanel" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="MaxSizeOfCoolerFrontPanel" class="control-label"></label>
-                            <input asp-for="MaxSizeOfCoolerFrontPanel" class="form-control" />
-                            <span asp-validation-for="MaxSizeOfCoolerFrontPanel" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="MaxSizeOfCoolerBackPanel" class="control-label"></label>
-                            <input asp-for="MaxSizeOfCoolerBackPanel" class="form-control" />
-                            <span asp-validation-for="MaxSizeOfCoolerBackPanel" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="MaximumCPUCoolerHeight" class="control-label"></label>
-                            <input asp-for="MaximumCPUCoolerHeight" class="form-control" />
-                            <span asp-validation-for="MaximumCPUCoolerHeight" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="MaximumLengthOfGraphicCard" class="control-label"></label>
-                            <input asp-for="MaximumLengthOfGraphicCard" class="form-control" />
-                            <span asp-validation-for="MaximumLengthOfGraphicCard" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberofPowerSuppliesThatCanBeInstalled" class="control-label"></label>
-                            <input asp-for="NumberofPowerSuppliesThatCanBeInstalled" class="form-control" />
-                            <span asp-validation-for="NumberofPowerSuppliesThatCanBeInstalled" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="PowerSupplyInstallationLocation" class="control-label"></label>
-                            <input asp-for="PowerSupplyInstallationLocation" class="form-control" />
-                            <span asp-validation-for="PowerSupplyInstallationLocation" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberOfFansThatCanBeInstalledInCase" class="control-label"></label>
-                            <input asp-for="NumberOfFansThatCanBeInstalledInCase" class="form-control" />
-                            <span asp-validation-for="NumberOfFansThatCanBeInstalledInCase" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberOfFanInstalledInCase" class="control-label"></label>
-                            <input asp-for="NumberOfFanInstalledInCase" class="form-control" />
-                            <span asp-validation-for="NumberOfFanInstalledInCase" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberOf120mmInstallableFans" class="control-label"></label>
-                            <input asp-for="NumberOf120mmInstallableFans" class="form-control" />
-                            <span asp-validation-for="NumberOf120mmInstallableFans" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberOfInstalledFansIs140mm" class="control-label"></label>
-                            <input asp-for="NumberOfInstalledFansIs140mm" class="form-control" />
-                            <span asp-validation-for="NumberOfInstalledFansIs140mm" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberOfFansThatCanBeInstalledonTheBack" class="control-label"></label>
-                            <input asp-for="NumberOfFansThatCanBeInstalledonTheBack" class="form-control" />
-                            <span asp-validation-for="NumberOfFansThatCanBeInstalledonTheBack" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberOfFansThatCanBeInstalledInTheFront" class="control-label"></label>
-                            <input asp-for="NumberOfFansThatCanBeInstalledInTheFront" class="form-control" />
-                            <span asp-validation-for="NumberOfFansThatCanBeInstalledInTheFront" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberOfFansThatCanBeInstalledinTheCeiling" class="control-label"></label>
-                            <input asp-for="NumberOfFansThatCanBeInstalledinTheCeiling" class="form-control" />
-                            <span asp-validation-for="NumberOfFansThatCanBeInstalledinTheCeiling" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="NumberofUSBPortsIs3Cases" class="control-label"></label>
-                            <input asp-for="NumberofUSBPortsIs3Cases" class="form-control" />
-                            <span asp-validation-for="NumberofUSBPortsIs3Cases" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="CaseUSBType_CPort" class="control-label"></label>
-                            <input asp-for="CaseUSBType_CPort" class="form-control" />
-                            <span asp-validation-for="CaseUSBType_CPort" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="CaseFanSpeedController" class="control-label"></label>
-                            <input asp-for="CaseFanSpeedController" class="form-control" />
-                            <span asp-validation-for="CaseFanSpeedController" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="FancaseLightingController" class="control-label"></label>
-                            <input asp-for="FancaseLightingController" class="form-control" />
-                            <span asp-validation-for="FancaseLightingController" class="text-danger"></span>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="Lighting" class="control-label"></label>
-                            <input asp-for="Lighting" class="form-control" />
-                            <span asp-validation-for="Lighting" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="MicrophoneInput" class="control-label"></label>
-                            <input asp-for="MicrophoneInput" class="form-control" />
-                            <span asp-validation-for="MicrophoneInput" class="text-danger"></span>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label asp-for="HeadPhoneOutPut" class="control-label"></label>
-                            <input asp-for="HeadPhoneOutPut" class="form-control" />
-                            <span asp-validation-for="HeadPhoneOutPut" class="text-danger"></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-
-                        <label asp-for="CategoryId" for="CategoryId">نوع دوره</label>
-                        <select asp-for="CategoryId" class="form-control" id="CategoryId" name="CategoryId" required="">
-                            <option value="1">لوازم</option>
-
-                        </select>
-                        <span asp-validation-for="CategoryId" class="text-danger"></span>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="form-group">
-                            <input type="submit" value="افزودن" class="btn btn-info" />
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <a asp-action="Index">بازگشت به پنل مدیریت</a>
-                    </div>
+                <div class="text-center" style="margin-top:15px">
+                    <button type="button" class="btn btn-success" id="add-images-btn">افزودن تصاویر</button>
+                    <input asp-for="Images" type="file" id="file-input" multiple accept="image/*" style="display: none;">
+                    <input type="submit" class="btn btn-primary" value="ارسال">
                 </div>
             </div>
-        </div>
-        <div class="col-md-4" style="width:350px;height:350px">
-            <img src="~/assets/img/single-product/p23.jpg" style="width:300px;height:300px" />
-            <br />
-            <div class="row">
-                <div class="col-md-2"></div>
-                <img src="~/assets/img/single-product/p23.jpg" style="width:50px;height:50px" />
-                <img src="~/assets/img/single-product/p23.jpg" style="width:50px;height:50px" />
-                <img src="~/assets/img/single-product/p23.jpg" style="width:50px;height:50px" />
-                <img src="~/assets/img/single-product/p23.jpg" style="width:50px;height:50px" />
-            </div>
-            <br />
-            <div class="row">
-                <div class="col-md-4"></div>
-                <button class="btn btn-info">افزودن تصویر</button>
-            </div>
-        </div>
-    </form>
+        </form>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#add-images-btn').on('click', function () {
+                    $('#file-input').click();
+                });
 
+                $('#file-input').on('change', function () {
+                    const files = this.files;
+                    const maxImages = 4;
+                    let currentImages = $('#image-gallery img').length;
 
+                    // بررسی تعداد تصاویر جدیدی که کاربر می‌تواند اضافه کند
+                    const newImagesCount = Math.min(files.length, maxImages - currentImages);
+
+                    if (newImagesCount === 0) {
+                        alert('تعداد عکس‌ها حداکثر باید ۴ تا باشد.');
+                        return;
+                    }
+
+                    // اضافه کردن تصاویر جدید به گالری
+                    for (let i = 0; i < newImagesCount; i++) {
+                        const file = files[i];
+                        const reader = new FileReader();
+                        reader.onload = (function (file) {
+                            return function (e) {
+                                // ایجاد عنصر جدید برای تصویر
+                                const newImage = $('<img>', {
+                                    class: 'gallery-image',
+                                    src: e.target.result,
+                                    style: 'width:70px;height:70px; border-radius:10px; margin: 5px;'
+                                });
+                                $('#image-gallery').append(newImage);
+
+                                // نمایش تصویر بزرگ
+                                $('#main-image').attr('src', e.target.result).show();
+                            };
+                        })(file);
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                // برای تغییر تصویر بزرگ هنگام کلیک بر روی تصاویر گالری
+                $(document).on('click', '.gallery-image', function () {
+                    const src = $(this).attr('src');
+                    $('#main-image').attr('src', src);
+                });
+            });
+        </script>
+    </div>
 </div>

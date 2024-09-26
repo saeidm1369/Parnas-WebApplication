@@ -1,0 +1,297 @@
+﻿@model Parnas.Domain.DTOs.MotherBoard.MotherBoardAddDto
+@{
+    ViewData["Title"] = "افزودن مادربورد";
+}
+
+<h2 style="margin:10px 40px 15px 0">افزودن مادربورد</h2>
+
+<div class="box box-warning container">
+    <div class="row">
+        <form asp-area="Admin" asp-controller="MotherBoard" asp-action="AddMotherBoard" method="post" enctype="multipart/form-data">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">اطلاعات کلی</h3>
+                        </div>
+
+                        <div class="box-body">
+                            <!-- Base Entity Inputs -->
+                            <div class="form-group">
+                                <label asp-for="Title">عنوان</label>
+                                <input asp-for="Title" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Brand">برند</label>
+                                <input asp-for="Brand" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Brand" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Price">قیمت</label>
+                                <input asp-for="Price" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>                            
+
+                            <div class="form-group">
+                                <label asp-for="Color">رنگ</label>
+                                <input asp-for="Color" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Color" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Dimensions">اندازه</label>
+                                <input asp-for="Dimensions" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Dimensions" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Weight">وزن</label>
+                                <input asp-for="Weight" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Weight" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Type">نوع</label>
+                                <input asp-for="Type" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Type" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Count">تعداد</label>
+                                <input asp-for="Count" type="number" class="form-control" placeholder="">
+                                <span asp-validation-for="Count" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CategoryId">دسته‌بندی</label>
+                                <select asp-for="CategoryId" class="form-control">
+                                    <option value="1">دسته‌بندی ۱</option>
+                                    <option value="2">دسته‌بندی ۲</option>
+                                    <option value="3">دسته‌بندی ۳</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">مشخصات مادربورد</h3>
+                        </div>
+
+                        <div class="box-body">
+                            <!-- MotherBoard Specific Inputs -->
+                            <div class="form-group">
+                                <label asp-for="Platform">پلتفرم</label>
+                                <input asp-for="Platform" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Platform" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Chipset">چیپست</label>
+                                <input asp-for="Chipset" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Chipset" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="AppearanceOfTheMotherBoard">ظاهر مادربورد</label>
+                                <input asp-for="AppearanceOfTheMotherBoard" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="AppearanceOfTheMotherBoard" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="ProccesorSocket">سوکت پردازنده</label>
+                                <input asp-for="ProccesorSocket" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="ProccesorSocket" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="SupportedProccesor">پردازنده‌های پشتیبانی‌شده</label>
+                                <input asp-for="SupportedProccesor" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="SupportedProccesor" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MotherBoardMemoryTechnology">فناوری حافظه مادربورد</label>
+                                <input asp-for="MotherBoardMemoryTechnology" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MotherBoardMemoryTechnology" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MemorySlot">اسلات حافظه</label>
+                                <input asp-for="MemorySlot" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MemorySlot" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Configuration">پیکربندی</label>
+                                <input asp-for="Configuration" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Configuration" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MaximumMemorySize">حداکثر حجم حافظه</label>
+                                <input asp-for="MaximumMemorySize" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MaximumMemorySize" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="XmpSupport">پشتیبانی از XMP</label>
+                                <input asp-for="XmpSupport" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="XmpSupport" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MainPowerConnector">کانکتور اصلی برق</label>
+                                <input asp-for="MainPowerConnector" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MainPowerConnector" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CPUPowerConnector">کانکتور برق پردازنده</label>
+                                <input asp-for="CPUPowerConnector" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="CPUPowerConnector" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="PCIExperssX16Slot">اسلات PCI Express X16</label>
+                                <input asp-for="PCIExperssX16Slot" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="PCIExperssX16Slot" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="PCIExperssX16Generation">نسل PCI Express X16</label>
+                                <input asp-for="PCIExperssX16Generation" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="PCIExperssX16Generation" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="M2Slot">اسلات M.2</label>
+                                <input asp-for="M2Slot" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="M2Slot" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="NumberOfSataPort">تعداد پورت SATA</label>
+                                <input asp-for="NumberOfSataPort" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="NumberOfSataPort" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="RaidSupport">پشتیبانی از RAID</label>
+                                <input asp-for="RaidSupport" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="RaidSupport" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MotherBoardDisplayPortOutput">خروجی DisplayPort مادربورد</label>
+                                <input asp-for="MotherBoardDisplayPortOutput" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MotherBoardDisplayPortOutput" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="HdmiOutputOfTheMotherBoard">خروجی HDMI مادربورد</label>
+                                <input asp-for="HdmiOutputOfTheMotherBoard" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="HdmiOutputOfTheMotherBoard" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="SoundChipset">چیپست صدا</label>
+                                <select asp-for="SoundChipset" name="SoundChipset" class="form-control">
+                                    <option value="True"> دارد</option>
+                                    <option value="False">ندارد </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Bluetooth">بلوتوث</label>
+                                <select asp-for="Bluetooth" name="Bluetooth" class="form-control">
+                                    <option value="True"> دارد</option>
+                                    <option value="False">ندارد </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="BluetoothVersion">نسخه بلوتوث</label>
+                                <input asp-for="BluetoothVersion" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="BluetoothVersion" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+               
+            </div>
+            <div class="col-md-5">
+                <div class="container">
+                    <div class="form-group">
+                        <label asp-for="Description">توضیحات </label>
+                        <textarea asp-for="Description" class="form-control" placeholder=""></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div style="margin-top: 15px">
+                        <img id="main-image" src="" style="width:350px;height:350px; border-radius:10px; display: none;" />
+                    </div>
+                    <div class="container-fluid" style="margin-top: 15px" id="image-gallery"></div>
+                </div>
+                <div class="text-center" style="margin-top:15px">
+                    <button type="button" class="btn btn-success" id="add-images-btn">افزودن تصاویر</button>
+                    <input asp-for="Images" type="file" id="file-input" multiple accept="image/*" style="display: none;">
+                    <input type="submit" class="btn btn-primary" value="ارسال">
+                </div>
+            </div>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#add-images-btn').on('click', function () {
+                    $('#file-input').click();
+                });
+
+                $('#file-input').on('change', function () {
+                    const files = this.files;
+                    const maxImages = 4;
+                    let currentImages = $('#image-gallery img').length;
+
+                    // بررسی تعداد تصاویر جدیدی که کاربر می‌تواند اضافه کند
+                    const newImagesCount = Math.min(files.length, maxImages - currentImages);
+
+                    if (newImagesCount === 0) {
+                        alert('تعداد عکس‌ها حداکثر باید ۴ تا باشد.');
+                        return;
+                    }
+
+                    // اضافه کردن تصاویر جدید به گالری
+                    for (let i = 0; i < newImagesCount; i++) {
+                        const file = files[i];
+                        const reader = new FileReader();
+                        reader.onload = (function (file) {
+                            return function (e) {
+                                // ایجاد عنصر جدید برای تصویر
+                                const newImage = $('<img>', {
+                                    class: 'gallery-image',
+                                    src: e.target.result,
+                                    style: 'width:70px;height:70px; border-radius:10px; margin: 5px;'
+                                });
+                                $('#image-gallery').append(newImage);
+
+                                // نمایش تصویر بزرگ
+                                $('#main-image').attr('src', e.target.result).show();
+                            };
+                        })(file);
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                // برای تغییر تصویر بزرگ هنگام کلیک بر روی تصاویر گالری
+                $(document).on('click', '.gallery-image', function () {
+                    const src = $(this).attr('src');
+                    $('#main-image').attr('src', src);
+                });
+            });
+        </script>
+    </div>
+</div>

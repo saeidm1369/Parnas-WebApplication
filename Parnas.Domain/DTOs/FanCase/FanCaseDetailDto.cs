@@ -39,7 +39,7 @@ namespace Parnas.Domain.DTOs.FanCase
         public string? Weight { get; set; }
 
         [Display(Name = "نوع")]
-        public string? Type { get; set; }
+        public string? Type { get; set; }        
         [Display(Name = "تصاویر")]
         public List<string> Images { get; set; }
 

@@ -7,6 +7,7 @@ using Parnas.DomainService.Services;
 
 namespace Parnas.Areas.Admin.Controllers
 {
+    [Area("Admin")]
     public class MotherBoardController : Controller
     {
         #region Field
