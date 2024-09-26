@@ -44,10 +44,14 @@ namespace Parnas.Domain.DTOs.Accessories
         [Display(Name = "تاریخ افزودن محصول")]
         public DateTime CreateDate { get; set; }
 
+        [Display(Name = "دسته بندی")]
+        public int CategoryId { get; set; }
+
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+
         [Display(Name = "تصاویر")]
-        public List<string> Images { get; set; }
+        public List<string> ImageList { get; set; }
 
         // Accessories Entity
         [Display(Name = "روشنایی")]

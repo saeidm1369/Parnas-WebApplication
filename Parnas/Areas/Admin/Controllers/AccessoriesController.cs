@@ -10,12 +10,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class AccessoriesController : Controller
     {
         #region Field
-        private readonly IGenericService<Accessories> _genericService;
+        private readonly IGenericService<Accessories, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public AccessoriesController(IGenericService<Accessories> genericService)
+        public AccessoriesController(IGenericService<Accessories, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -90,14 +90,14 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(accessoryAddDto);
 
-            var result = _genericService.Add<AccessoryAddDto>(accessoryAddDto, accessoryAddDto.Images);
+            var result = _genericService.Add<AccessoryAddDto, AccessoryImage> (accessoryAddDto, accessoryAddDto.Images);
             ViewData["Message"] = result.Type;
             return RedirectToAction("Index", "Accessories", new { area = "Admin" });
         }
 
         [HttpGet]
         public IActionResult UpdateAccessory(int id)
-        {
+       {
             if (id == 0)
                 ViewData["Message"] = "Null";
             var accessory = _genericService.GetById<AccessoryDetailsDto>(id);

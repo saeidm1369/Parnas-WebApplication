@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Power : BaseEntity<int> , IHasImage
+    public class Power : BaseEntity<int>
     {
         public Power()
         {
@@ -29,10 +29,6 @@ namespace Parnas.Domain.Entities
         public string? PinSataConnector { get; set; }
         public string? EighteenPlusCertificate { get; set; }
         public string? ProtectionStandards { get; set; }
-
-        // IHasImage Properties
-        public string? ImageName { get; set; }
-        public string? ImagePath { get; set; }
 
         #region Relations
         public int CategoryId { get; set; }

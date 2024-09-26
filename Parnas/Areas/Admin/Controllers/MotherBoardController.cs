@@ -10,12 +10,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class MotherBoardController : Controller
     {
         #region Field
-        private readonly IGenericService<MotherBoard> _genericService;
+        private readonly IGenericService<MotherBoard, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public MotherBoardController(IGenericService<MotherBoard> genericService)
+        public MotherBoardController(IGenericService<MotherBoard, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -90,7 +90,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(motherBoardAddDto);
 
-            var result = _genericService.Add<MotherBoardAddDto>(motherBoardAddDto, motherBoardAddDto.Images);
+            var result = _genericService.Add<MotherBoardAddDto, AccessoryImage>(motherBoardAddDto, motherBoardAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

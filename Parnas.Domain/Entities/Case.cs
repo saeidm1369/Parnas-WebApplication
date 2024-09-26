@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Case : BaseEntity<int> , IHasImage
+    public class Case : BaseEntity<int>
     {
         public Case()
         {
@@ -36,10 +36,6 @@ namespace Parnas.Domain.Entities
         public string? Lighting { get; set;}
         public bool MicrophoneInput { get; set;}
         public bool HeadPhoneOutPut { get; set;}
-
-        // IHasImage Properties
-        public string? ImageName { get; set; }
-        public string? ImagePath { get; set; }
 
         #region Relations
         public int CategoryId { get; set; }

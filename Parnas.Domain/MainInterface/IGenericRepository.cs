@@ -11,6 +11,7 @@ namespace Parnas.Domain.MainInterface
     {
         List<TEntity> GetAll();
         TEntity Get(Expression<Func<TEntity, bool>> where);
+        TEntity GetByIdWithImages(int id);
         TEntity GetById(int id);
 
         void Create(TEntity entity);

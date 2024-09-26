@@ -11,12 +11,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class HDDController : Controller
     {
         #region Field
-        private readonly IGenericService<HDD> _genericService;
+        private readonly IGenericService<HDD, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public HDDController(IGenericService<HDD> genericService)
+        public HDDController(IGenericService<HDD, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +91,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(hddAddDto);
 
-            var result = _genericService.Add<HDDAddDto>(hddAddDto, hddAddDto.Images);
+            var result = _genericService.Add<HDDAddDto, AccessoryImage>(hddAddDto, hddAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

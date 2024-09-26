@@ -19,6 +19,7 @@ namespace Parnas.Infrastructure.ApplicationDbContext
         {
             modelBuilder.ApplyConfiguration(new CategoryConfig());
             modelBuilder.ApplyConfiguration(new AccessoryConfig());
+            modelBuilder.ApplyConfiguration(new AccessoryImageConfig());
             base.OnModelCreating(modelBuilder);
         }
         public DbSet<Category> Categories { get; set; }
@@ -35,5 +36,7 @@ namespace Parnas.Infrastructure.ApplicationDbContext
         public DbSet<Power> Powers { get; set; }
         public DbSet<Ram> Rams { get; set; }
         public DbSet<SSD> SSDs { get; set; }
+        public DbSet<ProductImage> ProductImages { get; set; }
+        public DbSet<AccessoryImage> AccessoryImages { get; set; }
     }
 }

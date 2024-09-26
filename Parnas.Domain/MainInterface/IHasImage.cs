@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Parnas.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace Parnas.Domain.MainInterface
 {
-    public interface IHasImage
+    public interface IHasImage<TEnttiy>
     {
-        string ImageName { get; set; }
-        string ImagePath { get; set; }
+        public List<TEnttiy> ImageList { get; set; }
     }
 }

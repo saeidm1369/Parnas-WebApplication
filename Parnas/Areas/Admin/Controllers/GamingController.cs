@@ -11,12 +11,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class GamingController : Controller
     {
         #region Field
-        private readonly IGenericService<Gaming> _genericService;
+        private readonly IGenericService<Gaming, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public GamingController(IGenericService<Gaming> genericService)
+        public GamingController(IGenericService<Gaming, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +91,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(gamingAddDto);
 
-            var result = _genericService.Add(gamingAddDto, gamingAddDto.Images);
+            var result = _genericService.Add<GamingAddDto, AccessoryImage>(gamingAddDto, gamingAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

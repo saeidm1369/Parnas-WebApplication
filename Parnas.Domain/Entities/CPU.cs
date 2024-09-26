@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-     public class CPU : BaseEntity<int> , IHasImage
+     public class CPU : BaseEntity<int>
     {
         public CPU()
         {
@@ -34,10 +34,6 @@ namespace Parnas.Domain.Entities
         public string? GraphicProccesorFerequency { get; set; }
         public string? PowerCounsumption { get; set; }
         public string? Packaging { get; set; }
-
-        // IHasImage Properties
-        public string? ImageName { get; set; }
-        public string? ImagePath { get; set; }
 
         #region Relations
         public int CategoryId { get; set; }

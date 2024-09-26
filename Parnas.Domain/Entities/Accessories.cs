@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Accessories : BaseEntity<int>, IHasImage
+    public class Accessories : BaseEntity<int>, IHasImage<AccessoryImage>
     {
         public Accessories()
         {
@@ -23,13 +23,23 @@ namespace Parnas.Domain.Entities
         public bool AntiGhosting { get; set; }
         public string? Sensor { get; set; }
 
-        // IHasImage Properties
-        public string? ImageName { get; set; }
-        public string? ImagePath { get; set; }
-
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        // IHasImage Properties
+        public List<AccessoryImage> ImageList { get; set; } = new List<AccessoryImage>();
         #endregion
+    }
+
+    public class AccessoryImage : ProductImage
+    {
+        public AccessoryImage()
+        {
+            
+        }
+        public int AccessoryId { get; set; }
+
+        public Accessories Accessories { get; set; }
     }
 }

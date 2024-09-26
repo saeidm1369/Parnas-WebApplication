@@ -10,12 +10,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class SSDController : Controller
     {
         #region Field
-        private readonly IGenericService<SSD> _genericService;
+        private readonly IGenericService<SSD, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public SSDController(IGenericService<SSD> genericService)
+        public SSDController(IGenericService<SSD, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -90,7 +90,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(ssdAddDto);
 
-            var result = _genericService.Add<SSDAddDto>(ssdAddDto, ssdAddDto.Images);
+            var result = _genericService.Add<SSDAddDto, AccessoryImage>(ssdAddDto, ssdAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

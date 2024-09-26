@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Gaming : BaseEntity<int> , IHasImage
+    public class Gaming : BaseEntity<int>
     {
         public Gaming()
         {
@@ -20,10 +20,6 @@ namespace Parnas.Domain.Entities
         public string? DeepCool { get; set; }
         public string? Power { get; set; }
         public string? Case { get; set; }
-
-        // IHasImage Properties
-        public string? ImageName { get; set; }
-        public string? ImagePath { get; set; }
 
         #region Relations
         public int CategoryId { get; set; }

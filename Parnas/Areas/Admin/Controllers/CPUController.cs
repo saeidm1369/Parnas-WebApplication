@@ -12,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class CPUController : Controller
     {       
         #region Field
-        private readonly IGenericService<CPU> _genericService;
+        private readonly IGenericService<CPU, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public CPUController(IGenericService<CPU> genericService)
+        public CPUController(IGenericService<CPU, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -92,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(cpuAddDto);
 
-            var result = _genericService.Add<CPUAddDto>(cpuAddDto, cpuAddDto.Images);
+            var result = _genericService.Add<CPUAddDto, AccessoryImage>(cpuAddDto, cpuAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }
