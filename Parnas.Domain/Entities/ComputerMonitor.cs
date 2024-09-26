@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class ComputerMonitor : BaseEntity<int> , IHasImage
+    public class ComputerMonitor : BaseEntity<int>
     {
         public ComputerMonitor()
         {
@@ -31,10 +31,6 @@ namespace Parnas.Domain.Entities
         public bool VesaSupport { get; set; }
         public bool RotationCapability { get; set; }
         public string? PowerConsumption { get; set; }
-
-        // IHasImage Properties
-        public string? ImageName { get; set; }
-        public string? ImagePath { get; set; }
 
         #region Relations
         public int CategoryId { get; set; }

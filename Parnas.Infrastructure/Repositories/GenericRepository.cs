@@ -36,6 +36,12 @@ namespace Parnas.Infrastructure.Repositories
             return dbSet.Where(where).FirstOrDefault();
         }
 
+        public virtual TEntity GetByIdWithImages(int id)
+        {
+            // فرض بر این است که TEntity یک ImageList دارد
+            return dbSet.Include("ImageList").FirstOrDefault(e => EF.Property<int>(e, "Id") == id);
+        }
+
         public TEntity GetById(int id)
         {
             return dbSet.Find(id);

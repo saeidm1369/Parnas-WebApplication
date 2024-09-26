@@ -11,12 +11,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class ComputerMonitorController : Controller
     {
         #region Field
-        private readonly IGenericService<ComputerMonitor> _genericService;
+        private readonly IGenericService<ComputerMonitor, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public ComputerMonitorController(IGenericService<ComputerMonitor> genericService)
+        public ComputerMonitorController(IGenericService<ComputerMonitor, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +91,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(monitorAddDto);
 
-            var result = _genericService.Add<ComputerMonitorAddDto>(monitorAddDto, monitorAddDto.Images);
+            var result = _genericService.Add<ComputerMonitorAddDto, AccessoryImage>(monitorAddDto, monitorAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

@@ -11,12 +11,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class CoolingController : Controller
     {
         #region Field
-        private readonly IGenericService<Cooling> _genericService;
+        private readonly IGenericService<Cooling, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public CoolingController(IGenericService<Cooling> genericService)
+        public CoolingController(IGenericService<Cooling, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +91,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(coolingAddDto);
 
-            var result = _genericService.Add<CoolingAddDto>(coolingAddDto, coolingAddDto.Images);
+            var result = _genericService.Add<CoolingAddDto, AccessoryImage>(coolingAddDto, coolingAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

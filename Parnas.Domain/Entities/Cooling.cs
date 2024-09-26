@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Cooling : BaseEntity<int> , IHasImage
+    public class Cooling : BaseEntity<int>
     {
         public Cooling()
         {
@@ -26,10 +26,6 @@ namespace Parnas.Domain.Entities
         public string? RadiatorMaterial { get; set; }
         public string? RadiatorDimensions { get; set; }
         public string? CoolingPipeLenght { get; set; }
-
-        // IHasImage Properties
-        public string? ImageName { get; set; }
-        public string? ImagePath { get; set; }
 
         #region Relations
         public int CategoryId { get; set; }

@@ -11,12 +11,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class FanCaseController : Controller
     {
         #region Field
-        private readonly IGenericService<FanCase> _genericService;
+        private readonly IGenericService<FanCase, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public FanCaseController(IGenericService<FanCase> genericService)
+        public FanCaseController(IGenericService<FanCase, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +91,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(faneCaseAddDto);
 
-            var result = _genericService.Add(faneCaseAddDto, faneCaseAddDto.Images);
+            var result = _genericService.Add<FaneCaseAddDto, AccessoryImage>(faneCaseAddDto, faneCaseAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

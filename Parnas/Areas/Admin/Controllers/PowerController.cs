@@ -11,12 +11,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class PowerController : Controller
     {
         #region Field
-        private readonly IGenericService<Power> _genericService;
+        private readonly IGenericService<Power, AccessoryImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public PowerController(IGenericService<Power> genericService)
+        public PowerController(IGenericService<Power, AccessoryImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +91,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(poweAddDto);
 
-            var result = _genericService.Add<PoweAddDto>(poweAddDto, poweAddDto.Images);
+            var result = _genericService.Add<PoweAddDto, AccessoryImage>(poweAddDto, poweAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

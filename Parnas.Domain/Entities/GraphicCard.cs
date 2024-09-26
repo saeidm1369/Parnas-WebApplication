@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class GraphicCard : BaseEntity<int> , IHasImage
+    public class GraphicCard : BaseEntity<int>
     {
         public GraphicCard()
         {
@@ -39,10 +39,6 @@ namespace Parnas.Domain.Entities
         public string? Slot { get; set; }
         public string? PowerConnector { get; set; }
         public string? RecommendedPower { get; set; }
-
-        // IHasImage Properties
-        public string? ImageName { get; set; }
-        public string? ImagePath { get; set; }
 
         #region Relations
         public int CategoryId { get; set; }

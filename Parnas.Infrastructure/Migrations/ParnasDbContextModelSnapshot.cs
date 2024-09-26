@@ -57,12 +57,6 @@ namespace Parnas.Infrastructure.Migrations
                     b.Property<string>("Dimensions")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Input")
                         .HasColumnType("nvarchar(max)");
 
@@ -155,12 +149,6 @@ namespace Parnas.Infrastructure.Migrations
 
                     b.Property<bool>("HeadPhoneOutPut")
                         .HasColumnType("bit");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Inch2_5DriveBay")
                         .HasColumnType("nvarchar(max)");
@@ -305,12 +293,6 @@ namespace Parnas.Infrastructure.Migrations
                     b.Property<string>("HdmiImagePort")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("ImagePort")
                         .HasColumnType("nvarchar(max)");
 
@@ -424,12 +406,6 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FanLighting")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("IntelSocketSupport")
@@ -553,12 +529,6 @@ namespace Parnas.Infrastructure.Migrations
                     b.Property<string>("HDDFerequency")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
@@ -650,12 +620,6 @@ namespace Parnas.Infrastructure.Migrations
                     b.Property<string>("FanCaseUsageType")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
@@ -730,12 +694,6 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Hdd")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
@@ -833,12 +791,6 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("HdmiOutPutOfTheGraphicCard")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("InterfaceBandWidth")
@@ -947,12 +899,6 @@ namespace Parnas.Infrastructure.Migrations
                     b.Property<string>("HardDrivePort")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
@@ -1030,12 +976,6 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HdmiOutputOfTheMotherBoard")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
@@ -1150,12 +1090,6 @@ namespace Parnas.Infrastructure.Migrations
                     b.Property<string>("First12Current")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
@@ -1215,6 +1149,31 @@ namespace Parnas.Infrastructure.Migrations
                     b.ToTable("Powers");
                 });
 
+            modelBuilder.Entity("Parnas.Domain.Entities.ProductImage", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Discriminator")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ImagePath")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProductImages");
+
+                    b.HasDiscriminator<string>("Discriminator").HasValue("ProductImage");
+                });
+
             modelBuilder.Entity("Parnas.Domain.Entities.Ram", b =>
                 {
                     b.Property<int>("Id")
@@ -1245,12 +1204,6 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Ferequency")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
@@ -1329,12 +1282,6 @@ namespace Parnas.Infrastructure.Migrations
                     b.Property<string>("Dimensions")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("IsDelete")
                         .HasColumnType("bit");
 
@@ -1377,6 +1324,23 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("SSDs");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.AccessoryImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("AccessoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("AccessoryId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("AccessoryImage");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Accessories", b =>
@@ -1531,6 +1495,26 @@ namespace Parnas.Infrastructure.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Parnas.Domain.Entities.AccessoryImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.Accessories", "Accessories")
+                        .WithMany("ImageList")
+                        .HasForeignKey("AccessoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("ImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("Accessories");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Accessories", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
             modelBuilder.Entity("Parnas.Domain.Entities.Category", b =>
                 {
                     b.Navigation("Accessories");
@@ -1560,6 +1544,11 @@ namespace Parnas.Infrastructure.Migrations
                     b.Navigation("SSDs");
 
                     b.Navigation("SubCategories");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.ProductImage", b =>
+                {
+                    b.Navigation("ImageList");
                 });
 #pragma warning restore 612, 618
         }
