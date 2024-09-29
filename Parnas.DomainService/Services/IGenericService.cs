@@ -15,7 +15,7 @@ namespace Parnas.DomainService.Services
         List<TDto> GetAll<TDto>() where TDto : class;
         ServiceException Add<TDto, TImage>(TDto dto, List<IFormFile> files) where TDto : class
         where TImage : ProductImage, new();
-        ServiceException Update<TDto>(TDto dto, List<IFormFile> files) where TDto : class;
+        ServiceException Update<TDto>(TDto dto, List<IFormFile> files, int id) where TDto : class;
         ServiceException Delete(int id);
 
     }

@@ -107,11 +107,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateCPU(CPUAddDto cpuAddDto)
+        public IActionResult UpdateCPU(CPUUpdateDto cpuUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(cpuAddDto);
-            var result = _genericService.Update<CPUAddDto>(cpuAddDto, cpuAddDto.Images);
+                return View(cpuUpdateDto);
+            var result = _genericService.Update<CPUUpdateDto>(cpuUpdateDto, cpuUpdateDto.Images, cpuUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateCase(CaseAddDto caseAddDto)
+        public IActionResult UpdateCase(CaseUpdateDto caseUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(caseAddDto);
-            var result = _genericService.Update<CaseAddDto>(caseAddDto, caseAddDto.Images);
+                return View(caseUpdateDto);
+            var result = _genericService.Update<CaseUpdateDto>(caseUpdateDto, caseUpdateDto.Images, caseUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

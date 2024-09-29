@@ -49,7 +49,6 @@ namespace Parnas.Infrastructure.Repositories
 
         public void Create(TEntity entity)
         {
-
             dbSet.Add(entity);
             _dbContext.SaveChanges();
         }

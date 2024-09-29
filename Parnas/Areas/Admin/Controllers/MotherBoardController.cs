@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateMotherBoard(MotherBoardAddDto motherBoardAddDto)
+        public IActionResult UpdateMotherBoard(MotherBoardUpdateDto motherBoardUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(motherBoardAddDto);
-            var result = _genericService.Update<MotherBoardAddDto>(motherBoardAddDto, motherBoardAddDto.Images);
+                return View(motherBoardUpdateDto);
+            var result = _genericService.Update<MotherBoardUpdateDto>(motherBoardUpdateDto, motherBoardUpdateDto.Images, motherBoardUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

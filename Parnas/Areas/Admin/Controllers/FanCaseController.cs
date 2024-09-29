@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateFanCase(FaneCaseAddDto faneCaseAddDto)
+        public IActionResult UpdateFanCase(FanCaseUpdateDto faneCaseUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(faneCaseAddDto);
-            var result = _genericService.Update<FaneCaseAddDto>(faneCaseAddDto, faneCaseAddDto.Images);
+                return View(faneCaseUpdateDto);
+            var result = _genericService.Update<FanCaseUpdateDto>(faneCaseUpdateDto, faneCaseUpdateDto.Images, faneCaseUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

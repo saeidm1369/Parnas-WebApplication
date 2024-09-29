@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateGraphicCard(GraphicCardAddDto graphicCardAddDto)
+        public IActionResult UpdateGraphicCard(GraphicCardUpdateDto graphicCardUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(graphicCardAddDto);
-            var result = _genericService.Update<GraphicCardAddDto>(graphicCardAddDto, graphicCardAddDto.Images);
+                return View(graphicCardUpdateDto);
+            var result = _genericService.Update<GraphicCardUpdateDto>(graphicCardUpdateDto, graphicCardUpdateDto.Images, graphicCardUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

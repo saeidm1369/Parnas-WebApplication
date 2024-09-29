@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateRam(RamAddDto ramAddDto)
+        public IActionResult UpdateRam(RamUpdateDto ramUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(ramAddDto);
-            var result = _genericService.Update<RamAddDto>(ramAddDto, ramAddDto.Images);
+                return View(ramUpdateDto);
+            var result = _genericService.Update<RamUpdateDto>(ramUpdateDto, ramUpdateDto.Images, ramUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

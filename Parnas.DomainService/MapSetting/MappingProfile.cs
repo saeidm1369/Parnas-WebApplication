@@ -32,6 +32,9 @@ namespace Parnas.DomainService.MapSetting
 
             CreateMap<AccessoryAddDto, Accessories>()
                 .ForMember(dest => dest.ImageList, opt => opt.Ignore());
+            CreateMap<AccessoryUpdateDto, Accessories>()
+                .ForMember(dest => dest.ImageList, opt => opt.Ignore());
+
             #endregion
 
             #region Cases Map        

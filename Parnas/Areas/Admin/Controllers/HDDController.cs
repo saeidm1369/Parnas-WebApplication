@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateHDD(HDDAddDto hddAddDto)
+        public IActionResult UpdateHDD(HDDUpdateDto hddUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(hddAddDto);
-            var result = _genericService.Update<HDDAddDto>(hddAddDto, hddAddDto.Images);
+                return View(hddUpdateDto);
+            var result = _genericService.Update<HDDUpdateDto>(hddUpdateDto, hddUpdateDto.Images, hddUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

@@ -105,13 +105,13 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateAccessory(AccessoryAddDto accessoryAddDto)
+        public IActionResult UpdateAccessory(AccessoryUpdateDto accessoryUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(accessoryAddDto);
-            var result = _genericService.Update<AccessoryAddDto>(accessoryAddDto, accessoryAddDto.Images);
+                return View(accessoryUpdateDto);
+            var result = _genericService.Update<AccessoryUpdateDto>(accessoryUpdateDto, accessoryUpdateDto.ImageList, accessoryUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Accessories", new { area = "Admin" });
         }
 
         [HttpGet]

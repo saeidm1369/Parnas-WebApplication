@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateMonitor(ComputerMonitorAddDto monitorAddDto)
+        public IActionResult UpdateMonitor(ComputerMonitorUpdateDto monitorUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(monitorAddDto);
-            var result = _genericService.Update<ComputerMonitorAddDto>(monitorAddDto, monitorAddDto.Images);
+                return View(monitorUpdateDto);
+            var result = _genericService.Update<ComputerMonitorUpdateDto>(monitorUpdateDto, monitorUpdateDto.Images, monitorUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

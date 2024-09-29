@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdatePower(PoweAddDto poweAddDto)
+        public IActionResult UpdatePower(PowerUpdateDto powerUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(poweAddDto);
-            var result = _genericService.Update<PoweAddDto>(poweAddDto, poweAddDto.Images);
+                return View(powerUpdateDto);
+            var result = _genericService.Update<PowerUpdateDto>(powerUpdateDto, powerUpdateDto.Images, powerUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }

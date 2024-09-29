@@ -29,6 +29,7 @@ namespace Parnas.DomainService.Services
         public TDto GetById<TDto>(int id) where TDto : class
         {
             var entity = _repository.GetByIdWithImages(id);
+            
             var imageListProperty = entity.GetType().GetProperty("ImageList");
             if (imageListProperty == null)
                 return null;
@@ -57,7 +58,6 @@ namespace Parnas.DomainService.Services
              where TImage1 : ProductImage, new()
         {
             var entity = _mapper.Map<TEntity>(dto);
-
             foreach (var file in files)
             {
                 if (file.Length > 0)
@@ -87,41 +87,42 @@ namespace Parnas.DomainService.Services
                 type: "Success");
         }
 
-        public ServiceException Update<TDto>(TDto dto, List<IFormFile> files) where TDto : class
+        public ServiceException Update<TDto>(TDto dto, List<IFormFile> files, int id) where TDto : class
         {
             if (dto == null)
                 return ServiceException.Create(
                 type: "NotFound");
 
-            var entity = _mapper.Map<TEntity>(dto);
+            var entity = _repository.GetByIdWithImages(id);
 
+            if (files.Any())
+            {
+                entity.ImageList.RemoveRange(0, entity.ImageList.Count);
+            }
+            _mapper.Map(dto, entity);
             #region Save Images file
-            var imageUrls = new List<string>();
+
             foreach (var file in files)
             {
                 if (file.Length > 0)
                 {
                     var fileName = Path.GetFileNameWithoutExtension(file.FileName);
                     var extension = Path.GetExtension(file.FileName);
-                    var uniqueFileName = $"{fileName}_{Guid.NewGuid()}{extension}";
-                    var filePath = Path.Combine("wwwroot/images/uploads", uniqueFileName);
+                    var uniqueFileName = $"{fileName}{extension}";
+                    var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/uploads", uniqueFileName);
 
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
-                        file.CopyToAsync(stream);
+                        file.CopyToAsync(stream).Wait(); // Use .Wait() if not in an async method
                     }
 
-                    imageUrls.Add($"/images/{uniqueFileName}");
-
-                    if (entity is IHasImage<ProductImage> hasImageEntity)
+                    var image = new TImage()
                     {
-                        var productImage = new ProductImage
-                        {
-                            ImageName = fileName,
-                            ImagePath = filePath
-                        };
-                        hasImageEntity.ImageList.Add(productImage);
-                    }
+                        ImageName = uniqueFileName,
+                        ImagePath = filePath
+                    };
+
+                    entity.ImageList.Add(image);
                 }
             }
             #endregion

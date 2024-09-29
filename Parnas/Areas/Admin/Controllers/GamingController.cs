@@ -106,11 +106,11 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateGaming(GamingAddDto gamingAddDto)
+        public IActionResult UpdateGaming(GamingUpdateDto gamingUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(gamingAddDto);
-            var result = _genericService.Update<GamingAddDto>(gamingAddDto, gamingAddDto.Images);
+                return View(gamingUpdateDto);
+            var result = _genericService.Update<GamingUpdateDto>(gamingUpdateDto, gamingUpdateDto.Images, gamingUpdateDto.Id);
             ViewData["Message"] = result.Type;
             return View();
         }
