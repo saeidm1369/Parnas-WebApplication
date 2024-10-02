@@ -3,10 +3,12 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
+using static Parnas.Domain.Entities.GraphicCard;
 
 namespace Parnas.Domain.Entities
 {
-    public class GraphicCard : BaseEntity<int>
+    public class GraphicCard : BaseEntity<int>, IHasImage<GraphicCardImage>
     {
         public GraphicCard()
         {
@@ -43,6 +45,20 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        // IHasImage Properties
+        public List<GraphicCardImage> ImageList { get; set; } = new List<GraphicCardImage>();
         #endregion
+
+        public class GraphicCardImage : ProductImage
+        {
+            public GraphicCardImage()
+            {
+
+            }
+            public int GraphicCardId { get; set; }
+
+            public GraphicCard GraphicCard { get; set; }
+        }
     }
 }

@@ -3,10 +3,11 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
 
 namespace Parnas.Domain.Entities
 {
-    public class Case : BaseEntity<int>
+    public class Case : BaseEntity<int>, IHasImage<CaseImage>
     {
         public Case()
         {
@@ -40,6 +41,20 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        // IHasImage Properties
+        public List<CaseImage> ImageList { get; set; } = new List<CaseImage>();
         #endregion
+
+        public class CaseImage : ProductImage
+        {
+            public CaseImage()
+            {
+
+            }
+            public int CaseId { get; set; }
+
+            public Case Case { get; set; }
+        }
     };
 }

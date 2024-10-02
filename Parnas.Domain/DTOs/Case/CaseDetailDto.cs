@@ -41,8 +41,15 @@ namespace Parnas.Domain.DTOs.Case
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
+        [Display(Name = "تعداد")]
+        public int Count { get; set; }
+        [Display(Name = "تاریخ افزودن محصول")]
+        public DateTime CreateDate { get; set; }
+
+        [Display(Name = "دسته بندی")]
+        public int CategoryId { get; set; }
         [Display(Name = "تصاویر")]
-        public List<string> Images { get; set; }
+        public List<string> ImageList { get; set; }
 
         // Case Entity
         [Display(Name = "محفظه درایو 3.5 اینچی")]
@@ -91,6 +98,6 @@ namespace Parnas.Domain.DTOs.Case
         [Display(Name = "ورودی میکروفن")]
         public bool MicrophoneInput { get; set; }
         [Display(Name = "خروجی هدفون")]
-        public bool HeadPhoneOutPut { get; set; }    
+        public bool HeadPhoneOutPut { get; set; }
     }
 }

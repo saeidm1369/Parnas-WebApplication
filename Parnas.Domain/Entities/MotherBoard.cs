@@ -3,10 +3,12 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
+using static Parnas.Domain.Entities.MotherBoard;
 
 namespace Parnas.Domain.Entities
 {
-    public class MotherBoard : BaseEntity<int>
+    public class MotherBoard : BaseEntity<int>, IHasImage<MotherBoardImage>
     {
         public MotherBoard()
         {
@@ -38,6 +40,20 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        // IHasImage Properties
+        public List<MotherBoardImage> ImageList { get; set; } = new List<MotherBoardImage>();
         #endregion
+
+        public class MotherBoardImage : ProductImage
+        {
+            public MotherBoardImage()
+            {
+
+            }
+            public int MotherBoardId { get; set; }
+
+            public MotherBoard MotherBoard { get; set; }
+        }
     }
 }

@@ -1,45 +1,518 @@
-﻿@*<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Parnas</title>
+    <title>@ViewData["Title"] - ParnasFront</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Parnas.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ParnasFront.styles.css" asp-append-version="true" />
+
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Parnas</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+
+<body  style="background-color:black">
+    <header dir="rtl"  >
+        <div class="row text-white" style="margin-left:5px;margin-right:5px">
+            <div class="col-md-1 ">
+                ورود
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                </svg>
+            </div>
+            <div class="col-md-1">
+                ثبت نام
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                    <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325" />
+                </svg>
+            </div>
+            <div class="col-md-2">
+                0413446811
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-2">
+                لیست علاقه مندی
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15" />
+                </svg>
+            </div>
+
+            <div class="col-md-2">
+                <div class="row">
+                    <div class="col-md-5"></div>
+                    <div class="col-md-7">
+                        مقایسه کالا
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart" viewBox="0 0 16 16">
+                            <path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <br />
+
+        <div class="row text-white" style="margin-right:5px;margin-left:5px">
+            <div class="col-md-2">
+                <img style="height:50px;width:200px" src="~/img/logo Main test3-300x39.png.webp" />
+            </div>
+            <div class="col-md-8 ">
+                <input type="text" class="form-control" placeholder="جستجوی محصول" style="width:100%;background-color:gray;" />
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-1">
+                سبد خرید
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16">
+                    <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9zM1 7v1h14V7zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5m2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5" />
+                </svg>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-sm  navbar-toggleable-sm navbar-light  border-bottom box-shadow mb-3" dir="rtl" >
+            <div class="container-fluid ">
+                <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">پارناس</a>
+                <button class="navbar-toggler" style="background-color:white" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">صفحه اصلی</a>
+                        </li>
+                            <!-- Mega menu -->
+                        <li class="nav-item dropdown dropdown-mega position-static">
+                            <a class="nav-link dropdown-toggle text-white  px-4" href="#" data-bs-toggle="dropdown"
+                               data-bs-auto-close="outside">منو اصلی</a>
+                            <div class="dropdown-menu shadow-lg col-lg-12 my-0" style="background-color:gray">
+                                <div class="mega-content px-4 " >
+                                    <div class="container-fluid">
+                                        <div class="row text-white  " dir="rtl"  >
+                                            <div class="col-12 col-md-4 col-lg-3 py-4 text-center">
+                                                <h5 class="text-info">سیستم های آماده</h5>
+                                                <div class="list-group">
+                                                    <a class="text-white" href="#">گیمینگ</a>
+                                                    <a class="text-white" href="#">رندرینگ</a>
+                                                    <a class="text-white" href="#">پیشنهاد ویژه</a>
+                                                   
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 col-lg-3 py-4 text-center">
+                                                <h5 class="text-info">قطعات کامپیوتر</h5>
+                                                <div class="list-group">
+                                                    <a class="text-white" href="#">
+                                                        پردازنده (سی پی یو)
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        خنک کننده پردازنده
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        رم کامپیوتر
+                                                    </a>
+                                                    <a class="text-white" href="#">مادربرد</a>
+                                                    <a class="text-white" href="#">
+                                                        حافظه اس اس دی
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        حافظه اچ دی دی
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        کارت گرافیک
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        کیس کامپیوتر
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        منبع تغذیه
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        مانیتور
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        فن کیس
+
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-4 col-lg-3 py-4 text-center">
+                                                <h5 class="text-info">لوازم جانبی</h5>
+                                                <div class="list-group">
+                                                    <a class="text-white" href="#">
+                                                        لوازم مادینگ
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        موس
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        کیبورد
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        موس و کیبورد (باندل)
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        موس پد
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        هدست و هدفون
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        اسپیکر
+
+                                                    </a>
+                                                    <a class="text-white" href="#">
+                                                        دسته بازی
+                                                    </a>
+                                                   
+                                                    <a class="text-white" href="#">
+                                                        تجهیزات استریم
+
+                                                    </a>
+
+                                                    <a class="text-white" href="#">
+                                                        وبکم
+
+                                                    </a>
+
+                                                    <a class="text-white" href="#">
+                                                        میکروفن
+
+                                                    </a>
+
+                                                    <a class="text-white" href="#">
+                                                        کپچر کارت
+
+                                                    </a>
+                                                    <a class="text-white" href="#">کارت صدا</a>
+
+                                                 
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!--End Mega menu -->
+                          
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Custom">کاستوم واتر کولینگ</a>
+                        </li>
+                        <li class="nav-item dropdown " >
+                            <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">گالری</a>
+                            <ul class="dropdown-menu text-center" style="background-color:gray" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item text-white" asp-area="" asp-controller="Home" asp-action="CaseGallery">گالری کیس مادینگ ما</a></li>
+                                <li><a class="dropdown-item text-white" asp-area="" asp-controller="Home" asp-action="SystemGallery"> گالری سیستم های اسمبل شده ما </a></li>
+                                <li><a class="dropdown-item text-white" asp-area="" asp-controller="Home" asp-action="ModKit">  ماد کیت</a></li>
+                                <li><a class="dropdown-item text-white" asp-area="" asp-controller="Home" asp-action="ExtremeCooling">  اکستریم کولینگ</a></li>
+
+                            </ul>
+
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Ourservices">خدمات</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Warranty">وارانتی پی سی ماد</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">درباره ما</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Contact">تماس با ما</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
+
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
+
+    <div class="row body-content " dir="rtl" style="margin-right:5px;margin-left:5px;">
+        <main  role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Parnas - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top  footer text-muted" >
+        <div class="row bg-black " dir="rtl" style="margin-right:5px;margin-left:5px">
+            <div class="col-md-4">
+                <img src="~/img/Group-26@3x-1-1-qt4lxwg0z56pkwy4uoeheqs1lw4q2dgoqwjgivcdk4.png" />
+                </div>
+                <div class="col-md-8 text-center text-white">
+                    <h5>بهترین بودیم، بهترین می مانیم</h5>
+                    </div>        
         </div>
+        <div class="row bg-black text-white" dir="rtl" style="margin-right:5px;margin-left:5px;margin-top:10px">
+            <div class="col-md-4 text-center border" style="height:100px;">
+                <h6 >گالری کیس ماد</h6>
+                
+                <label>نمونه کارهای کیس ماد</label>
+            </div>
+            <div class="col-md-4 text-center border" >
+                <h6>وارانتی پی سی ماد</h6>
+                <label>
+                    تعویض بی قید و شرط
+                </label>
+                </div>
+            <div class="col-md-4 text-center border">
+                <h6>اکستریم کولینگ</h6>
+            <label>راه حل قطعی خنک کاری پردازنده</label>
+            </div>
+        </div>
+        
+        <div class="row bg-black text-danger" dir="rtl" style="margin-right:5px;margin-left:5px;margin-top:10px">
+            <h4>آخرین مطالب پی‌سی ماد مگ</h4>
+
+        </div>
+        <div class="row bg-black text-white" dir="rtl" style="margin-right:5px;margin-left:5px">
+            <div class="col-md-6">
+            <ul>
+                <li>
+                    <a >احتمال عرضه کارت RTX 5090 با دو کانکتور 16پین</a>
+                </li>
+                <li>
+                    <a >طرفداران محل قرارگیری کانسپت آرت Battlefield 6 را کشف کردند</a>
+                </li>
+                <li>
+                    <a >
+                        هرآنچه درباره Frostpunk 2 می دانیم
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        شایعه: اینتل Arrow Lake-S از رم تا سرعت 10,000 MT/s پشتیبانی می‌کند
+                    </a>
+                </li>
+                <li>
+                    <a >
+                        تست و بررسی کولر بادی اوست AV1236 ARGB
+                    </a>
+                </li>
+
+            </ul>
+            </div>
+            <div class="col-md-6">
+                <ul>
+                    <li>
+                        <a >رویداد State of Play سونی امشب برگزار می‌شود و شامل معرفی بیش از ۲۰ بازی خواهد بود</a>
+                    </li>
+                    <li>
+                        <a >کوالکام، در یک قدمی خرید اینتل</a>
+                    </li>
+                    <li>
+                        <a >
+                            تاریخ و زمان انتشار Frostpunk 2
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            مشخصات سیستم مورد نیاز Until Dawn منتشر شد پشتیبانی از اولترا واید و هپتیک‌های DualSense
+                        </a>
+                    </li>
+                    <li>
+                        <a >
+                            نیم نگاه و بررسی بتای Call Of Duty Black Ops 6
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div> 
+        <div class="row border-top text-white bg-black" dir="rtl" style="margin-right:5px;margin-left:5px">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-5">
+                       
+                                  <h5 class="text-danger">  سیستم های گیمینگ
+                                    </h5>
+                               
+<ul style="font-size:small">
+                            <li >
+                                سیستم گیمینگ اکو | Gaming ECO
+
+    </li>
+    <li>
+                                سیستم گیمینگ پلاس | Gaming PLUS
+
+    </li>
+    <li>
+                                سیستم گیمینگ پرو | Gaming PRO
+
+    </li>
+                            <li>
+                                سیستم گیمینگ پرو مکس | Gaming PROMAX
+
+                            </li>
+                            <li>
+                                سیستم گیمینگ الیت | Gaming ELITE
+
+                            </li>
+                            <li>
+                                سیستم گیمینگ اولترا | Gaming ULTRA
+
+                            </li>
+</ul>
+                        
+                        
+                       
+                        
+                      
+                        
+                        
+                           
+                       
+                                   <h5 class="text-danger"> سیستم های رندرینگ
+                                    </h5>
+                        <ul style="font-size:small">
+                                <li>
+                                سیستم رندرینگ اکو | Workstation ECO                        
+
+                                </li>
+                            <li>
+                                سیستم رندرینگ پلاس | Workstation PLUS                        
+
+                            </li>
+                            <li>
+                                سیستم رندرینگ پرو | Workstation PRO                        
+
+                            </li>
+                            <li>
+                                سیستم رندرینگ پرو مکس | Workstation PROMAX                        
+
+                            </li>
+                            <li>
+                                سیستم رندرینگ الیت | Workstation ELITE                       
+
+                            </li>
+                            <li>
+                                سیستم رندرینگ اولترا | Workstation ULTRA
+
+                            </li>
+                            </ul> 
+
+
+
+
+
+
+
+                    </div>
+                    <div class="col-md-4 ">
+                        <h5 class="text-danger">
+                            فروشگاه ‍‍‍‍‍‍‍پی سی ماد
+                        </h5>
+                        <ul style="font-size:small">
+                            <li>	وارانـتی پـی‌سـی مـاد</li>
+                            <li>	کاسـتوم واتـر کـولینگ</li>
+                            <li>	خـدمـات مــا</li>
+                            <li>	اکـسـتریم کـولـینگ</li>
+                            <li>	گـالری کـیس‌مـادینگ مـا</li>
+                            <li>	گـالری کـیس های اسمبل شده</li>
+                            <li>	مـاد کـیـت</li>
+                            <li>
+                                	بـرنـدهـا
+                            </li>
+                            <li>
+                                	داسـتـان مـا
+                            </li>
+                            <li>
+                                	ارتـبـاط بـا مـا
+                            </li>
+                        </ul>
+                        
+                    </div>
+                    <div class="col-md-3">
+                        <h5 class="text-danger">پی سی ماد مگ</h5>
+                        <ul style="font-size:small">
+                            <li>
+                                	صـفـحه اصـلی
+                            </li>
+                            <li>
+                                	آمــوزش
+                            </li>
+                            <li>
+                                	اخـبـار
+                            </li>
+                            <li>
+                                	بـررسـی
+                            </li>
+                            <li>
+                                	راهـنـمـای خـریـد
+                            </li>
+                            <li>
+                                	رویـداد هـا
+                            </li>
+                            <li>
+                                	مـعـرفـی
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-6">
+
+                    </div>
+                    <div class="col-md-6">
+                        <img style="margin-top:15px" src="~/img/kasbokar.png" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-4">
+                    پی سی ماد را دنبال کنید
+                    </div>
+                    <div class="col-md-8 text-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+
+                    </div>
+                   
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br />
+                <div class="row">
+                    <div class="col-md-4"><h4>تماس با ما</h4></div>
+                    <div class="col-md-8">
+                    <h5>  04134446811
+                        </h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"><h4>آدرس ما</h4></div>
+                    <div class="col-md-10">
+                        <h6>
+                            نصف راه اول کمربندی روبروی مخابرات ساختمان فرهنگ طبقه دوم  واحد 5
+                        </h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -47,4 +520,3 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
-*@

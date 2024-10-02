@@ -3,10 +3,12 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
+using static Parnas.Domain.Entities.SSD;
 
 namespace Parnas.Domain.Entities
 {
-    public class SSD : BaseEntity<int>
+    public class SSD : BaseEntity<int>, IHasImage<SSDImage>
     {
         public SSD()
         {
@@ -24,6 +26,20 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        // IHasImage Properties
+        public List<SSDImage> ImageList { get; set; } = new List<SSDImage>();
         #endregion
+
+        public class SSDImage : ProductImage
+        {
+            public SSDImage()
+            {
+
+            }
+            public int SSDId { get; set; }
+
+            public SSD SSD { get; set; }
+        }
     }
 }

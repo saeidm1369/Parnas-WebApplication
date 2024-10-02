@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.ComputerMonitor;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.ComputerMonitor;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class ComputerMonitorController : Controller
     {
         #region Field
-        private readonly IGenericService<ComputerMonitor, AccessoryImage> _genericService;
+        private readonly IGenericService<ComputerMonitor, ComputerMonitorImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public ComputerMonitorController(IGenericService<ComputerMonitor, AccessoryImage> genericService)
+        public ComputerMonitorController(IGenericService<ComputerMonitor, ComputerMonitorImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(monitorAddDto);
 
-            var result = _genericService.Add<ComputerMonitorAddDto, AccessoryImage>(monitorAddDto, monitorAddDto.Images);
+            var result = _genericService.Add<ComputerMonitorAddDto, GraphicCardImagr>(monitorAddDto, monitorAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

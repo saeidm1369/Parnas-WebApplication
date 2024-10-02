@@ -3,10 +3,12 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
+using static Parnas.Domain.Entities.ComputerMonitor;
 
 namespace Parnas.Domain.Entities
 {
-    public class ComputerMonitor : BaseEntity<int>
+    public class ComputerMonitor : BaseEntity<int>, IHasImage<ComputerMonitorImage>
     {
         public ComputerMonitor()
         {
@@ -35,6 +37,18 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        // IHasImage Properties
+        public List<ComputerMonitorImage> ImageList { get; set; } = new List<ComputerMonitorImage>();
         #endregion
+        public class ComputerMonitorImage : ProductImage
+        {
+            public ComputerMonitorImage()
+            {
+
+            }
+            public int ComputerMonitorId { get; set; }
+
+            public ComputerMonitor ComputerMonitor { get; set; }
+        }
     }
 }

@@ -65,12 +65,13 @@
                                 <span asp-validation-for="Type" class="text-danger"></span>
                             </div>
 
+                            <!-- select -->
                             <div class="form-group">
-                                <label asp-for="CategoryId">دسته‌بندی</label>
-                                <select asp-for="CategoryId" class="form-control">
-                                    <option value="1">دسته‌بندی ۱</option>
-                                    <option value="2">دسته‌بندی ۲</option>
-                                    <option value="3">دسته‌بندی ۳</option>
+                                <label asp-for="CategoryId" for="CategoryId">انتخاب دسته بندی</label>
+                                <select asp-for="CategoryId" name="CategoryId" class="form-control">
+                                    <option value="1"> لوازم جانبی</option>
+                                    <option value="2">سیستم های آماده</option>
+                                    <option value="3">قطعات کامپیوتر</option>
                                 </select>
                             </div>
                         </div>

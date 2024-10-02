@@ -3,10 +3,12 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
+using static Parnas.Domain.Entities.Cooling;
 
 namespace Parnas.Domain.Entities
 {
-    public class Cooling : BaseEntity<int>
+    public class Cooling : BaseEntity<int>, IHasImage<CoolingImage>
     {
         public Cooling()
         {
@@ -30,6 +32,19 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        // IHasImage Properties
+        public List<CoolingImage> ImageList { get; set; } = new List<CoolingImage>();
         #endregion
+
+        public class CoolingImage : ProductImage
+        {
+            public CoolingImage()
+            {
+
+            }
+            public int CoolingId { get; set; }
+
+            public Cooling Cooling { get; set; }
+        }
     }
 }

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Parnas.Infrastructure.Config
 {
-    public class AccessoryImageConfig : IEntityTypeConfiguration<AccessoryImage>
+    public class AccessoryImageConfig : IEntityTypeConfiguration<GraphicCardImagr>
     {
-        public void Configure(EntityTypeBuilder<AccessoryImage> builder)
+        public void Configure(EntityTypeBuilder<GraphicCardImagr> builder)
         {
             builder.HasOne(x => x.Accessories)
                 .WithMany(x => x.ImageList)

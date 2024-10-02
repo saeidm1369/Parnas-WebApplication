@@ -1,0 +1,201 @@
+﻿@model Parnas.Domain.DTOs.FanCase.FanCaseDetailDto
+@{
+    ViewData["Title"] = "ویرایش  محصول";
+}
+
+<h2 style="margin:10px 40px 15px 0">ویرایش فن کیس</h2>
+
+<div class="box box-warning container">
+    <div class="row">
+        <form asp-area="Admin" asp-controller="FanCase" asp-action="UpdateFanCase" method="post" enctype="multipart/form-data">
+            <div class="col-md-7">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">اطلاعات کلی</h3>
+                        </div>
+
+                        <div class="box-body">
+                            <!-- Base inputs -->
+                            <div class="form-group">
+                                <label asp-for="Title">عنوان</label>
+                                <input asp-for="Title" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Title" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Brand">برند</label>
+                                <input asp-for="Brand" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Brand" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Price">قیمت</label>
+                                <input asp-for="Price" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Count">تعداد</label>
+                                <input asp-for="Count" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Count" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Color">رنگ</label>
+                                <input asp-for="Color" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Color" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Dimensions">اندازه</label>
+                                <input asp-for="Dimensions" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Dimensions" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Weight">وزن</label>
+                                <input asp-for="Weight" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Weight" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Type">نوع</label>
+                                <input asp-for="Type" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Type" class="text-danger"></span>
+                            </div>
+
+                            <!-- select -->
+                            <div class="form-group">
+                                <label asp-for="CategoryId" for="CategoryId">انتخاب دسته بندی</label>
+                                <select asp-for="CategoryId" name="CategoryId" class="form-control">
+                                    <option value="1"> لوازم جانبی</option>
+                                    <option value="2">سیستم های آماده</option>
+                                    <option value="3">قطعات کامپیوتر</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">مشخصات فن کیس</h3>
+                        </div>
+
+                        <div class="box-body">
+                            <!-- FanCase specific inputs -->
+                            <div class="form-group">
+                                <label asp-for="FanCaseType">نوع فن کیس</label>
+                                <input asp-for="FanCaseType" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="FanCaseType" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="FanCaseUsageType">نوع کاربرد فن کیس</label>
+                                <input asp-for="FanCaseUsageType" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="FanCaseUsageType" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="FanCaseController">کنترل‌کننده فن کیس</label>
+                                <input asp-for="FanCaseController" type="checkbox" class="form-control">
+                                <span asp-validation-for="FanCaseController" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CaseFanSpeedController">کنترل‌کننده سرعت فن کیس</label>
+                                <input asp-for="CaseFanSpeedController" type="checkbox" class="form-control">
+                                <span asp-validation-for="CaseFanSpeedController" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="CaseFanNoiseLevel">سطح صدای فن کیس</label>
+                                <input asp-for="CaseFanNoiseLevel" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="CaseFanNoiseLevel" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="RatiotionSpeedOfTheCaseFan">سرعت چرخش فن کیس</label>
+                                <input asp-for="RatiotionSpeedOfTheCaseFan" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="RatiotionSpeedOfTheCaseFan" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="FanCaseLighting">نورپردازی فن کیس</label>
+                                <input asp-for="FanCaseLighting" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="FanCaseLighting" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="MaximumCaseAirFlow">حداکثر جریان هوا در کیس</label>
+                                <input asp-for="MaximumCaseAirFlow" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="MaximumCaseAirFlow" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="FanCaseLightingController">کنترل‌کننده نورپردازی فن کیس</label>
+                                <input asp-for="FanCaseLightingController" type="checkbox" class="form-control">
+                                <span asp-validation-for="FanCaseLightingController" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="container">
+                    <div class="form-group">
+                        <label asp-for="Description">توضیحات </label>
+                        <textarea asp-for="Description" class="form-control" placeholder=""></textarea>
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div style="margin-top: 15px">
+                        <img id="main-image" src="" style="width:350px;height:350px; border-radius:10px; display: none;" />
+                    </div>
+                    <div class="container-fluid" style="margin-top: 15px" id="image-gallery"></div>
+                </div>
+                <div class="text-center" style="margin-top:15px">
+                    <button type="button" class="btn btn-success" id="add-images-btn">افزودن تصاویر</button>
+                    <input asp-for="ImageList" type="file" id="file-input" multiple accept="image/*" style="display: none;">
+                    <input type="submit" class="btn btn-primary" value="ارسال">
+                </div>
+            </div>
+        </form>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#add-images-btn').on('click', function () {
+                    $('#file-input').click();
+                });
+
+                $('#file-input').on('change', function () {
+                    const files = this.files;
+
+                    // اضافه کردن تصاویر جدید به گالری
+                    for (let i = 0; i < files.length; i++) {
+                        const file = files[i];
+                        const reader = new FileReader();
+                        reader.onload = (function (file) {
+                            return function (e) {
+                                // ایجاد عنصر جدید برای تصویر
+                                const newImage = $('<img>', {
+                                    class: 'gallery-image',
+                                    src: e.target.result,
+                                    style: 'width:70px;height:70px; border-radius:10px; margin: 5px;',
+                                    'data-index': $('#image-gallery img').length // تنظیم ایندکس
+                                });
+                                $('#image-gallery').append(newImage);
+                            };
+                        })(file);
+                        reader.readAsDataURL(file);
+                    }
+                });
+
+                // برای تغییر تصویر بزرگ هنگام کلیک بر روی تصاویر گالری
+                $(document).on('click', '.gallery-image', function () {
+                    const src = $(this).attr('src');
+                    $('#main-image').attr('src', src).show();
+                });
+            });
+        </script>
+    </div>
+</div>

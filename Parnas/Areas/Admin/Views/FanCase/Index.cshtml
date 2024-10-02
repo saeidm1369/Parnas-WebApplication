@@ -34,8 +34,9 @@
                                     <td>@FanCases.Brand</td>
                                     <td>@FanCases.Price</td>
                                     <td>
-                                        <a href="#">ویرایش</a>
-                                        <a href="#">حذف</a>
+                                        <a asp-area="Admin" asp-controller="FanCase" asp-action="Detail" asp-route-Id="@FanCases.Id">جزئیات</a>
+                                        <a asp-area="Admin" asp-controller="FanCase" asp-action="UpdateFanCase" asp-route-Id="@FanCases.Id">ویرایش</a>
+                                        <a asp-area="Admin" asp-controller="FanCase" asp-action="DeleteFanCase" asp-route-Id="@FanCases.Id">حذف</a>
                                     </td>
                                 </tr>
                             }

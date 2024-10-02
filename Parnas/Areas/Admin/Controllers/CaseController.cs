@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.Case;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.Case;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class CaseController : Controller
     {
         #region Field
-        private readonly IGenericService<Case, AccessoryImage> _genericService;
+        private readonly IGenericService<Case, CaseImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public CaseController(IGenericService<Case, AccessoryImage> genericService)
+        public CaseController(IGenericService<Case, CaseImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(caseAddDto);
 
-            var result = _genericService.Add<CaseAddDto, AccessoryImage>(caseAddDto, caseAddDto.Images);
+            var result = _genericService.Add<CaseAddDto, GraphicCardImagr>(caseAddDto, caseAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

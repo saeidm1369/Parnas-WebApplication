@@ -1,37 +1,218 @@
 ﻿@{
-    ViewData["Title"] = "پارناس";
+    ViewData["Title"] = "Home Page";
 }
 
+<div class="row " dir="rtl" style="margin-left:5px;margin-right:5px">
+    <div class="col-md-8 ">
+        <div class="row">
+            <div id="demo" class="carousel row slide" data-bs-ride="carousel">
 
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
 
-<body>
-    <div class="wrapper">
-        <!-------------------------------- Header Section -->
-        @Html.Partial("_Header")
-        <!-------------------------------- Header Section -->
-        <!--------------------- Header Responsive Section -->
-        @Html.Partial("_HeaderResponsive")
-        <!--------------------- Header Responsive Section -->
-        <!---------------------------- Page Loader Section-->
-        @Html.Partial("_PageLoader")
-        <!---------------------------- Page Loader Section-->
-        <!--------------------------------- Main Content -->
-        @Html.Partial("_Main")
-        <!--------------------------------- Main Content -->
-        <!-------------------------- Mobile Footer Section-->
-        @Html.Partial("_MobileFooter")
-        <!-------------------------- Mobile Footer Section-->
-        <!-------------------------------- Footer Section -->
-        @*LayoutPage*@
-        <!-------------------------------- Footer Section -->
-        <!----------------------------- Go To Top Section -->
-        @Html.Partial("_GoToTop")
-        <!----------------------------- Go To Top Section -->
-        <!------------------------------ Cities Map Modal -->
-        @Html.Partial("_Cities")
-        <!------------------------------ Cities Map Modal -->
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/img/chicago.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/img/la.jpg" alt="Chicago" class="d-block rounded" style="width:100%;height:330px">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/img/ny.jpg" alt="New York" class="d-block rounded" style="width:100%;height:330px">
+                    </div>
+                </div>
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </div>
     </div>
-</body>
-</html>
+    <div class="col-md-4">
+        <div class="row ">
+            <img src="~/img/chicago.jpg" style="margin-right:30px" class="rounded" height="150px" width="100%" />
+        </div>
+        <div class="row " style="margin-top:30px">
+            <img src="~/img/la.jpg" style="margin-right:30px" class="rounded" height="150px" width="100%" />
+        </div>
+    </div>
+</div>
+<br />
+<div class="row rounded "  style="height:30px;background-color:black">
+    <label class="text-white text-center">محصولات جدید</label>
+</div>
+<br />
+<br />
+<div id="demo1" dir="rtl" class="carousel row slide" data-bs-ride="carousel">
+
+
+
+
+    <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/img/ny.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/la.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/chicago.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/logo Main test3-300x39.png.webp" />
+                </div>
+            </div>
+
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/img/logo Main test3-300x39.png.webp" />
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/chicago.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/ny.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/la.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/img/la.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/logo Main test3-300x39.png.webp" />
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/chicago.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/ny.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="~/img/la.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+
+                <div class="col-md-3">
+                    <img src="~/img/chicago.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/logo Main test3-300x39.png.webp" />
+                </div>
+                <div class="col-md-3">
+                    <img src="~/img/ny.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo1" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo1" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+<br />
+<div class="row">
+    <div class="col-md-5"></div>
+    <div class="col-md-2 bg-info">
+        <div class="row  text-center">
+            <label class="text-white form-label" style="font-size:larger">تخفیف روزانه</label>
+        </div>
+    </div>
+    <div class="col-md-5"></div>
+
+</div>
+<br />
+<div id="demo2" dir="rtl" class="carousel row slide" data-bs-ride="carousel">
+
+
+
+
+    <div class="carousel-inner">
+
+
+        <div class="carousel-item active">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="~/img/ny.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-4">
+                    <img src="~/img/la.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-4">
+                    <img src="~/img/chicago.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+            </div>
+
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="~/img/chicago.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-4">
+                    <img src="~/img/ny.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-4">
+                    <img src="~/img/la.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="~/img/la.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-4">
+                    <img src="~/img/chicago.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+                <div class="col-md-4">
+                    <img src="~/img/ny.jpg" alt="Los Angeles" class="d-block rounded" style="width:100%;height:330px">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo2" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo2" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+
+<br />
+
+<div class="row ">
+    <img class="" style="margin-top:30px" src="~/img/logo Main test3-300x39.png.webp" />
+</div>
+<br />
+
+    <br />
+
+<br />
+<br />
+

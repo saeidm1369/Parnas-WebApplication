@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.Power;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.Power;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class PowerController : Controller
     {
         #region Field
-        private readonly IGenericService<Power, AccessoryImage> _genericService;
+        private readonly IGenericService<Power, PowerImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public PowerController(IGenericService<Power, AccessoryImage> genericService)
+        public PowerController(IGenericService<Power, PowerImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(poweAddDto);
 
-            var result = _genericService.Add<PoweAddDto, AccessoryImage>(poweAddDto, poweAddDto.Images);
+            var result = _genericService.Add<PoweAddDto, GraphicCardImagr>(poweAddDto, poweAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

@@ -1,0 +1,46 @@
+﻿@model Parnas.Domain.DTOs.Cooling.CoolingListDto
+
+@{
+    ViewData["Title"] = "حذف سیستم خنک کننده";
+}
+
+<div class="container mt-5">
+    <h2 class="text-danger">حذف سیستم خنک کننده</h2>
+    <div class="text-center">
+        <h4 class="text-warning mt-5">آیا از حذف این محصول مطمئن هستید؟</h4>
+    </div>
+
+    <div class="card mt-4 shadow-sm">
+        <div class="card-header bg-danger text-white text-center">
+            <h4 class="mb-0" style="font-size: 2rem;">اطلاعات محصول</h4>
+        </div>
+        <div class="card-body">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <strong style="font-size: 1.5rem;">@Html.DisplayNameFor(model => model.Title):</strong>
+                    <p style="font-size: 1.4rem;" class="text-muted">@Html.DisplayFor(model => model.Title)</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <strong style="font-size: 1.5rem;">@Html.DisplayNameFor(model => model.Brand):</strong>
+                    <p style="font-size: 1.4rem;" class="text-muted">@Html.DisplayFor(model => model.Brand)</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <strong style="font-size: 1.5rem;">@Html.DisplayNameFor(model => model.Price):</strong>
+                    <p style="font-size: 1.4rem;" class="text-muted">@Html.DisplayFor(model => model.Price)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-4 text-center">
+        <form asp-action="DeleteCooling" class="d-inline">
+            <input asp-for="@Model.Id" type="hidden" />
+            <button type="submit" class="btn btn-danger btn-lg px-4" style="border-radius: 10px;">
+                <i class="fas fa-trash-alt"></i> حذف
+            </button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary btn-lg ml-3 px-4" style="border-radius: 10px;">
+            <i class="fas fa-arrow-left"></i> بازگشت به لیست محصولات
+        </a>
+    </div>
+</div>

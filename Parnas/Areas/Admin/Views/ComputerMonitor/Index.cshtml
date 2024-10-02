@@ -34,8 +34,9 @@
                                     <td>@monitors.Brand</td>
                                     <td>@monitors.Price</td>
                                     <td>
-                                        <a href="#">ویرایش</a>
-                                        <a href="#">حذف</a>
+                                        <a asp-area="Admin" asp-controller="ComputerMonitor" asp-action="Detail" asp-route-Id="@monitors.Id">جزئیات</a>
+                                        <a asp-area="Admin" asp-controller="ComputerMonitor" asp-action="UpdateMonitor" asp-route-Id="@monitors.Id">ویرایش</a>
+                                        <a asp-area="Admin" asp-controller="ComputerMonitor" asp-action="DeleteMonitor" asp-route-Id="@monitors.Id">حذف</a>
                                     </td>
                                 </tr>
                             }

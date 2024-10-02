@@ -34,8 +34,9 @@
                                     <td>@HDDs.Brand</td>
                                     <td>@HDDs.Price</td>
                                     <td>
-                                        <a href="#">ویرایش</a>
-                                        <a href="#">حذف</a>
+                                        <a asp-area="Admin" asp-controller="HDD" asp-action="Detail" asp-route-Id="@HDDs.Id">جزئیات</a>
+                                        <a asp-area="Admin" asp-controller="HDD" asp-action="UpdateHDD" asp-route-Id="@HDDs.Id">ویرایش</a>
+                                        <a asp-area="Admin" asp-controller="HDD" asp-action="DeleteHDD" asp-route-Id="@HDDs.Id">حذف</a>
                                     </td>
                                 </tr>
                             }

@@ -34,8 +34,9 @@
                                     <td>@rams.Brand</td>
                                     <td>@rams.Price</td>
                                     <td>
-                                        <a href="#">ویرایش</a>
-                                        <a href="#">حذف</a>
+                                        <a asp-area="Admin" asp-controller="Ram" asp-action="Detail" asp-route-Id="@rams.Id">جزئیات</a>
+                                        <a asp-area="Admin" asp-controller="Ram" asp-action="UpdateRam" asp-route-Id="@rams.Id">ویرایش</a>
+                                        <a asp-area="Admin" asp-controller="Ram" asp-action="DeleteRam" asp-route-Id="@rams.Id">حذف</a>
                                     </td>
                                 </tr>
                             }

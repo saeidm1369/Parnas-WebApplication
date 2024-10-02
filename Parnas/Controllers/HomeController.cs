@@ -2,7 +2,7 @@
 using Parnas.Models;
 using System.Diagnostics;
 
-namespace Parnas.Controllers
+namespace ParnasFront.Controllers
 {
     public class HomeController : Controller
     {
@@ -18,7 +18,39 @@ namespace Parnas.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Custom()
+        {
+            return View();
+        }
+        public IActionResult CaseGallery()
+        {
+            return View();
+        }
+        public IActionResult SystemGallery()
+        {
+            return View();
+        }
+        public IActionResult ModKit()
+        {
+            return View();
+        }
+        public IActionResult ExtremeCooling()
+        {
+            return View();
+        }
+        public IActionResult Ourservices()
+        {
+            return View();
+        }
+        public IActionResult Warranty()
+        {
+            return View();
+        }
+        public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Contact()
         {
             return View();
         }

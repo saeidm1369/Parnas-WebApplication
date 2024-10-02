@@ -34,8 +34,9 @@
                                     <td>@CPUs.Brand</td>
                                     <td>@CPUs.Price</td>
                                     <td>
-                                        <a href="#">ویرایش</a>
-                                        <a href="#">حذف</a>
+                                        <a asp-area="Admin" asp-controller="CPU" asp-action="Detail" asp-route-Id="@CPUs.Id">جزئیات</a>
+                                        <a asp-area="Admin" asp-controller="CPU" asp-action="UpdateCPU" asp-route-Id="@CPUs.Id">ویرایش</a>
+                                        <a asp-area="Admin" asp-controller="CPU" asp-action="DeleteCPU" asp-route-Id="@CPUs.Id">حذف</a>
                                     </td>
                                 </tr>
                             }

@@ -5,6 +5,7 @@ using Parnas.Domain.DTOs.Cooling;
 using Parnas.Domain.DTOs.CPU;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.CPU;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -12,12 +13,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class CPUController : Controller
     {       
         #region Field
-        private readonly IGenericService<CPU, AccessoryImage> _genericService;
+        private readonly IGenericService<CPU, CPUImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public CPUController(IGenericService<CPU, AccessoryImage> genericService)
+        public CPUController(IGenericService<CPU, CPUImage> genericService)
         {
             _genericService = genericService;
         }
@@ -92,7 +93,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(cpuAddDto);
 
-            var result = _genericService.Add<CPUAddDto, AccessoryImage>(cpuAddDto, cpuAddDto.Images);
+            var result = _genericService.Add<CPUAddDto, GraphicCardImagr>(cpuAddDto, cpuAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

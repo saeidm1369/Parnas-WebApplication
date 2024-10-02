@@ -157,7 +157,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Lighting")
                         .HasColumnType("nvarchar(max)");
@@ -297,7 +299,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("MonitorTechnology")
                         .HasColumnType("nvarchar(max)");
@@ -412,7 +416,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("MaximumAirFlow")
                         .HasColumnType("nvarchar(max)");
@@ -530,7 +536,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Model")
                         .HasColumnType("nvarchar(max)");
@@ -621,7 +629,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<bool>("LightingControllerFanCase")
                         .HasColumnType("bit");
@@ -697,7 +707,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("MotherBoard")
                         .HasColumnType("nvarchar(max)");
@@ -797,7 +809,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<bool>("K4Support")
                         .HasColumnType("bit");
@@ -900,7 +914,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<decimal>("Price")
                         .HasColumnType("decimal(18,2)");
@@ -979,7 +995,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("M2Slot")
                         .HasColumnType("nvarchar(max)");
@@ -1091,7 +1109,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("NominalPower")
                         .HasColumnType("nvarchar(max)");
@@ -1207,7 +1227,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("NumberOfModel")
                         .HasColumnType("nvarchar(max)");
@@ -1283,7 +1305,9 @@ namespace Parnas.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
 
                     b.Property<string>("Longevity")
                         .HasColumnType("nvarchar(max)");
@@ -1326,21 +1350,236 @@ namespace Parnas.Infrastructure.Migrations
                     b.ToTable("SSDs");
                 });
 
-            modelBuilder.Entity("Parnas.Domain.Entities.AccessoryImage", b =>
+            modelBuilder.Entity("Parnas.Domain.Entities.Case+CaseImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("CaseId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("CaseImage_ProductImageId");
+
+                    b.HasIndex("CaseId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("CaseImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.ComputerMonitor+ComputerMonitorImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("ComputerMonitorId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("ComputerMonitorImage_ProductImageId");
+
+                    b.HasIndex("ComputerMonitorId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("ComputerMonitorImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Cooling+CoolingImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("CoolingId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("CoolingImage_ProductImageId");
+
+                    b.HasIndex("CoolingId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("CoolingImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.CPU+CPUImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("CPUId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("CPUImage_ProductImageId");
+
+                    b.HasIndex("CPUId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("CPUImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.FanCase+FanCaseImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("FanCaseId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("FanCaseImage_ProductImageId");
+
+                    b.HasIndex("FanCaseId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("FanCaseImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Gaming+GamingImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("GamingId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("GamingImage_ProductImageId");
+
+                    b.HasIndex("GamingId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("GamingImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.GraphicCard+GraphicCardImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("GraphicCardId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("GraphicCardImage_ProductImageId");
+
+                    b.Property<int?>("ProductImageId1")
+                        .HasColumnType("int");
+
+                    b.HasIndex("GraphicCardId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasIndex("ProductImageId1");
+
+                    b.HasDiscriminator().HasValue("GraphicCardImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.GraphicCardImagr", b =>
                 {
                     b.HasBaseType("Parnas.Domain.Entities.ProductImage");
 
                     b.Property<int>("AccessoryId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("ProductImageId")
+                    b.HasIndex("AccessoryId");
+
+                    b.HasDiscriminator().HasValue("GraphicCardImagr");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.HDD+HDDImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("HDDId")
                         .HasColumnType("int");
 
-                    b.HasIndex("AccessoryId");
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("HDDImage_ProductImageId");
+
+                    b.HasIndex("HDDId");
 
                     b.HasIndex("ProductImageId");
 
-                    b.HasDiscriminator().HasValue("AccessoryImage");
+                    b.HasDiscriminator().HasValue("HDDImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.MotherBoard+MotherBoardImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("MotherBoardId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("MotherBoardImage_ProductImageId");
+
+                    b.HasIndex("MotherBoardId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("MotherBoardImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Power+PowerImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int>("PowerId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("PowerId");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasDiscriminator().HasValue("PowerImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Ram+RamImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("RamImage_ProductImageId");
+
+                    b.Property<int>("RamId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasIndex("RamId");
+
+                    b.HasDiscriminator().HasValue("RamImage");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.SSD+SSDImage", b =>
+                {
+                    b.HasBaseType("Parnas.Domain.Entities.ProductImage");
+
+                    b.Property<int?>("ProductImageId")
+                        .HasColumnType("int")
+                        .HasColumnName("SSDImage_ProductImageId");
+
+                    b.Property<int>("SSDId")
+                        .HasColumnType("int");
+
+                    b.HasIndex("ProductImageId");
+
+                    b.HasIndex("SSDId");
+
+                    b.HasDiscriminator().HasValue("SSDImage");
                 });
 
             modelBuilder.Entity("Parnas.Domain.Entities.Accessories", b =>
@@ -1359,7 +1598,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("Cases")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1379,7 +1618,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("ComputerMonitors")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1390,7 +1629,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("Coolings")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1401,7 +1640,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("CPUs")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1412,7 +1651,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("FanCases")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1423,7 +1662,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("Gamings")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1434,7 +1673,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("GraphicCards")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1445,7 +1684,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("HDDs")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1456,7 +1695,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("MotherBoards")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1467,7 +1706,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("Powers")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1478,7 +1717,7 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("Rams")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
@@ -1489,13 +1728,122 @@ namespace Parnas.Infrastructure.Migrations
                     b.HasOne("Parnas.Domain.Entities.Category", "Category")
                         .WithMany("SSDs")
                         .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("Parnas.Domain.Entities.AccessoryImage", b =>
+            modelBuilder.Entity("Parnas.Domain.Entities.Case+CaseImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.Case", "Case")
+                        .WithMany("ImageList")
+                        .HasForeignKey("CaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("CaseImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("Case");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.ComputerMonitor+ComputerMonitorImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.ComputerMonitor", "ComputerMonitor")
+                        .WithMany("ImageList")
+                        .HasForeignKey("ComputerMonitorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("ComputerMonitorImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("ComputerMonitor");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Cooling+CoolingImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.Cooling", "Cooling")
+                        .WithMany("ImageList")
+                        .HasForeignKey("CoolingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("CoolingImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("Cooling");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.CPU+CPUImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.CPU", "CPU")
+                        .WithMany("ImageList")
+                        .HasForeignKey("CPUId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("CPUImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("CPU");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.FanCase+FanCaseImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.FanCase", "FanCase")
+                        .WithMany("ImageList")
+                        .HasForeignKey("FanCaseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("FanCaseImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("FanCase");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Gaming+GamingImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.Gaming", "Gaming")
+                        .WithMany("ImageList")
+                        .HasForeignKey("GamingId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("GamingImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("Gaming");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.GraphicCard+GraphicCardImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.GraphicCard", "GraphicCard")
+                        .WithMany("ImageList")
+                        .HasForeignKey("GraphicCardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("AccessoryImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("GraphicCardImageList")
+                        .HasForeignKey("ProductImageId1");
+
+                    b.Navigation("GraphicCard");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.GraphicCardImagr", b =>
                 {
                     b.HasOne("Parnas.Domain.Entities.Accessories", "Accessories")
                         .WithMany("ImageList")
@@ -1503,14 +1851,90 @@ namespace Parnas.Infrastructure.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
-                        .WithMany("ImageList")
-                        .HasForeignKey("ProductImageId");
-
                     b.Navigation("Accessories");
                 });
 
+            modelBuilder.Entity("Parnas.Domain.Entities.HDD+HDDImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.HDD", "HDD")
+                        .WithMany("ImageList")
+                        .HasForeignKey("HDDId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("HDDImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("HDD");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.MotherBoard+MotherBoardImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.MotherBoard", "MotherBoard")
+                        .WithMany("ImageList")
+                        .HasForeignKey("MotherBoardId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("MotherBoardImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("MotherBoard");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Power+PowerImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.Power", "Power")
+                        .WithMany("ImageList")
+                        .HasForeignKey("PowerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("PowerImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.Navigation("Power");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Ram+RamImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("RamImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.HasOne("Parnas.Domain.Entities.Ram", "Ram")
+                        .WithMany("ImageList")
+                        .HasForeignKey("RamId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Ram");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.SSD+SSDImage", b =>
+                {
+                    b.HasOne("Parnas.Domain.Entities.ProductImage", null)
+                        .WithMany("SSDImageList")
+                        .HasForeignKey("ProductImageId");
+
+                    b.HasOne("Parnas.Domain.Entities.SSD", "SSD")
+                        .WithMany("ImageList")
+                        .HasForeignKey("SSDId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("SSD");
+                });
+
             modelBuilder.Entity("Parnas.Domain.Entities.Accessories", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Case", b =>
                 {
                     b.Navigation("ImageList");
                 });
@@ -1546,7 +1970,86 @@ namespace Parnas.Infrastructure.Migrations
                     b.Navigation("SubCategories");
                 });
 
+            modelBuilder.Entity("Parnas.Domain.Entities.ComputerMonitor", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Cooling", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.CPU", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.FanCase", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Gaming", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.GraphicCard", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.HDD", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.MotherBoard", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Power", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
             modelBuilder.Entity("Parnas.Domain.Entities.ProductImage", b =>
+                {
+                    b.Navigation("AccessoryImageList");
+
+                    b.Navigation("CPUImageList");
+
+                    b.Navigation("CaseImageList");
+
+                    b.Navigation("ComputerMonitorImageList");
+
+                    b.Navigation("CoolingImageList");
+
+                    b.Navigation("FanCaseImageList");
+
+                    b.Navigation("GamingImageList");
+
+                    b.Navigation("GraphicCardImageList");
+
+                    b.Navigation("HDDImageList");
+
+                    b.Navigation("MotherBoardImageList");
+
+                    b.Navigation("PowerImageList");
+
+                    b.Navigation("RamImageList");
+
+                    b.Navigation("SSDImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.Ram", b =>
+                {
+                    b.Navigation("ImageList");
+                });
+
+            modelBuilder.Entity("Parnas.Domain.Entities.SSD", b =>
                 {
                     b.Navigation("ImageList");
                 });

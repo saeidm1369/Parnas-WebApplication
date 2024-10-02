@@ -3,10 +3,12 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
+using static Parnas.Domain.Entities.FanCase;
 
 namespace Parnas.Domain.Entities
 {
-    public class FanCase : BaseEntity<int>
+    public class FanCase : BaseEntity<int>, IHasImage<FanCaseImage>
     {
         public FanCase()
         {
@@ -25,6 +27,18 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        // IHasImage Properties
+        public List<FanCaseImage> ImageList { get; set; } = new List<FanCaseImage>();
         #endregion
+        public class FanCaseImage : ProductImage
+        {
+            public FanCaseImage()
+            {
+
+            }
+            public int FanCaseId { get; set; }
+
+            public FanCase FanCase { get; set; }
+        }
     }
 }

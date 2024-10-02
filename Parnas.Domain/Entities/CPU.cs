@@ -3,10 +3,12 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
+using static Parnas.Domain.Entities.CPU;
 
 namespace Parnas.Domain.Entities
 {
-     public class CPU : BaseEntity<int>
+     public class CPU : BaseEntity<int>, IHasImage<CPUImage>
     {
         public CPU()
         {
@@ -38,6 +40,19 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+        // IHasImage Properties
+        public List<CPUImage> ImageList { get; set; } = new List<CPUImage>();
         #endregion
+
+        public class CPUImage : ProductImage
+        {
+            public CPUImage()
+            {
+
+            }
+            public int CPUId { get; set; }
+
+            public CPU CPU { get; set; }
+        }
     }
 }

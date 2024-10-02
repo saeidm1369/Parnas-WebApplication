@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.HDD;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.HDD;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class HDDController : Controller
     {
         #region Field
-        private readonly IGenericService<HDD, AccessoryImage> _genericService;
+        private readonly IGenericService<HDD, HDDImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public HDDController(IGenericService<HDD, AccessoryImage> genericService)
+        public HDDController(IGenericService<HDD, HDDImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(hddAddDto);
 
-            var result = _genericService.Add<HDDAddDto, AccessoryImage>(hddAddDto, hddAddDto.Images);
+            var result = _genericService.Add<HDDAddDto, GraphicCardImagr>(hddAddDto, hddAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

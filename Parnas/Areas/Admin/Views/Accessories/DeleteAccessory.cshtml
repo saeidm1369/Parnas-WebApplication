@@ -4,45 +4,43 @@
     ViewData["Title"] = "حذف لوازم جانبی";
 }
 
-<h2>حذف لوازم جانبی</h2>
+<div class="container mt-5">    
+        <h2 class="text-danger">حذف لوازم جانبی</h2>
+    <div class="text-center">
+        <h4 class="text-warning mt-5">آیا از حذف این محصول مطمئن هستید؟</h4>
+    </div>
 
-<h3>آیا از حذف این محصول مطمئن هستید؟</h3>
-
-
-
-
-
-        <input asp-for="@Model.Id" type="hidden"/>
-        <div class="row">
-            <div class="col-md-4">
-     
-            @Html.DisplayNameFor(model => model.Title)
-       
-            @Html.DisplayFor(model => model.Title)
-        
-            </div>
-
-            <div class="col-md-4">
-        
-            @Html.DisplayNameFor(model => model.Brand)
-        
-            @Html.DisplayFor(model => model.Brand)
-       
+    <div class="card mt-4 shadow-sm">
+        <div class="card-header bg-danger text-white text-center">
+            <h4 class="mb-0" style="font-size: 2rem;">اطلاعات محصول</h4>
         </div>
-            <div class="col-md-4">
-       
-            @Html.DisplayNameFor(model => model.Price)
-       
-            @Html.DisplayFor(model => model.Price)
-        
-            </div>
-       </div>
-       <div class="row">
+        <div class="card-body">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <strong style="font-size: 1.5rem;">@Html.DisplayNameFor(model => model.Title):</strong>
+                    <p style="font-size: 1.4rem;" class="text-muted">@Html.DisplayFor(model => model.Title)</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <strong style="font-size: 1.5rem;">@Html.DisplayNameFor(model => model.Brand):</strong>
+                    <p style="font-size: 1.4rem;" class="text-muted">@Html.DisplayFor(model => model.Brand)</p>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <strong style="font-size: 1.5rem;">@Html.DisplayNameFor(model => model.Price):</strong>
+                    <p style="font-size: 1.4rem;" class="text-muted">@Html.DisplayFor(model => model.Price)</p>
+                </div>                
+            </div>            
+        </div>
+    </div>
 
-    <form asp-action="DeleteAccessory">
-        <input type="submit" value="حذف" class="btn btn-default" /> |
-        <a asp-action="Index">بازگشت به  لیست محصولات</a>
-    </form>
-
-
+    <div class="mt-4 text-center">
+        <form asp-action="DeleteAccessory" class="d-inline">
+            <input asp-for="@Model.Id" type="hidden" />
+            <button type="submit" class="btn btn-danger btn-lg px-4" style="border-radius: 10px;">
+                <i class="fas fa-trash-alt"></i> حذف
+            </button>
+        </form>
+        <a asp-action="Index" class="btn btn-secondary btn-lg ml-3 px-4" style="border-radius: 10px;">
+            <i class="fas fa-arrow-left"></i> بازگشت به لیست محصولات
+        </a>
+    </div>
 </div>

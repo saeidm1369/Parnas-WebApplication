@@ -2,7 +2,8 @@
 @{
     ViewData["Title"] = "افزودن کیس ";
 }
-<h2 style="margin:10px 40px 15px 0">افزودن کیس </h2>
+
+<h2 style="margin:10px 40px 15px 0">افزودن کیس</h2>
 
 <div class="box box-warning container">
     <div class="row">
@@ -11,7 +12,7 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="box-header with-border">
-                            <h3 class="box-title">اجزای کلی</h3>
+                            <h3 class="box-title">اطلاعات کلی </h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">
@@ -21,26 +22,31 @@
                                 <input asp-for="Title" type="text" class="form-control" placeholder="">
                                 <span asp-validation-for="Title" class="text-danger"></span>
                             </div>
+
                             <div class="form-group">
                                 <label asp-for="Brand">برند</label>
                                 <input asp-for="Brand" type="text" class="form-control" placeholder="">
                                 <span asp-validation-for="Brand" class="text-danger"></span>
                             </div>
+
                             <div class="form-group">
                                 <label asp-for="Price">قیمت</label>
                                 <input asp-for="Price" type="text" class="form-control" placeholder="">
                                 <span asp-validation-for="Price" class="text-danger"></span>
                             </div>
+
                             <div class="form-group">
                                 <label asp-for="Color">رنگ</label>
                                 <input asp-for="Color" type="text" class="form-control" placeholder="">
                                 <span asp-validation-for="Color" class="text-danger"></span>
                             </div>
+
                             <div class="form-group">
                                 <label asp-for="Dimensions">ابعاد</label>
                                 <input asp-for="Dimensions" type="text" class="form-control" placeholder="">
                                 <span asp-validation-for="Dimensions" class="text-danger"></span>
                             </div>
+
                             <div class="form-group">
                                 <label asp-for="Weight">وزن</label>
                                 <input asp-for="Weight" type="text" class="form-control" placeholder="">
@@ -50,20 +56,31 @@
                                 <label asp-for="Count">تعداد</label>
                                 <input asp-for="Count" type="text" class="form-control" placeholder="">
                                 <span asp-validation-for="Count" class="text-danger"></span>
-                                <div class="form-group">
-                                    <label asp-for="Type">نوع </label>
-                                    <input asp-for="Type" type="text" class="form-control" placeholder="">
-                                    <span asp-validation-for="Type" class="text-danger"></span>
-                                </div>
-                                <!-- select -->
-                                <div class="form-group">
-                                    <label asp-for="CategoryId" for="CategoryId">انتخاب دسته بندی</label>
-                                    <select asp-for="CategoryId" name="CategoryId" class="form-control">
-                                        <option value="1"> لوازم جانبی</option>
-                                        <option value="2">سیستم های آماده</option>
-                                        <option value="3">قطعات کامپیوتر</option>
-                                    </select>
-                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="Type">نوع</label>
+                                <input asp-for="Type" type="text" class="form-control" placeholder="">
+                                <span asp-validation-for="Type" class="text-danger"></span>
+                            </div>
+                            <!-- select -->
+                            <div class="form-group">
+                                <label asp-for="CategoryId" for="CategoryId">انتخاب دسته بندی</label>
+                                <select asp-for="CategoryId" name="CategoryId" class="form-control">
+                                    <option value="1"> لوازم جانبی</option>
+                                    <option value="2">سیستم های آماده</option>
+                                    <option value="3">قطعات کامپیوتر</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="box-header with-border">
+                            <h3 class="box-title">مشخصات کیس</h3>
+                        </div>
+                        <div class="box-body">
+                            <!-- Monitor specific inputs -->
                                 <div class="form-group">
                                     <label asp-for="Lighting"> روشنایی </label>
                                     <input asp-for="Lighting" type="text" class="form-control" placeholder="">
@@ -89,9 +106,7 @@
                                     <label asp-for="CaseUSBType_CPort"> تعداد پورت های تایپ c </label>
                                     <input asp-for="CaseUSBType_CPort" type="text" class="form-control" placeholder="">
                                     <span asp-validation-for="CaseUSBType_CPort" class="text-danger"></span>
-                                </div>
-
-                            </div>                            
+                                </div>                                                
                             <div class="form-group">
                                 <label asp-for="CaseFanSpeedController" for="CaseFanSpeedController"> کنترل کننده سرعت فن کیس</label>
                                 <select asp-for="CaseFanSpeedController" name="CaseFanSpeedController" class="form-control">
@@ -119,17 +134,7 @@
                                     <option value="True"> دارد</option>
                                     <option value="False">ندارد </option>
                                 </select>
-                            </div>
-                        </div>
-                        <!-- /.box-body -->
-                    </div>
-                    <div class="col-md-6">
-                        <div class="box-header with-border">
-                            <h3 class="box-title"> </h3>
-                        </div>
-                        <!-- /.box-header -->
-                        <div class="box-body">
-                            <!-- text input -->
+                            </div>                        
                             <div class="form-group">
                                 <label asp-for="Inch3_5DriveBay">محفظه درایو 3.5 اینچی</label>
                                 <input asp-for="Inch3_5DriveBay" type="text" class="form-control" placeholder="">
@@ -204,15 +209,12 @@
                                 <label asp-for="NumberOfFansThatCanBeInstalledinTheCeiling"> تعداد فن هایی که که در سقف نصب شده اند </label>
                                 <input asp-for="NumberOfFansThatCanBeInstalledinTheCeiling" type="text" class="form-control" placeholder="">
                                 <span asp-validation-for="NumberOfFansThatCanBeInstalledinTheCeiling" class="text-danger"></span>
-                            </div>                                                  
-                                                       
-                        </div>
-                        <!-- /.box-body -->
+                            </div>
+
                     </div>
                 </div>
-
-
             </div>
+    </div>
             <div class="col-md-5">
                 <div class="container">
                     <div class="form-group">

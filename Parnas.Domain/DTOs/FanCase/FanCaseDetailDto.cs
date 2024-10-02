@@ -39,9 +39,15 @@ namespace Parnas.Domain.DTOs.FanCase
         public string? Weight { get; set; }
 
         [Display(Name = "نوع")]
-        public string? Type { get; set; }        
+        public string? Type { get; set; }
+        [Display(Name = "تعداد")]
+        public int Count { get; set; }
+        [Display(Name = "تاریخ افزودن محصول")]
+        public DateTime CreateDate { get; set; }
+        [Display(Name = "دسته بندی")]
+        public int CategoryId { get; set; }
         [Display(Name = "تصاویر")]
-        public List<string> Images { get; set; }
+        public List<string> ImageList { get; set; }
 
         // FanCase Entity
         [Display(Name = "نوع فن کیس")]

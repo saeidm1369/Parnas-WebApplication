@@ -40,8 +40,14 @@ namespace Parnas.Domain.DTOs.SSD
 
         [Display(Name = "نوع")]
         public string? Type { get; set; }
-
-        public List<string> Images { get; set; }
+        [Display(Name = "تعداد")]
+        public int Count { get; set; }
+        [Display(Name = "تاریخ افزودن محصول")]
+        public DateTime CreateDate { get; set; }
+        [Display(Name = "دسته بندی")]
+        public int CategoryId { get; set; }
+        [Display(Name = "تصاویر")]
+        public List<string> ImageList { get; set; }
 
         // SSD Entity
         [Display(Name = "ظاهر SSD")]

@@ -34,8 +34,9 @@
                                     <td>@gamings.Brand</td>
                                     <td>@gamings.Price</td>
                                     <td>
-                                        <a href="#">ویرایش</a>
-                                        <a href="#">حذف</a>
+                                        <a asp-area="Admin" asp-controller="Gaming" asp-action="Detail" asp-route-Id="@gamings.Id">جزئیات</a>
+                                        <a asp-area="Admin" asp-controller="Gaming" asp-action="UpdateGaming" asp-route-Id="@gamings.Id">ویرایش</a>
+                                        <a asp-area="Admin" asp-controller="Gaming" asp-action="DeleteGaming" asp-route-Id="@gamings.Id">حذف</a>
                                     </td>
                                 </tr>
                             }

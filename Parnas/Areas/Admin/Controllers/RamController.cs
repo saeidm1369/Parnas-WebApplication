@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.Ram;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.Ram;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class RamController : Controller
     {
         #region Field
-        private readonly IGenericService<Ram, AccessoryImage> _genericService;
+        private readonly IGenericService<Ram, RamImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public RamController(IGenericService<Ram, AccessoryImage> genericService)
+        public RamController(IGenericService<Ram, RamImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(ramAddDto);
 
-            var result = _genericService.Add<RamAddDto, AccessoryImage>(ramAddDto, ramAddDto.Images);
+            var result = _genericService.Add<RamAddDto, GraphicCardImagr>(ramAddDto, ramAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

@@ -1,10 +1,10 @@
 ﻿@using Parnas.Domain.DTOs.Cooling
 @model List<CoolingListDto>
 @{
-    ViewData["Title"] = "خنک کننده ";
+    ViewData["Title"] = "خنک کننده";
 }
 
-<h2>خنک کننده </h2>
+<h2>خنک کننده</h2>
 
 
 <div class="box">
@@ -34,8 +34,9 @@
                                     <td>@coolings.Brand</td>
                                     <td>@coolings.Price</td>
                                     <td>
-                                        <a href="#">ویرایش</a>
-                                        <a href="#">حذف</a>
+                                        <a asp-area="Admin" asp-controller="Cooling" asp-action="Detail" asp-route-Id="@coolings.Id">جزئیات</a>
+                                        <a asp-area="Admin" asp-controller="Cooling" asp-action="UpdateCooling" asp-route-Id="@coolings.Id">ویرایش</a>
+                                        <a asp-area="Admin" asp-controller="Cooling" asp-action="DeleteCooling" asp-route-Id="@coolings.Id">حذف</a>
                                     </td>
                                 </tr>
                             }

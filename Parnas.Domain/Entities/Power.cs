@@ -3,10 +3,12 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Case;
+using static Parnas.Domain.Entities.Power;
 
 namespace Parnas.Domain.Entities
 {
-    public class Power : BaseEntity<int>
+    public class Power : BaseEntity<int>, IHasImage<PowerImage>
     {
         public Power()
         {
@@ -33,6 +35,20 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        // IHasImage Properties
+        public List<PowerImage> ImageList { get; set; } = new List<PowerImage>();
         #endregion
+
+        public class PowerImage : ProductImage
+        {
+            public PowerImage()
+            {
+
+            }
+            public int PowerId { get; set; }
+
+            public Power Power { get; set; }
+        }
     }
 }

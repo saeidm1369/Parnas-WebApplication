@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.SSD;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.SSD;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class SSDController : Controller
     {
         #region Field
-        private readonly IGenericService<SSD, AccessoryImage> _genericService;
+        private readonly IGenericService<SSD, SSDImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public SSDController(IGenericService<SSD, AccessoryImage> genericService)
+        public SSDController(IGenericService<SSD, SSDImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(ssdAddDto);
 
-            var result = _genericService.Add<SSDAddDto, AccessoryImage>(ssdAddDto, ssdAddDto.Images);
+            var result = _genericService.Add<SSDAddDto, GraphicCardImagr>(ssdAddDto, ssdAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

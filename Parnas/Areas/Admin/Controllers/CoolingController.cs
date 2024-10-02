@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.Cooling;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.Cooling;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class CoolingController : Controller
     {
         #region Field
-        private readonly IGenericService<Cooling, AccessoryImage> _genericService;
+        private readonly IGenericService<Cooling, CoolingImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public CoolingController(IGenericService<Cooling, AccessoryImage> genericService)
+        public CoolingController(IGenericService<Cooling, CoolingImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,13 +92,13 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(coolingAddDto);
 
-            var result = _genericService.Add<CoolingAddDto, AccessoryImage>(coolingAddDto, coolingAddDto.Images);
+            var result = _genericService.Add<CoolingAddDto, GraphicCardImagr>(coolingAddDto, coolingAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }
 
         [HttpGet]
-        public IActionResult UpdateMonitor(int id)
+        public IActionResult UpdateCooling(int id)
         {
             if (id == 0)
                 ViewData["Message"] = "Null";
@@ -106,7 +107,7 @@ namespace Parnas.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateMonitor(CoolingUpdateDto coolingUpdateDto)
+        public IActionResult UpdateCooling(CoolingUpdateDto coolingUpdateDto)
         {
             if (!ModelState.IsValid)
                 return View(coolingUpdateDto);

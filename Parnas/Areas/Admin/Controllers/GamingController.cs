@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.Gaming;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.Gaming;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class GamingController : Controller
     {
         #region Field
-        private readonly IGenericService<Gaming, AccessoryImage> _genericService;
+        private readonly IGenericService<Gaming, GamingImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public GamingController(IGenericService<Gaming, AccessoryImage> genericService)
+        public GamingController(IGenericService<Gaming, GamingImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(gamingAddDto);
 
-            var result = _genericService.Add<GamingAddDto, AccessoryImage>(gamingAddDto, gamingAddDto.Images);
+            var result = _genericService.Add<GamingAddDto, GraphicCardImagr>(gamingAddDto, gamingAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }

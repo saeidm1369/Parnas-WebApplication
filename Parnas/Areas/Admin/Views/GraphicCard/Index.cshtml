@@ -34,8 +34,9 @@
                                     <td>@graphicCards.Brand</td>
                                     <td>@graphicCards.Price</td>
                                     <td>
-                                        <a href="#">ویرایش</a>
-                                        <a href="#">حذف</a>
+                                        <a asp-area="Admin" asp-controller="GraphicCard" asp-action="Detail" asp-route-Id="@graphicCards.Id">جزئیات</a>
+                                        <a asp-area="Admin" asp-controller="GraphicCard" asp-action="UpdateGraphicCard" asp-route-Id="@graphicCards.Id">ویرایش</a>
+                                        <a asp-area="Admin" asp-controller="GraphicCard" asp-action="DeleteGraphicCard" asp-route-Id="@graphicCards.Id">حذف</a>
                                     </td>
                                 </tr>
                             }

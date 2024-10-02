@@ -3,10 +3,11 @@ using Parnas.Domain.MainInterface;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using static Parnas.Domain.Entities.Ram;
 
 namespace Parnas.Domain.Entities
 {
-    public class Ram : BaseEntity<int>
+    public class Ram : BaseEntity<int>, IHasImage<RamImage>
     {
         public Ram()
         {
@@ -24,6 +25,20 @@ namespace Parnas.Domain.Entities
         #region Relations
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
+        // IHasImage Properties
+        public List<RamImage> ImageList { get; set; } = new List<RamImage>();
         #endregion
+
+        public class RamImage : ProductImage
+        {
+            public RamImage()
+            {
+
+            }
+            public int RamId { get; set; }
+
+            public Ram Ram { get; set; }
+        }
     }
 }

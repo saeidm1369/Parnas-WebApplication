@@ -11,12 +11,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class GraphicCardController : Controller
     {
         #region Field
-        private readonly IGenericService<GraphicCard, AccessoryImage> _genericService;
+        private readonly IGenericService<GraphicCard, GraphicCardImagr> _genericService;
         #endregion
 
         #region Constructor
 
-        public GraphicCardController(IGenericService<GraphicCard, AccessoryImage> genericService)
+        public GraphicCardController(IGenericService<GraphicCard, GraphicCardImagr> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +91,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(graphicCardAddDto);
 
-            var result = _genericService.Add<GraphicCardAddDto, AccessoryImage>(graphicCardAddDto, graphicCardAddDto.Images);
+            var result = _genericService.Add<GraphicCardAddDto, GraphicCardImagr>(graphicCardAddDto, graphicCardAddDto.Images);
             ViewData["Message"] = result.Type;
             return View();
         }
