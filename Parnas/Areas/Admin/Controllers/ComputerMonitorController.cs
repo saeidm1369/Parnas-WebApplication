@@ -94,7 +94,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<ComputerMonitorAddDto, GraphicCardImagr>(monitorAddDto, monitorAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "ComputerMonitor", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -113,7 +113,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(monitorUpdateDto);
             var result = _genericService.Update<ComputerMonitorUpdateDto>(monitorUpdateDto, monitorUpdateDto.Images, monitorUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "ComputerMonitor", new { area = "Admin" });
         }
 
         [HttpGet]

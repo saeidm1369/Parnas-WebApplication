@@ -95,7 +95,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<CPUAddDto, GraphicCardImagr>(cpuAddDto, cpuAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "CPU", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -114,7 +114,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(cpuUpdateDto);
             var result = _genericService.Update<CPUUpdateDto>(cpuUpdateDto, cpuUpdateDto.Images, cpuUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "CPU", new { area = "Admin" });
         }
 
         [HttpGet]

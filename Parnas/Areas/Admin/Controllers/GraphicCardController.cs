@@ -93,7 +93,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<GraphicCardAddDto, GraphicCardImagr>(graphicCardAddDto, graphicCardAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "GraphicCard", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -112,7 +112,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(graphicCardUpdateDto);
             var result = _genericService.Update<GraphicCardUpdateDto>(graphicCardUpdateDto, graphicCardUpdateDto.Images, graphicCardUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "GraphicCard", new { area = "Admin" });
         }
 
         [HttpGet]

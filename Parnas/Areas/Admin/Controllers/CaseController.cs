@@ -94,7 +94,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<CaseAddDto, GraphicCardImagr>(caseAddDto, caseAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Case", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -113,7 +113,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(caseUpdateDto);
             var result = _genericService.Update<CaseUpdateDto>(caseUpdateDto, caseUpdateDto.Images, caseUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Case", new { area = "Admin" });
         }
 
         [HttpGet]

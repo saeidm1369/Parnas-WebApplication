@@ -94,7 +94,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<SSDAddDto, GraphicCardImagr>(ssdAddDto, ssdAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "SSD", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -113,7 +113,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(ssdUpdateDto);
             var result = _genericService.Update<SSDUpdateDto>(ssdUpdateDto, ssdUpdateDto.Images, ssdUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "SSD", new { area = "Admin" });
         }
 
         [HttpGet]

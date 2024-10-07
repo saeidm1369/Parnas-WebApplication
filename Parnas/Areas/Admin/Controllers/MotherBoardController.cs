@@ -94,7 +94,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<MotherBoardAddDto, GraphicCardImagr>(motherBoardAddDto, motherBoardAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "MotherBoard", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -113,7 +113,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(motherBoardUpdateDto);
             var result = _genericService.Update<MotherBoardUpdateDto>(motherBoardUpdateDto, motherBoardUpdateDto.Images, motherBoardUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "MotherBoard", new { area = "Admin" });
         }
 
         [HttpGet]

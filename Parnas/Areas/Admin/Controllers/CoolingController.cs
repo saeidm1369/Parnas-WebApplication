@@ -94,7 +94,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<CoolingAddDto, GraphicCardImagr>(coolingAddDto, coolingAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Cooling", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -113,7 +113,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(coolingUpdateDto);
             var result = _genericService.Update<CoolingUpdateDto>(coolingUpdateDto, coolingUpdateDto.Images, coolingUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Cooling", new { area = "Admin" });
         }
 
         [HttpGet]

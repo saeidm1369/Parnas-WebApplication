@@ -94,7 +94,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<PoweAddDto, GraphicCardImagr>(poweAddDto, poweAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Power", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -113,7 +113,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(powerUpdateDto);
             var result = _genericService.Update<PowerUpdateDto>(powerUpdateDto, powerUpdateDto.Images, powerUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "Power", new { area = "Admin" });
         }
 
         [HttpGet]

@@ -94,7 +94,7 @@ namespace Parnas.Areas.Admin.Controllers
 
             var result = _genericService.Add<HDDAddDto, GraphicCardImagr>(hddAddDto, hddAddDto.Images);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "HDD", new { area = "Admin" });
         }
 
         [HttpGet]
@@ -113,7 +113,7 @@ namespace Parnas.Areas.Admin.Controllers
                 return View(hddUpdateDto);
             var result = _genericService.Update<HDDUpdateDto>(hddUpdateDto, hddUpdateDto.Images, hddUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return View();
+            return RedirectToAction("Index", "HDD", new { area = "Admin" });
         }
 
         [HttpGet]
