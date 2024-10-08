@@ -92,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(ramAddDto);
 
-            var result = _genericService.Add<RamAddDto, GraphicCardImagr>(ramAddDto, ramAddDto.Images);
+            var result = _genericService.Add<RamAddDto, RamImage>(ramAddDto, ramAddDto.Images);
             ViewData["Message"] = result.Type;
             return RedirectToAction("Index", "Ram", new { area = "Admin" });
         }

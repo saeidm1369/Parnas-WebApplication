@@ -92,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(hddAddDto);
 
-            var result = _genericService.Add<HDDAddDto, GraphicCardImagr>(hddAddDto, hddAddDto.Images);
+            var result = _genericService.Add<HDDAddDto, HDDImage>(hddAddDto, hddAddDto.Images);
             ViewData["Message"] = result.Type;
             return RedirectToAction("Index", "HDD", new { area = "Admin" });
         }

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Parnas.Domain.Entities
 {
-    public class Accessories : BaseEntity<int>, IHasImage<GraphicCardImagr>
+    public class Accessories : BaseEntity<int>, IHasImage<AccessoriesImage>
     {
         public Accessories()
         {
@@ -28,13 +28,13 @@ namespace Parnas.Domain.Entities
         public Category Category { get; set; }
 
         // IHasImage Properties
-        public List<GraphicCardImagr> ImageList { get; set; } = new List<GraphicCardImagr>();
+        public List<AccessoriesImage> ImageList { get; set; } = new List<AccessoriesImage>();
         #endregion
     }
 
-    public class GraphicCardImagr : ProductImage
+    public class AccessoriesImage : ProductImage
     {
-        public GraphicCardImagr()
+        public AccessoriesImage()
         {
             
         }

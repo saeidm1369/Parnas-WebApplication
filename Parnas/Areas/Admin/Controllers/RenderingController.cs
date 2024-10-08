@@ -1,23 +1,24 @@
 ﻿using DomainServices.Exception;
 using Microsoft.AspNetCore.Mvc;
-using Parnas.Domain.DTOs.Accessories;
-using Parnas.Domain.DTOs.MotherBoard;
+using Parnas.Domain.DTOs.Gaming;
+using Parnas.Domain.DTOs.Rendering;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
-using static Parnas.Domain.Entities.MotherBoard;
+using static Parnas.Domain.Entities.Gaming;
+using static Parnas.Domain.Entities.Rendering;
 
 namespace Parnas.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class MotherBoardController : Controller
+    public class RenderingController : Controller
     {
         #region Field
-        private readonly IGenericService<MotherBoard, MotherBoardImage> _genericService;
+        private readonly IGenericService<Rendering, RenderingImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public MotherBoardController(IGenericService<MotherBoard, MotherBoardImage> genericService)
+        public RenderingController(IGenericService<Rendering, RenderingImage> genericService)
         {
             _genericService = genericService;
         }
@@ -30,8 +31,8 @@ namespace Parnas.Areas.Admin.Controllers
         {
             try
             {
-                var motherBoard = _genericService.GetAll<MotherBoardListDto>().ToList();
-                return View(motherBoard);
+                var renderings = _genericService.GetAll<RenderingListDto>().ToList();
+                return View(renderings);
             }
             catch (ServiceException exception)
             {
@@ -56,7 +57,7 @@ namespace Parnas.Areas.Admin.Controllers
         {
             try
             {
-                var result = _genericService.GetById<MotherBoardDetailDto>(id);
+                var result = _genericService.GetById<RenderingDetailDto>(id);
                 return View(result);
             }
             catch (ServiceException exception)
@@ -81,56 +82,56 @@ namespace Parnas.Areas.Admin.Controllers
         #region CUD
 
         [HttpGet]
-        public IActionResult AddMotherBoard()
+        public IActionResult AddRendering()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult AddMotherBoard(MotherBoardAddDto motherBoardAddDto)
+        public IActionResult AddRendering(RenderingAddDto renderingAddDto)
         {
             if (!ModelState.IsValid)
-                return View(motherBoardAddDto);
+                return View(renderingAddDto);
 
-            var result = _genericService.Add<MotherBoardAddDto, MotherBoardImage>(motherBoardAddDto, motherBoardAddDto.Images);
+            var result = _genericService.Add<RenderingAddDto, RenderingImage>(renderingAddDto, renderingAddDto.Images);
             ViewData["Message"] = result.Type;
-            return RedirectToAction("Index", "MotherBoard", new { area = "Admin" });
+            return RedirectToAction("Index", "Rendering", new { area = "Admin" });
         }
 
         [HttpGet]
-        public IActionResult UpdateMotherBoard(int id)
+        public IActionResult UpdateRendering(int id)
         {
             if (id == 0)
                 ViewData["Message"] = "Null";
-            var motherBoard = _genericService.GetById<MotherBoardDetailDto>(id);
-            return View(motherBoard);
+            var rendering = _genericService.GetById<RenderingDetailDto>(id);
+            return View(rendering);
         }
 
         [HttpPost]
-        public IActionResult UpdateMotherBoard(MotherBoardUpdateDto motherBoardUpdateDto)
+        public IActionResult UpdateRendering(RenderingUpdateDto renderingUpdateDto)
         {
             if (!ModelState.IsValid)
-                return View(motherBoardUpdateDto);
-            var result = _genericService.Update<MotherBoardUpdateDto>(motherBoardUpdateDto, motherBoardUpdateDto.Images, motherBoardUpdateDto.Id);
+                return View(renderingUpdateDto);
+            var result = _genericService.Update<RenderingUpdateDto>(renderingUpdateDto, renderingUpdateDto.Images, renderingUpdateDto.Id);
             ViewData["Message"] = result.Type;
-            return RedirectToAction("Index", "MotherBoard", new { area = "Admin" });
+            return RedirectToAction("Index", "Rendering", new { area = "Admin" });
         }
 
         [HttpGet]
-        public IActionResult DeleteMotherBoard(MotherBoardListDto motherBoardDto)
+        public IActionResult DeleteRendering(RenderingListDto renderingListDto)
         {
-            if (motherBoardDto.Id == 0)
+            if (renderingListDto.Id == 0)
                 ViewData["Message"] = "Null";
-            var result = _genericService.GetById<MotherBoardListDto>(motherBoardDto.Id);
+            var result = _genericService.GetById<RenderingListDto>(renderingListDto.Id);
             return View(result);
         }
 
         [HttpPost]
-        public IActionResult DeleteMotherBoard(int id)
+        public IActionResult DeleteRendering(int id)
         {
             var result = _genericService.Delete(id);
             ViewData["Message"] = result.Type;
-            return RedirectToAction("Index", "MotherBoard", new { area = "Admin" });
+            return RedirectToAction("Index", "Rendering", new { area = "Admin" });
         }
         #endregion
     }

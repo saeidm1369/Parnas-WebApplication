@@ -92,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(faneCaseAddDto);
 
-            var result = _genericService.Add<FaneCaseAddDto, GraphicCardImagr>(faneCaseAddDto, faneCaseAddDto.Images);
+            var result = _genericService.Add<FaneCaseAddDto, FanCaseImage>(faneCaseAddDto, faneCaseAddDto.Images);
             ViewData["Message"] = result.Type;
             return RedirectToAction("Index", "FanCase", new { area = "Admin" });
         }

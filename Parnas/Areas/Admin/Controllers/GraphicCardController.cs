@@ -4,6 +4,7 @@ using Parnas.Domain.DTOs.Accessories;
 using Parnas.Domain.DTOs.GraphicCard;
 using Parnas.Domain.Entities;
 using Parnas.DomainService.Services;
+using static Parnas.Domain.Entities.GraphicCard;
 
 namespace Parnas.Areas.Admin.Controllers
 {
@@ -11,12 +12,12 @@ namespace Parnas.Areas.Admin.Controllers
     public class GraphicCardController : Controller
     {
         #region Field
-        private readonly IGenericService<GraphicCard, GraphicCardImagr> _genericService;
+        private readonly IGenericService<GraphicCard, GraphicCardImage> _genericService;
         #endregion
 
         #region Constructor
 
-        public GraphicCardController(IGenericService<GraphicCard, GraphicCardImagr> genericService)
+        public GraphicCardController(IGenericService<GraphicCard, GraphicCardImage> genericService)
         {
             _genericService = genericService;
         }
@@ -91,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(graphicCardAddDto);
 
-            var result = _genericService.Add<GraphicCardAddDto, GraphicCardImagr>(graphicCardAddDto, graphicCardAddDto.Images);
+            var result = _genericService.Add<GraphicCardAddDto, GraphicCardImage>(graphicCardAddDto, graphicCardAddDto.Images);
             ViewData["Message"] = result.Type;
             return RedirectToAction("Index", "GraphicCard", new { area = "Admin" });
         }

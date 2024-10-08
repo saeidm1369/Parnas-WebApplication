@@ -16,6 +16,7 @@ using static Parnas.Domain.Entities.HDD;
 using static Parnas.Domain.Entities.MotherBoard;
 using static Parnas.Domain.Entities.Power;
 using static Parnas.Domain.Entities.Ram;
+using static Parnas.Domain.Entities.Rendering;
 using static Parnas.Domain.Entities.SSD;
 
 namespace Parnas.Infrastructure.ApplicationDbContext
@@ -54,6 +55,8 @@ namespace Parnas.Infrastructure.ApplicationDbContext
             modelBuilder.ApplyConfiguration(new PowerImageConfig());
             modelBuilder.ApplyConfiguration(new RamConfig());
             modelBuilder.ApplyConfiguration(new RamImageConfig());
+            modelBuilder.ApplyConfiguration(new RenderingConfig());
+            modelBuilder.ApplyConfiguration(new RenderingImageConfig());
             modelBuilder.ApplyConfiguration(new SSDConfig());
             modelBuilder.ApplyConfiguration(new SSDImageConfig());
             base.OnModelCreating(modelBuilder);
@@ -71,9 +74,10 @@ namespace Parnas.Infrastructure.ApplicationDbContext
         public DbSet<MotherBoard> MotherBoards { get; set; }
         public DbSet<Power> Powers { get; set; }
         public DbSet<Ram> Rams { get; set; }
+        public DbSet<Rendering> Renderings { get; set; }
         public DbSet<SSD> SSDs { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
-        public DbSet<GraphicCardImagr> AccessoryImages { get; set; }
+        public DbSet<AccessoriesImage> AccessoryImages { get; set; }
         public DbSet<CaseImage> CaseImages { get; set; }
         public DbSet<ComputerMonitorImage> ComputerMonitorImages { get; set; }
         public DbSet<CoolingImage> CoolingImages { get; set; }
@@ -85,6 +89,7 @@ namespace Parnas.Infrastructure.ApplicationDbContext
         public DbSet<MotherBoardImage> MotherBoardImages { get; set; }
         public DbSet<PowerImage> PowerImages { get; set; }
         public DbSet<RamImage> RamImages { get; set; }
+        public DbSet<RenderingImage> RenderingImages { get; set; }
         public DbSet<SSDImage> SSDImages { get; set; }
 
 

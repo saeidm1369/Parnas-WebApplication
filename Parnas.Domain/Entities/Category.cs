@@ -30,6 +30,7 @@ namespace Parnas.Domain.Entities
         public ICollection<MotherBoard> MotherBoards { get; set; }
         public ICollection<Power> Powers { get; set; }
         public ICollection<Ram> Rams { get; set; }
+        public ICollection<Rendering> Renderings { get; set; }
         public ICollection<SSD> SSDs { get; set; }
         #endregion
     }

@@ -14,6 +14,7 @@ using static Parnas.Domain.Entities.HDD;
 using static Parnas.Domain.Entities.MotherBoard;
 using static Parnas.Domain.Entities.Power;
 using static Parnas.Domain.Entities.Ram;
+using static Parnas.Domain.Entities.Rendering;
 using static Parnas.Domain.Entities.SSD;
 
 namespace Parnas.Domain.Entities
@@ -37,6 +38,7 @@ namespace Parnas.Domain.Entities
         public virtual ICollection<MotherBoardImage> MotherBoardImageList { get; set; } = new List<MotherBoardImage>();
         public virtual ICollection<PowerImage> PowerImageList { get; set; } = new List<PowerImage>();
         public virtual ICollection<RamImage> RamImageList { get; set; } = new List<RamImage>();
+        public virtual ICollection<RenderingImage> RenderingImageList { get; set; } = new List<RenderingImage>();
         public virtual ICollection<SSDImage> SSDImageList { get; set; } = new List<SSDImage>();
         #endregion
     }

@@ -93,7 +93,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(cpuAddDto);
 
-            var result = _genericService.Add<CPUAddDto, GraphicCardImagr>(cpuAddDto, cpuAddDto.Images);
+            var result = _genericService.Add<CPUAddDto, CPUImage>(cpuAddDto, cpuAddDto.Images);
             ViewData["Message"] = result.Type;
             return RedirectToAction("Index", "CPU", new { area = "Admin" });
         }

@@ -92,7 +92,7 @@ namespace Parnas.Areas.Admin.Controllers
             if (!ModelState.IsValid)
                 return View(poweAddDto);
 
-            var result = _genericService.Add<PoweAddDto, GraphicCardImagr>(poweAddDto, poweAddDto.Images);
+            var result = _genericService.Add<PoweAddDto, PowerImage>(poweAddDto, poweAddDto.Images);
             ViewData["Message"] = result.Type;
             return RedirectToAction("Index", "Power", new { area = "Admin" });
         }

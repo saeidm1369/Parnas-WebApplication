@@ -11,6 +11,7 @@ using Parnas.Domain.DTOs.HDD;
 using Parnas.Domain.DTOs.MotherBoard;
 using Parnas.Domain.DTOs.Power;
 using Parnas.Domain.DTOs.Ram;
+using Parnas.Domain.DTOs.Rendering;
 using Parnas.Domain.DTOs.SSD;
 using Parnas.Domain.Entities;
 using System;
@@ -167,6 +168,18 @@ namespace Parnas.DomainService.MapSetting
             CreateMap<RamAddDto, Ram>()
                 .ForMember(dest => dest.ImageList, opt => opt.Ignore());
             CreateMap<RamUpdateDto, Ram>()
+                .ForMember(dest => dest.ImageList, opt => opt.Ignore());
+            #endregion
+
+            #region Rendering Map
+            CreateMap<Rendering, RenderingAddDto>();
+            CreateMap<Rendering, RenderingDetailDto>();
+            CreateMap<Rendering, RenderingListDto>();
+            CreateMap<Rendering, RenderingUpdateDto>();
+
+            CreateMap<RenderingAddDto, Rendering>()
+                .ForMember(dest => dest.ImageList, opt => opt.Ignore());
+            CreateMap<RenderingUpdateDto, Rendering>()
                 .ForMember(dest => dest.ImageList, opt => opt.Ignore());
             #endregion
 
